@@ -33,7 +33,7 @@
 </div>
 
 <p align="center">
-  <img width="100%" src="https://github.com/MinmusLin/MinmusLin/tree/main/assets/Snake.svg"/>
+  <img width="100%" src="assets/Snake.svg"/>
 </p>
 
 ### 🥰 *Take a look at my repositories and let's get in touch!*
