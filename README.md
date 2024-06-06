@@ -32,4 +32,8 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MinmusLin&layout=compact" height="190"/>
 </div>
 
+<p align="center">
+  <img width="100%" src="assets/Snake.svg"/>
+</p>
+
 ### 🥰 *Take a look at my repositories and let's get in touch!*
