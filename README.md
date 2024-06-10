@@ -5,7 +5,7 @@
   visitor!
 </h1>
 
-### 👨‍💻 *About Me*
+### 👨‍💻 [*About Me*](https://minmuslin.github.io)
 
 * 🚀 I'm Jishen Lin, an undergraduate student of [School of Software Engineering](https://sse.tongji.edu.cn), [Tongji University](https://www.tongji.edu.cn).
 
@@ -25,7 +25,7 @@
 
 * 🛠️ Development Tools: Git, CMake, Makefile, Docker, Linux, LaTeX
 
-### 📊 *My GitHub*
+### 📊 [*My GitHub*](https://github.com/MinmusLin)
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=MinmusLin&show_icons=true&count_private=true" height="190"/>
