@@ -15,44 +15,126 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='about-me'></span>
+<span class="anchor" id="about-me"></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+<h1>
+  🥰 Hi there my No.
+  <img src="https://profile-counter.glitch.me/MinmusLin/count.svg"/>
+  visitor!
+</h1>
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+I'm Jishen Lin, an undergraduate student majoring in Software Engineering with a focus on Machine Intelligence at the School of Computer Science and Technology, [Tongji University](https://www.tongji.edu.cn). I am passionate about full-stack development and committed to practicing elegant engineering solutions. I enjoy collaborating with diverse teams to explore cutting-edge technologies and solve real-world problems through innovative and efficient solutions. With experience in full-stack development, AI research, and open-source projects, I am always seeking new challenges and opportunities to learn and grow.
 
+Feel free to reach out if you'd like to discuss ideas or explore new possibilities in tech innovation!
 
-# 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 📝 Publications 
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
-
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
-
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+<span class="anchor" id="educations"></span>
 
 # 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+- *2022 – 2026*, Tongji University – School of Computer Science and Technology
+  - Bachelor's Degree in Software Engineering, Specialization in Machine Intelligence
 
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+<span class="anchor" id="honors-and-awards"></span>
+
+# 🏅 Honors and Awards
+
+- *2022 / 2023*, 🥇 First-Class Scholarship for Outstanding Students, Tongji University (Top 5%)
+- *2022 / 2023*, 🎖️ "Outstanding Student" Award, Tongji University (Top 5%)
+- *2022 / 2023*, 🎖️ Social Activity Scholarship, Tongji University (Top 5%)
+- *2022 - 2026*, 🎖️ Tang Zhongying Scholarship for Moral Education, Tongji University (Top 1%)
+- *2024*, 🥇🥉 Gold Award in Shanghai and National Bronze Award in the 2024 China International College Students' Innovation Competition
+- *2024*, 🥇 Gold Award in International Genetically Engineered Machine Competition (iGEM)
+
+<span class="anchor" id="scientific-research"></span>
+
+# 🔬 Scientific Research
+
+- *2023 / 03 - 2024 / 03*, Mask-Wearing Detection System for Access Control Based on Ultralytics
+  - This project developed a real-time mask-wearing detection system using the YOLOv8 model, covering data collection, annotation, model training, and optimization. The solution integrated mask detection into the access control system, enabling real-time monitoring and alerts.
+
+  **The project was successfully completed and received an "Excellent" rating in the 2024 final review by the School of Electronics and Information Engineering.**
+
+- *2024 / 03 - 2025 / 03*, Lightweight Network for 3D Image Sensor Signal Enhancement
+  - Multi-scale Kernel Design: The network dynamically adjusts kernel sizes to capture both local details and broader features, modeling dependencies at various scales.
+  - Model Complexity Analysis: Pruning and sparsification techniques reduced redundant computations, optimizing performance through L1 regularization and gradient calculations.
+  - Lightweight Design: Streamlined network structures reduced computational complexity and memory usage while maintaining high performance.
+  - Real-world Testing: The model was validated on real-time sensor data, demonstrating improved image quality and efficiency on resource-constrained devices.
+
+  **This project ranked first in the 2024 project proposal defense at the School of Software Engineering, Tongji University. A related paper is under preparation and expected to be submitted to the 2025 IEEE International Conference on Multimedia and Expo (ICME).**
+
+<span class="anchor" id="internships"></span>
+
+# 👨‍💻 Internships
+
+- *2024 / 07 - 2024 / 08*, Changjiang Pension Insurance Co., Pacific Insurance Group – IT Department
+  - Front-end Development for Mid-platform Management System: Led development using Vue.js, integrating Vue Router and Element UI. Developed key modules like user management and role permissions.
+  - Due Diligence Assistant Development: Implemented speech-to-text by integrating third-party recognition services with the Dify language model to automate meeting minute generation and analysis.
+  - Prompt Optimization for Dify Model: Enhanced prompt design and multi-turn dialogue features to improve the system's understanding of queries and contextual relevance, leading to more accurate and intelligent responses.
+
+  **In this internship, I not only deepened my technical expertise in front-end development, but also enhanced my communication and teamwork skills, gaining a better understanding of project requirements and.**
+
+<span class="anchor" id="projects"></span>
+
+# 💻 Projects
+
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Teamfight Tactics</div><img src="images/teamfight-tactics.png" alt="image" width="100%"></div></div>
+<div class="paper-box-text" markdown="1">
+- *2023*, Teamfight Tactics：A game developed with Cocos2d-x
+  - This project implemented core game features using object-oriented principles and was open-sourced on GitHub, receiving positive feedback. I gained in-depth knowledge of Cocos2d-x and experience in community management.
+  - **The project won the Bronze Award at the 2024 China International College Students' Innovation Competition (Tongji University) and the Bronze Award in the 9th Shanghai Student Cultural and Creative Works Exhibition.**
+</div>
+</div>
+
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">PetJoy</div><img src="images/petjoy.png" alt="image" width="100%"></div></div>
+<div class="paper-box-text" markdown="1">
+- *2024*, PetJoy: A one-stop hub for information and resource exchange tailored to pet enthusiasts
+  - Developing the PetJoy platform enhanced my expertise in the Vue ecosystem and efficient data management with axios. I built and optimized backend services using ASP.NET Core Web API and handled containerization with Docker and Nginx. I successfully led a 10-person team to complete the project.
+  - **This experience enhanced my full-stack development skills and honed my project management and team communication abilities.**
+</div>
+</div>
+
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Oral Hub</div><img src="images/oral-hub.png" alt="image" width="100%"></div></div>
+<div class="paper-box-text" markdown="1">
+- *2024*, Oral Hub: Children's dental intelligent diagnosis and treatment platform
+  - This project developed an AI-based early screening platform for pediatric malocclusion, integrating data from over 100 regions in China into a database. It created intelligent screening models and provided educational content, advancing pediatric oral health initiatives with scalable solutions.
+  - **The project won the Gold Award in Shanghai and National Bronze Award in the 2024 China International College Students' Innovation Competition.**
+</div>
+</div>
+
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">MinmusOS</div><img src="images/minmusos.png" alt="image" width="100%"></div></div>
+<div class="paper-box-text" markdown="1">
+- *2024*, MinmusOS: The design and implementation of an operating system based on Rust language
+  - MinmusOS is a multi-tasking operating system developed in Rust for the Intel IA-32 (x86) architecture. It implements kernel-space and user-space separation, task scheduling, memory management, and device drivers, leveraging Rust's memory safety to address issues in traditional OS design.
+  - **This project helped me gain a foundational understanding of the Rust programming language, operating system principles, and Linux-related toolchains, significantly improving my system development skills.**
+</div>
+</div>
+
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="images/atlas-y.png" alt="image" width="100%"></div></div>
+<div class="paper-box-text" markdown="1">
+- *2024*, Atlas.Y: Advanced targeting and localization assistance system for yeast
+  - Atlas.Y is a molecular tag design software for optimizing yeast subcellular localization, developed for the iGEM competition. As team lead, I guided the project and represented Tongji University in Paris. The frontend was built with Vue3.js, Vuetify, and Element Plus, while the backend handled database management and RESTful APIs. We also integrated a deep learning model for intelligent tag optimization and developed a Wiki to present our project. Wiki: [https://2024.igem.wiki/tongji-software](https://2024.igem.wiki/tongji-software).
+  - **This project won the Gold Medal in the iGEM Competition, and I attended the 2024 iGEM Jamboree in Paris, France as the Student Leader to present the project.**
+</div>
+</div>
+
+<span id="technical-skills"></span>
+
+# 🛠️ Technical Skills
+
+- 🖥️ **Programming Languages**: C/C++, C#, Java, Python, HTML, CSS, JavaScript, TypeScript, Dart, SQL, Swift, Rust
+- 🧰 **Frameworks and Libraries**: Node, Vue, Spring Boot, Cocos2d-x, Qt, Flutter, OpenCV, SwiftUI
+- 📈 **Data Analysis**: PyTorch, TensorFlow, Scikit-learn, NumPy, Matplotlib
+- ⚙️ **Development Tools**: Git, CMake, Makefile, Docker, Linux, Shell, Bash, LaTeX, Typst
+
+<span class="anchor" id="student-activities"></span>
+
+# 🏫 Student Activities
+
+- 👨‍🎓 Class Monitor, Class 1, Software Engineering, School of Computer Science and Technology (2022 cohort)
+- 🎖️ Awarded "Outstanding Volunteer" by Freshman Institute (2022-2023), with nearly 200 hours of volunteer service
+- 🏆 President, Huawei Technology Club, School of Computer Science and Technology, Tongji University
+- 🏆 2024 Huawei Developer Program (HSD) Tongji University Campus Ambassador
+- 💞 Member, Zhongying Public Welfare Promotion Association, Tongji University
+- 👨‍🏫 Senior Peer Mentor, Academic Development and Guidance Center & Student Growth Center, Jiading Campus
+
+<br><br>
