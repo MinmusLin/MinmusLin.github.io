@@ -23,6 +23,8 @@ redirect_from:
   visitor!
 </h1>
 
+[My Resume](https://github.com/MinmusLin/MinmusLin/raw/refs/heads/main/resume/Resume_En.docx) | [我的简历](https://github.com/MinmusLin/MinmusLin/raw/refs/heads/main/resume/Resume_Zh.docx)
+
 I'm Jishen Lin, an undergraduate student majoring in Software Engineering with a focus on Machine Intelligence at the School of Computer Science and Technology, [Tongji University](https://www.tongji.edu.cn). I am passionate about full-stack development and committed to practicing elegant engineering solutions. I enjoy collaborating with diverse teams to explore cutting-edge technologies and solve real-world problems through innovative and efficient solutions. With experience in full-stack development, AI research, and open-source projects, I am always seeking new challenges and opportunities to learn and grow.
 
 Feel free to reach out if you'd like to discuss ideas or explore new possibilities in tech innovation!
@@ -85,14 +87,6 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
 </div>
 </div>
 
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">PetJoy</div><img src="images/petjoy.png" alt="image" width="100%"></div></div>
-<div class="paper-box-text" markdown="1">
-- *2024*, PetJoy: A one-stop hub for information and resource exchange tailored to pet enthusiasts
-  - Developing the PetJoy platform enhanced my expertise in the Vue ecosystem and efficient data management with axios. I built and optimized backend services using ASP.NET Core Web API and handled containerization with Docker and Nginx. I successfully led a 10-person team to complete the project.
-  - **This experience enhanced my full-stack development skills and honed my project management and team communication abilities.**
-</div>
-</div>
-
 <div class="paper-box"><div class="paper-box-image"><div><div class="badge">Oral Hub</div><img src="images/oral-hub.png" alt="image" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
 - *2024*, Oral Hub: Children's dental intelligent diagnosis and treatment platform
@@ -122,9 +116,9 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
 # 🛠️ Technical Skills
 
 - 🖥️ **Programming Languages**: C/C++, C#, Java, Python, HTML, CSS, JavaScript, TypeScript, Dart, SQL, Swift, Rust
-- 🧰 **Frameworks and Libraries**: Node, Vue, Spring Boot, Cocos2d-x, Qt, Flutter, OpenCV, SwiftUI
+- 🧰 **Frameworks and Libraries**: Node.js, Vue.js, ASP.NET, Spring Boot, Cocos2d-x, Qt, Flutter, OpenCV, SwiftUI
 - 📈 **Data Analysis**: PyTorch, TensorFlow, Scikit-learn, NumPy, Matplotlib
-- ⚙️ **Development Tools**: Git, CMake, Makefile, Docker, Linux, Shell, Bash, LaTeX, Typst
+- ⚙️ **Development Tools**: Git, GitHub Actions, CMake, Makefile, Docker, Linux, Shell, Bash, LaTeX, Typst
 
 <span class="anchor" id="student-activities"></span>
 
