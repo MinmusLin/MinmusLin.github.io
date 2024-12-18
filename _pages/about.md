@@ -62,7 +62,7 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
   - Lightweight Design: Streamlined network structures reduced computational complexity and memory usage while maintaining high performance.
   - Real-world Testing: The model was validated on real-time sensor data, demonstrating improved image quality and efficiency on resource-constrained devices.
 
-  **This project ranked first in the 2024 project proposal defense at the School of Software Engineering, Tongji University. A related paper is under preparation and expected to be submitted to the 2025 IEEE International Conference on Multimedia and Expo (ICME).**
+  **This project ranked first in the 2024 project proposal defense at the School of Software Engineering, Tongji University.**
 
 <span class="anchor" id="internships"></span>
 
@@ -115,8 +115,8 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
 
 # 🛠️ Technical Skills
 
-- 🖥️ **Programming Languages**: C/C++, C#, Java, Python, HTML, CSS, JavaScript, TypeScript, Dart, SQL, Swift, Rust
-- 🧰 **Frameworks and Libraries**: Node.js, Vue.js, ASP.NET, Spring Boot, Cocos2d-x, Qt, Flutter, OpenCV, SwiftUI
+- 🖥️ **Programming Languages**: C/C++, C#, Java, Python, HTML, CSS, JavaScript, TypeScript, Dart, SQL, Swift, Rust, Go
+- 🧰 **Frameworks and Libraries**: Node.js, Vue.js, ASP.NET, Spring Boot, Cocos2d-x, Qt, Flutter, SwiftUI
 - 📈 **Data Analysis**: PyTorch, TensorFlow, Scikit-learn, NumPy, Matplotlib
 - ⚙️ **Development Tools**: Git, GitHub Actions, CMake, Makefile, Docker, Linux, Shell, Bash, LaTeX, Typst
 
