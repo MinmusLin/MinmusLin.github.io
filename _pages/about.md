@@ -29,10 +29,10 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 **Self-evaluation:**
 
-- Achieved excellent academic performance during undergraduate studies, with a solid grasp of fundamental knowledge in algorithms, data structures, operating systems, and possessing certain system analysis and design capabilities.
-- Positive, optimistic, and highly responsible, with a meticulous work ethic and strong team communication and collaboration skills.
-- Passionate about programming, with a strong ability to learn and a keen interest in technology, coupled with good programming habits.
-- Highly curious, motivated, and eager to learn, consistently staying updated with the latest industry technologies and continuously improving professional expertise.
+- 🎓 Achieved excellent academic performance during undergraduate studies, with a solid grasp of fundamental knowledge in algorithms, data structures, operating systems, and possessing certain system analysis and design capabilities.
+- ⏰ Positive, optimistic, and highly responsible, with a meticulous work ethic and strong team communication and collaboration skills.
+- 📑 Passionate about programming, with a strong ability to learn and a keen interest in technology, coupled with good programming habits.
+- 💡 Highly curious, motivated, and eager to learn, consistently staying updated with the latest industry technologies and continuously improving professional expertise.
 
 Feel free to reach out if you'd like to discuss ideas or explore new possibilities in tech innovation!
 
