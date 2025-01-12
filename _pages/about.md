@@ -25,7 +25,14 @@ redirect_from:
 
 [My Resume](https://github.com/MinmusLin/MinmusLin/raw/refs/heads/main/resume/Resume_En.pdf) / [我的简历](https://github.com/MinmusLin/MinmusLin/raw/refs/heads/main/resume/Resume_Zh.pdf)
 
-I'm Jishen Lin, an undergraduate student majoring in Software Engineering with a focus on Machine Intelligence at the School of Computer Science and Technology, [Tongji University](https://www.tongji.edu.cn). I am passionate about full-stack development and committed to practicing elegant engineering solutions. I enjoy collaborating with diverse teams to explore cutting-edge technologies and solve real-world problems through innovative and efficient solutions. With experience in full-stack development, AI research, and open-source projects, I am always seeking new challenges and opportunities to learn and grow.
+I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [School of Computer Science and Technology](https://cs.tongji.edu.cn), [Tongji University](https://www.tongji.edu.cn). I am passionate about full-stack development and committed to practicing elegant engineering solutions. I enjoy collaborating with diverse teams to explore cutting-edge technologies and solve real-world problems through innovative and efficient solutions. With experience in full-stack development, AI research, and open-source projects, I am always seeking new challenges and opportunities to learn and grow.
+
+**Self-evaluation:**
+
+- Achieved excellent academic performance during undergraduate studies, with a solid grasp of fundamental knowledge in algorithms, data structures, operating systems, and possessing certain system analysis and design capabilities.
+- Positive, optimistic, and highly responsible, with a meticulous work ethic and strong team communication and collaboration skills.
+- Passionate about programming, with a strong ability to learn and a keen interest in technology, coupled with good programming habits.
+- Highly curious, motivated, and eager to learn, consistently staying updated with the latest industry technologies and continuously improving professional expertise.
 
 Feel free to reach out if you'd like to discuss ideas or explore new possibilities in tech innovation!
 
@@ -87,7 +94,7 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
 
 <div class="paper-box"><div class="paper-box-image"><div><div class="badge">Teamfight Tactics</div><img src="images/teamfight-tactics.png" alt="image" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
-- *2023*, Teamfight Tactics: A Game Developed with Cocos2d-x
+- *2023 / 12*, Teamfight Tactics: A Game Developed with Cocos2d-x
 
   *Windows Application Development*
 
@@ -100,7 +107,7 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
 
 <div class="paper-box"><div class="paper-box-image"><div><div class="badge">MinmusOS</div><img src="images/minmusos.png" alt="image" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
-- *2024*, MinmusOS: The Design and Implementation of an Operating System Based on Rust Language
+- *2024 / 08*, MinmusOS: The Design and Implementation of an Operating System Based on Rust Language
 
   *System Development*
 
@@ -113,7 +120,7 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
 
 <div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="images/atlas-y.png" alt="image" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
-- *2024*, Atlas.Y: Advanced Targeting and Localization Assistance System for Yeast
+- *2024 / 10*, Atlas.Y: Advanced Targeting and Localization Assistance System for Yeast
 
   *Full-stack Application Development and Database Maintenance*
 
