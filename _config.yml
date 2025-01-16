@@ -1,6 +1,6 @@
 title                        : "Jishen Lin (林继申)"
 
-description                  : "Full-stack Development Enthusiast, studying at School of Computer Science and Technology, Tongji University."
+description                  : "Bachelor's Degree in Software Engineering, School of Computer Science and Technology, Tongji University."
 
 repository                   : "MinmusLin/MinmusLin.github.io"
 
@@ -17,14 +17,14 @@ google_scholar_stats_use_cdn : true
 author:
   name             : "Jishen Lin (林继申)"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Tongji University"
+  bio              : "Full-stack Development Enthusiast"
   location         : "Shanghai, China"
-  employer         :
+  employer         : "Tongji University"
   pubmed           :
   googlescholar    : # "https://scholar.google.com/citations?user=GOOGLE_SCHOLAR_ID"
   email            : "minmuslin@outlook.com"
   researchgate     :
-  uri              :
+  uri              : "https://minmuslin.github.io"
   bitbucket        :
   codepen          :
   dribbble         :
