@@ -92,7 +92,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 🧩 Projects
 
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="images/atlas-y.png" alt="image" width="100%"></div></div>
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="images/zhimu-cloud.png" alt="image" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
 - *2024 / 10 – 2025 / 02*, Zhimu Cloud: Intelligent Curtain Wall Dataset Management Platform
 
