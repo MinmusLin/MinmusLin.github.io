@@ -61,10 +61,10 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
   *National-level College Student Innovation Training Project - Lead Researcher*
 
-  - Multi-scale Kernel Design: The network dynamically adjusts kernel sizes to capture both local details and broader features, modeling dependencies at various scales.
-  - Model Complexity Analysis: Pruning and sparsification techniques reduced redundant computations, optimizing performance through L1 regularization and gradient calculations.
-  - Lightweight Design: Streamlined network structures reduced computational complexity and memory usage while maintaining high performance.
-  - Real-world Testing: The model was validated on real-time sensor data, demonstrating improved image quality and efficiency on resource-constrained devices.
+  - Developed a lightweight 3D imaging processing algorithm to address the challenges of balancing power consumption and accuracy in Time-of-Flight (ToF) sensors for edge devices.
+  - Aimed to optimize model inference efficiency, reduce computational complexity, and ensure high-quality depth map and 3D point cloud imaging for applications like robotics, autonomous driving, and AR/VR.
+  - Implemented dynamic kernel adjustment and reduced model parameters to create a lightweight architecture, deploying the algorithm on edge devices for real-time processing and low-power operation.
+  - Successfully improved imaging quality and computational efficiency, enabling real-time 3D perception on edge devices and advancing the development of "sensing-computing integration" technology.
 
 - *2023 / 03 - 2024 / 03*, Access Control Mask Detection System Based on Ultralytics
 
@@ -92,22 +92,23 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 🧩 Projects
 
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Teamfight Tactics</div><img src="images/teamfight-tactics.png" alt="image" width="100%"></div></div>
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="images/atlas-y.png" alt="image" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
-- *2023 / 12*, Teamfight Tactics: A Game Developed with Cocos2d-x
+- *2024 / 03 – 2024 / 10*, Atlas.Y: Advanced Targeting and Localization Assistance System for Yeast
 
-  *Windows Application Development*
+  *Full-stack Application Development and Database Maintenance*
 
-  - Implemented core functionalities such as character control, combat systems, and equipment synthesis using object-oriented programming (encapsulation, inheritance, polymorphism).
-  - The project is open-sourced on GitHub and has received positive feedback and support from the open-source community.
-  - Through this project, I gained in-depth knowledge of Cocos2d-x game engine development and valuable experience in interacting with the open-source community and handling feedback.
-  - The project won the Bronze Award at Tongji University in the China International College Students Innovation Competition (2024) and the Bronze Award at the 9th "Huichuang Youth" Shanghai College Students Cultural and Creative Works Exhibition.
+  - As a software and artificial intelligence track entry for the iGEM competition, this project aimed to address protein localization challenges in synthetic biology by integrating AI technologies.
+  - Led full-stack development, building a system to support molecular tag design and optimization, ensuring efficient data processing and model integration.
+  - Developed RESTful APIs using Spring Boot, integrated graph neural network models, designed a MySQL database for efficient data operations, and coordinated the team to deliver the project.
+  - Built the team project Wiki using Vue.js (Link: [https://2024.igem.wiki/tongji-software](https://2024.igem.wiki/tongji-software)).
+  - The project won an international gold medal in the iGEM competition and received high recognition from dozens of international synthetic biology researchers. As one of the team leaders, presented the project in Paris, France.
 </div>
 </div>
 
 <div class="paper-box"><div class="paper-box-image"><div><div class="badge">MinmusOS</div><img src="images/minmusos.png" alt="image" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
-- *2024 / 08*, MinmusOS: The Design and Implementation of an Operating System Based on Rust Language
+- *2024 / 07 - 2024 / 08*, MinmusOS: The Design and Implementation of an Operating System Based on Rust Language
 
   *System Development*
 
@@ -117,18 +118,16 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
   - Through this project, I gained a foundational understanding of Rust, deepened my knowledge of operating system principles, became familiar with Linux-related toolchains, and significantly improved my system development skills.
 </div>
 </div>
-
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="images/atlas-y.png" alt="image" width="100%"></div></div>
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Teamfight Tactics</div><img src="images/teamfight-tactics.png" alt="image" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
-- *2024 / 10*, Atlas.Y: Advanced Targeting and Localization Assistance System for Yeast
+- *2023 / 11 - 2023 / 12*, Teamfight Tactics: A Game Developed with Cocos2d-x
 
-  *Full-stack Application Development and Database Maintenance*
+  *Windows Application Development*
 
-  - As a software and artificial intelligence track entry for the iGEM competition, this project aimed to address protein localization challenges in synthetic biology by integrating AI technologies.
-  - Led full-stack development, building a system to support molecular tag design and optimization, ensuring efficient data processing and model integration.
-  - Developed RESTful APIs using Spring Boot, integrated graph neural network models, designed a MySQL database for efficient data operations, and coordinated the team to deliver the project.
-  - Built the team project Wiki using Vue.js (Link: [https://2024.igem.wiki/tongji-software](https://2024.igem.wiki/tongji-software)).
-  - The project won an international gold medal in the iGEM competition and received high recognition from dozens of international synthetic biology researchers. As one of the team leaders, presented the project in Paris, France.
+  - Implemented core functionalities such as character control, combat systems, and equipment synthesis using object-oriented programming (encapsulation, inheritance, polymorphism).
+  - The project is open-sourced on GitHub and has received positive feedback and support from the open-source community.
+  - Through this project, I gained in-depth knowledge of Cocos2d-x game engine development and valuable experience in interacting with the open-source community and handling feedback.
+  - The project won the Bronze Award at Tongji University in the China International College Students Innovation Competition (2024) and the Bronze Award at the 9th "Huichuang Youth" Shanghai College Students Cultural and Creative Works Exhibition.
 </div>
 </div>
 
