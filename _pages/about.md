@@ -18,41 +18,36 @@ redirect_from:
 <span class="anchor" id="about-me"></span>
 
 <h1>
-  🥰 Hi there my No.
+  👋 Hi there my No.
   <img src="https://profile-counter.glitch.me/MinmusLin/count.svg"/>
   visitor!
 </h1>
 
-[My Resume](https://github.com/MinmusLin/MinmusLin/raw/refs/heads/main/resume/Resume_En.pdf) / [我的简历](https://github.com/MinmusLin/MinmusLin/raw/refs/heads/main/resume/Resume_Zh.pdf)
+# 👨‍💻 About Me ([CV](https://github.com/MinmusLin/MinmusLin/raw/refs/heads/main/assets/CV.pdf))
 
 I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [School of Computer Science and Technology](https://cs.tongji.edu.cn), [Tongji University](https://www.tongji.edu.cn). I am passionate about full-stack development and committed to practicing elegant engineering solutions. I enjoy collaborating with diverse teams to explore cutting-edge technologies and solve real-world problems through innovative and efficient solutions. With experience in full-stack development, AI research, and open-source projects, I am always seeking new challenges and opportunities to learn and grow.
-
-**Self-evaluation:**
-
-- 🎓 Achieved excellent academic performance during undergraduate studies, with a solid grasp of fundamental knowledge in algorithms, data structures, operating systems, and possessing certain system analysis and design capabilities.
-- ⏰ Positive, optimistic, and highly responsible, with a meticulous work ethic and strong team communication and collaboration skills.
-- 📑 Passionate about programming, with a strong ability to learn and a keen interest in technology, coupled with good programming habits.
-- 💡 Highly curious, motivated, and eager to learn, consistently staying updated with the latest industry technologies and continuously improving professional expertise.
-
-Feel free to reach out if you'd like to discuss ideas or explore new possibilities in tech innovation!
 
 <span class="anchor" id="educations"></span>
 
 # 📖 Educations
 
-- *2022 - 2026*, Tongji University - School of Computer Science and Technology
+- *2022 / 08 - 2026 / 06*, Tongji University - School of Computer Science and Technology
   - Bachelor's Degree in Software Engineering
+  - GPA: 4.73 / 5.00 (92.27 on a 100-point scale)
+  - Rank: 14 / 199 (Top 7%)
+  - English Proficiency: CET-6
 
 <span class="anchor" id="honors-and-awards"></span>
 
 # 🏅 Honors and Awards
 
-- *2022 / 2023*, 🥇 First-Class Scholarship for Outstanding Students, Tongji University (Top 5%)
-- *2022 / 2023*, 🎖️ "Outstanding Student" Award, Tongji University (Top 5%)
+- *2022 - 2026*, 🎖️ Tang Zhongying Moral Education Scholarship, Tongji University (Top 1%)
+- *2022 / 2023*, 🥇 First-Class Outstanding Student Scholarship, Tongji University (Top 5%)
 - *2022 / 2023*, 🎖️ Social Activity Scholarship, Tongji University (Top 5%)
-- *2022 - 2026*, 🎖️ Tang Zhongying Scholarship for Moral Education, Tongji University (Top 1%)
-- *2024*, 🥇🥉 Gold Award in Shanghai and National Bronze Award in the 2024 China International College Students' Innovation Competition
-- *2024*, 🥇 Gold Award in International Genetically Engineered Machine Competition (iGEM)
+- *2022 / 2023*, 🎖️ "Outstanding Class Cadre" Award, Tongji University (Top 1%)
+- *2023 / 2024*, 🎖️ "Outstanding Student" Award, Tongji University (Top 5%)
+- *2024 / 07 - 2024 / 10*, 🥇🥉 Gold Award in Shanghai (Provincial Level) and National Bronze Award in China International College Students Innovation Competition (2024)
+- *2024 / 03 - 2024 / 10*, 🥇 Gold Award in International Genetically Engineered Machine Competition (iGEM)
 
 <span class="anchor" id="scientific-research"></span>
 
@@ -60,13 +55,14 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
 
 - *2023 / 03 - 2024 / 03*, Access Control Mask Detection System Based on Ultralytics
 
-  *University-Level College Student Innovation Training Project - Team Member*
+  *Provincial-Level College Student Innovation Training Project - Lead Researcher*
 
-  - This project developed a real-time mask-wearing detection system using the YOLOv8 model, covering data collection, annotation, model training, and optimization. The solution integrated mask detection into the access control system, enabling real-time monitoring and alerts.
+  - Post-COVID-19, mask-wearing became essential to prevent virus spread. Our team developed a real-time mask detection system using YOLOv8 for access control in high-traffic areas.
+  - Design and deploy a system to detect mask usage and proper wearing, reducing manual monitoring in places like schools and transit hubs.
+  - Researched YOLO models and trained on open-source datasets for binary mask detection. Expanded datasets with improper mask usage images, fine-tuned model parameters, and improved accuracy. Evaluated performance and deployed the system into access control.
+  - Built a high-accuracy, real-time mask detection system capable of identifying proper/improper mask usage. The system is scalable for high-traffic environments, aiding pandemic prevention while cutting labor costs.
 
-  **The project was successfully completed and received an "Excellent" rating in the 2024 final review by the School of Electronics and Information Engineering.**
-
-- *2024 / 03 - 2025 / 03*, Lightweight Method for Signal Enhancement Network in 3D Image Sensors
+- *2024 / 03 - 2025 / 03*, Lightweight Network for 3D Image Sensor Signal Enhancement
 
   *National-Level College Student Innovation Training Project - Lead Researcher*
 
@@ -75,18 +71,18 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
   - Lightweight Design: Streamlined network structures reduced computational complexity and memory usage while maintaining high performance.
   - Real-world Testing: The model was validated on real-time sensor data, demonstrating improved image quality and efficiency on resource-constrained devices.
 
-  **The project ranked first in the 2024 College of Computer Science and Technology, Tongji University, Innovation Training Project Proposal Defense.**
-
 <span class="anchor" id="internships"></span>
 
 # 👨‍💻 Internships
 
-- *2024 / 07 - 2024 / 08*, Changjiang Pension Insurance Co., Pacific Insurance Group - IT Department
-  - Frontend Development for Middle Platform Management System: Assisted in the frontend development of the middle platform management system. Optimized the frontend display of user management, role permissions, and other functional modules within the Vue.js ecosystem, enhancing system performance and user experience.
-  - Development of Due Diligence Assistant: Contributed to the development of the meeting minutes feature for the Due Diligence Assistant. Integrated speech recognition services with the Dify large language model to enable automatic generation and analysis of meeting minutes. Technically, users could upload meeting audio files through the file upload module, and the system converted and returned text results. Leveraging the Dify large language model, the system displayed key information and consistency analysis of viewpoints in the meeting minutes. For each speaker and topic, the model automatically generated summaries and key points, providing a more intelligent approach to content extraction and presentation.
-  - Prompt Optimization Based on Dify Open-Source Large Language Model: Optimized the prompt design and workflow of the model. Enhanced the system's contextual analysis capabilities through multi-turn dialogue functionality, enabling it to remember and correlate previous interactions, thereby improving the accuracy and intelligent feedback of subsequent conversations.
+- *2024 / 07 - 2024 / 08*, Changjiang Pension Insurance Co., Pacific Insurance Group
 
-  **During this internship, I improved my frontend development skills through technical practice and effective communication, while also strengthening my ability to collaborate with the team and understand project requirements.**
+  *Intern, Information Technology Department*
+
+  - Participated in the development and implementation of a due diligence assistant, aiming to enhance due diligence efficiency through automated workflows, addressing issues such as time consumption, error-proneness, and high costs in traditional due diligence processes.
+  - Deployed Dify on local servers, designed, and implemented workflows for the due diligence assistant, covering question classification, meeting minutes generation, consistency analysis of viewpoints, and handling of routine inquiries.
+  - Integrated databases and called LLM APIs, designed classification and processing logic, tested, and optimized workflows to ensure accuracy and efficiency.
+  - Successfully deployed and launched the due diligence assistant, achieving over 95% accuracy in question classification. The meeting minutes generation and viewpoint analysis functions significantly improved efficiency, receiving positive feedback from the due diligence team.
 
 <span class="anchor" id="projects"></span>
 
@@ -101,7 +97,7 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
   - Implemented core functionalities such as character control, combat systems, and equipment synthesis using object-oriented programming (encapsulation, inheritance, polymorphism).
   - The project is open-sourced on GitHub and has received positive feedback and support from the open-source community.
   - Through this project, I gained in-depth knowledge of Cocos2d-x game engine development and valuable experience in interacting with the open-source community and handling feedback.
-  - **The project won the Bronze Award at Tongji University in the China International College Students Innovation Competition (2024) and the Bronze Award at the 9th "Huichuang Youth" Shanghai College Students Cultural and Creative Works Exhibition.**
+  - The project won the Bronze Award at Tongji University in the China International College Students Innovation Competition (2024) and the Bronze Award at the 9th "Huichuang Youth" Shanghai College Students Cultural and Creative Works Exhibition.
 </div>
 </div>
 
@@ -114,7 +110,7 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
   - MinmusOS is a multitasking operating system developed in Rust, targeting the Intel IA-32 (x86) architecture.
   - The project achieved separation between the system kernel and user space, covering core functionalities such as boot processes, task scheduling, memory management, and device drivers.
   - Leveraging Rust's memory safety mechanisms, the project effectively addressed memory safety issues commonly found in traditional operating system kernels.
-  - **Through this project, I gained a foundational understanding of Rust, deepened my knowledge of operating system principles, became familiar with Linux-related toolchains, and significantly improved my system development skills.**
+  - Through this project, I gained a foundational understanding of Rust, deepened my knowledge of operating system principles, became familiar with Linux-related toolchains, and significantly improved my system development skills.
 </div>
 </div>
 
@@ -128,19 +124,18 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
   - The frontend, built with Vue.js, provides a user-friendly interface, while the backend implements RESTful APIs and database management to support molecular tag queries and data analysis.
   - A deep learning model and algorithm environment were deployed in the backend to enable intelligent optimization of molecular tag design.
   - Developed the project Wiki ([2024.igem.wiki/tongji-software](https://2024.igem.wiki/tongji-software)) to detail the software's functionalities and application scenarios, showcasing it to competition judges and the public.
-  - **The project won the Gold Award at the International Genetically Engineered Machine Competition (iGEM), and I, as the Student Leader, presented the project in person in Paris, France.**
+  - The project won the Gold Award at the International Genetically Engineered Machine Competition (iGEM), and I, as the Student Leader, presented the project in person in Paris, France.
 </div>
 </div>
 
 <span id="technical-skills"></span>
 
-# 🛠️ Technical Skills
+# 🛠️ Skills
 
-- 🖥️ Proficient in programming languages such as C/C++, Java and Go, with strong capabilities in system development and algorithm implementation.
-- 🧰 Skilled in the Vue.js ecosystem and familiar with frameworks like Spring Boot, possessing full-stack development experience.
-- ⚙️ Experienced in Linux environments and associated toolchains, proficient in development tools such as CMake, Makefile, and Docker.
-- 📈 Highly skilled in Git version control and CI/CD workflows like GitHub Actions.
-- 🗃️ Capable of database design and optimization, with hands-on experience in MySQL and Redis.
+- 🖥️ Proficient in Java programming language and Spring Boot framework, with the ability to develop systems and implement algorithms.
+- 🧰 Experienced in Vue.js ecosystem, possessing full-stack development experience.
+- ⚙️ Familiar with Linux environment and basic operations, skilled in development tools such as Git, Docker, and GitHub Actions CI/CD workflows.
+- 🗃️ Capable of database design, with expertise in MySQL and Redis.
 
 <span class="anchor" id="student-activities"></span>
 
@@ -148,9 +143,20 @@ Feel free to reach out if you'd like to discuss ideas or explore new possibiliti
 
 - 👨‍🎓 Class Monitor, Class 1, Software Engineering, School of Computer Science and Technology (2022 cohort)
 - 🎖️ Awarded "Outstanding Volunteer" by Freshman Institute (2022-2023), with nearly 200h of volunteer service
-- 🏆 President, Huawei Technology Club, School of Computer Science and Technology, Tongji University
+- 🏆 President, Huawei Student Technology Club, School of Computer Science and Technology, Tongji University
 - 🏆 2024 Huawei Developer Program (HSD) Tongji University Campus Ambassador
 - 💞 Member, Zhongying Public Welfare Promotion Association, Tongji University
-- 👨‍🏫 Senior Peer Mentor, Academic Development and Guidance Center & Student Growth Center, Jiading Campus
+- 👨‍🏫 Senior Peer Mentor, Academic Guidance and Development Center, Tongji University
+
+<span class="anchor" id="self-evaluation"></span>
+
+# Self-Evaluation
+
+- 🎓 Achieved outstanding academic performance during undergraduate studies, proficient in core computer science knowledge such as data structures and algorithms, operating systems, computer networks, and design patterns, with strong system analysis and design capabilities.
+- ⏰ Served as the group leader for nearly all courses during undergraduate studies, demonstrating excellent project planning and team coordination skills, able to collaborate efficiently with team members and drive project progress effectively.
+- 📑 Passionate about technology, with strong programming habits, clear code structure, and attention to detail and maintainability, capable of quickly mastering new technologies and applying them to practical projects.
+- 💡 Enthusiastic about sports, maintaining good physical fitness and a positive attitude towards life, able to handle high-intensity work challenges.
+
+# 🥰 Take a look at my repositories and let's get in touch!
 
 <br><br>

@@ -17,8 +17,11 @@ main:
   - title: "Projects"
     url: "/#projects"
 
-  - title: "Technical Skills"
-    url: "/#technical-skills"
+  - title: "Skills"
+    url: "/#skills"
 
   - title: "Student Activities"
     url: "/#student-activities"
+
+  - title: "Self-Evaluation"
+    url: "/#self-evaluation"
