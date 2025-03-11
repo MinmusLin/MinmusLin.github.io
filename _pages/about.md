@@ -55,7 +55,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 - *2023 / 03 - 2024 / 03*, Access Control Mask Detection System Based on Ultralytics
 
-  *Provincial-Level College Student Innovation Training Project - Lead Researcher*
+  *Provincial-level College Student Innovation Training Project - Lead Researcher*
 
   - Post-COVID-19, mask-wearing became essential to prevent virus spread. Our team developed a real-time mask detection system using YOLOv8 for access control in high-traffic areas.
   - Design and deploy a system to detect mask usage and proper wearing, reducing manual monitoring in places like schools and transit hubs.
@@ -64,7 +64,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 - *2024 / 03 - 2025 / 03*, Lightweight Network for 3D Image Sensor Signal Enhancement
 
-  *National-Level College Student Innovation Training Project - Lead Researcher*
+  *National-level College Student Innovation Training Project - Lead Researcher*
 
   - Multi-scale Kernel Design: The network dynamically adjusts kernel sizes to capture both local details and broader features, modeling dependencies at various scales.
   - Model Complexity Analysis: Pruning and sparsification techniques reduced redundant computations, optimizing performance through L1 regularization and gradient calculations.
@@ -120,11 +120,11 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
   *Full-stack Application Development and Database Maintenance*
 
-  - This project is an entry for the Software & AI track of the iGEM (International Genetically Engineered Machine Competition) 2024.
-  - The frontend, built with Vue.js, provides a user-friendly interface, while the backend implements RESTful APIs and database management to support molecular tag queries and data analysis.
-  - A deep learning model and algorithm environment were deployed in the backend to enable intelligent optimization of molecular tag design.
-  - Developed the project Wiki ([2024.igem.wiki/tongji-software](https://2024.igem.wiki/tongji-software)) to detail the software's functionalities and application scenarios, showcasing it to competition judges and the public.
-  - The project won the Gold Award at the International Genetically Engineered Machine Competition (iGEM), and I, as the Student Leader, presented the project in person in Paris, France.
+  - As a software and artificial intelligence track entry for the iGEM competition, this project aimed to address protein localization challenges in synthetic biology by integrating AI technologies.
+  - Led full-stack development, building a system to support molecular tag design and optimization, ensuring efficient data processing and model integration.
+  - Developed RESTful APIs using Spring Boot, integrated graph neural network models, designed a MySQL database for efficient data operations, and coordinated the team to deliver the project.
+  - Built the team project Wiki using Vue.js (Link: [https://2024.igem.wiki/tongji-software](https://2024.igem.wiki/tongji-software)).
+  - The project won an international gold medal in the iGEM competition and received high recognition from dozens of international synthetic biology researchers. As one of the team leaders, presented the project in Paris, France.
 </div>
 </div>
 
