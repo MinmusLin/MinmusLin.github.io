@@ -31,8 +31,8 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 📖 Educations
 
-<div class="paper-box"><img src="images/tongji.png" alt="image" width="200px">
-<div class="paper-box-text" markdown="1">
+<div class="paper-box" style="display: flex"><img src="images/tongji.png" alt="image" width="200px">
+<div class="paper-box-text" markdown="1" style="flex: 1">
 - *2022 / 08 - 2026 / 06*, Tongji University - School of Computer Science and Technology
   - Bachelor's Degree in Software Engineering
   - GPA: 4.73 / 5.00 (92.27 on a 100-point scale)
@@ -131,7 +131,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 </div>
 </div>
 
-<span id="technical-skills"></span>
+<span id="skills"></span>
 
 # 🛠️ Skills
 
