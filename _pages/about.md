@@ -63,15 +63,6 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 🔬 Scientific Research
 
-- *2023 / 03 - 2024 / 03*, Access Control Mask Detection System Based on Ultralytics
-
-  *Provincial-level College Student Innovation Training Project - Lead Researcher*
-
-  - Post-COVID-19, mask-wearing became essential to prevent virus spread. Our team developed a real-time mask detection system using YOLOv8 for access control in high-traffic areas.
-  - Design and deploy a system to detect mask usage and proper wearing, reducing manual monitoring in places like schools and transit hubs.
-  - Researched YOLO models and trained on open-source datasets for binary mask detection. Expanded datasets with improper mask usage images, fine-tuned model parameters, and improved accuracy. Evaluated performance and deployed the system into access control.
-  - Built a high-accuracy, real-time mask detection system capable of identifying proper/improper mask usage. The system is scalable for high-traffic environments, aiding pandemic prevention while cutting labor costs.
-
 - *2024 / 03 - 2025 / 03*, Lightweight Network for 3D Image Sensor Signal Enhancement
 
   *National-level College Student Innovation Training Project - Lead Researcher*
@@ -80,6 +71,15 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
   - Model Complexity Analysis: Pruning and sparsification techniques reduced redundant computations, optimizing performance through L1 regularization and gradient calculations.
   - Lightweight Design: Streamlined network structures reduced computational complexity and memory usage while maintaining high performance.
   - Real-world Testing: The model was validated on real-time sensor data, demonstrating improved image quality and efficiency on resource-constrained devices.
+
+- *2023 / 03 - 2024 / 03*, Access Control Mask Detection System Based on Ultralytics
+
+  *Provincial-level College Student Innovation Training Project - Lead Researcher*
+
+  - Post-COVID-19, mask-wearing became essential to prevent virus spread. Our team developed a real-time mask detection system using YOLOv8 for access control in high-traffic areas.
+  - Design and deploy a system to detect mask usage and proper wearing, reducing manual monitoring in places like schools and transit hubs.
+  - Researched YOLO models and trained on open-source datasets for binary mask detection. Expanded datasets with improper mask usage images, fine-tuned model parameters, and improved accuracy. Evaluated performance and deployed the system into access control.
+  - Built a high-accuracy, real-time mask detection system capable of identifying proper/improper mask usage. The system is scalable for high-traffic environments, aiding pandemic prevention while cutting labor costs.
 
 <span class="anchor" id="internships"></span>
 
