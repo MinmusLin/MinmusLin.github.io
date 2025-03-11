@@ -23,7 +23,7 @@ redirect_from:
   visitor!
 </h1>
 
-# 👨‍💻 About Me ([CV](https://github.com/MinmusLin/MinmusLin/raw/refs/heads/main/assets/CV.pdf))
+# 👨‍💻 About Me ([CV](https://github.com/MinmusLin/MinmusLin/raw/refs/heads/main/CV/CV.pdf))
 
 I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [School of Computer Science and Technology](https://cs.tongji.edu.cn), [Tongji University](https://www.tongji.edu.cn). I am passionate about full-stack development and committed to practicing elegant engineering solutions. I enjoy collaborating with diverse teams to explore cutting-edge technologies and solve real-world problems through innovative and efficient solutions. With experience in full-stack development, AI research, and open-source projects, I am always seeking new challenges and opportunities to learn and grow.
 
@@ -36,6 +36,16 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
   - GPA: 4.73 / 5.00 (92.27 on a 100-point scale)
   - Rank: 14 / 199 (Top 7%)
   - English Proficiency: CET-6
+
+<div class="paper-box"><div class="paper-box-image"><div><img src="images/tongji.png" alt="image" width="100%"></div></div>
+<div class="paper-box-text" markdown="1">
+- *2022 / 08 - 2026 / 06*, Tongji University - School of Computer Science and Technology
+  - Bachelor's Degree in Software Engineering
+  - GPA: 4.73 / 5.00 (92.27 on a 100-point scale)
+  - Rank: 14 / 199 (Top 7%)
+  - English Proficiency: CET-6
+</div>
+</div>
 
 <span class="anchor" id="honors-and-awards"></span>
 
@@ -73,7 +83,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 <span class="anchor" id="internships"></span>
 
-# 👨‍💻 Internships
+# 💻 Internships
 
 - *2024 / 07 - 2024 / 08*, Changjiang Pension Insurance Co., Pacific Insurance Group
 
@@ -86,7 +96,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 <span class="anchor" id="projects"></span>
 
-# 💻 Projects
+# 🧩 Projects
 
 <div class="paper-box"><div class="paper-box-image"><div><div class="badge">Teamfight Tactics</div><img src="images/teamfight-tactics.png" alt="image" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
@@ -150,12 +160,12 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 <span class="anchor" id="self-evaluation"></span>
 
-# Self-Evaluation
+# 💡 Self-Evaluation
 
 - 🎓 Achieved outstanding academic performance during undergraduate studies, proficient in core computer science knowledge such as data structures and algorithms, operating systems, computer networks, and design patterns, with strong system analysis and design capabilities.
 - ⏰ Served as the group leader for nearly all courses during undergraduate studies, demonstrating excellent project planning and team coordination skills, able to collaborate efficiently with team members and drive project progress effectively.
 - 📑 Passionate about technology, with strong programming habits, clear code structure, and attention to detail and maintainability, capable of quickly mastering new technologies and applying them to practical projects.
-- 💡 Enthusiastic about sports, maintaining good physical fitness and a positive attitude towards life, able to handle high-intensity work challenges.
+- 🏃‍♂️‍➡️ Enthusiastic about sports, maintaining good physical fitness and a positive attitude towards life, able to handle high-intensity work challenges.
 
 # 🥰 Take a look at my repositories and let's get in touch!
 
