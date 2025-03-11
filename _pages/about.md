@@ -66,7 +66,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
   - Implemented dynamic kernel adjustment and reduced model parameters to create a lightweight architecture, deploying the algorithm on edge devices for real-time processing and low-power operation.
   - Successfully improved imaging quality and computational efficiency, enabling real-time 3D perception on edge devices and advancing the development of "sensing-computing integration" technology.
 
-- *2023 / 03 - 2024 / 03*, Access Control Mask Detection System Based on Ultralytics
+- *2023 / 03 - 2024 / 03*, Access Control Mask Detection System
 
   *Provincial-level College Student Innovation Training Project - Lead Researcher*
 
@@ -91,6 +91,20 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 <span class="anchor" id="projects"></span>
 
 # 🧩 Projects
+
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="images/atlas-y.png" alt="image" width="100%"></div></div>
+<div class="paper-box-text" markdown="1">
+- *2024 / 10 – 2025 / 02*, Zhimu Cloud: Intelligent Curtain Wall Dataset Management Platform
+
+  *Full-stack Application Development and Database Maintenance*
+
+  - This project provides efficient, secure data storage, processing, and analysis services for the smart curtain wall research platform, promoting the deep integration and innovative application of civil engineering science and computer science.
+  - Responsible for designing and implementing the dataset management platform, supporting basic dataset operations, and providing user authentication, resource access management, and data interface services for 10 external subsystems.
+  - Developed RESTful APIs using Spring Boot, implemented basic dataset operations based on Alibaba Cloud OSS SDK, and used Redis to store login credentials.
+  - Designed and implemented a CI/CD pipeline based on GitHub Actions, providing automated integration and deployment services for 10 external subsystems, and integrated logging functionality.
+  - Successfully delivered the platform, handling over 10,000 data requests daily, providing efficient and secure data support for the smart curtain wall research platform, and driving cross-disciplinary innovative applications.
+</div>
+</div>
 
 <div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="images/atlas-y.png" alt="image" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
