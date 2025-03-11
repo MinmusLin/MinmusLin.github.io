@@ -92,6 +92,8 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 🧩 Projects
 
+🎉 For more interesting and innovative projects, please visit my [GitHub repository](https://github.com/MinmusLin?tab=repositories).
+
 <div class="paper-box"><div class="paper-box-image"><div><div class="badge">Zhimu Cloud</div><img src="images/zhimu-cloud.png" alt="image" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
 - *2024 / 10 – 2025 / 02*, Zhimu Cloud: Intelligent Curtain Wall Dataset Management Platform
@@ -117,31 +119,6 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
   - Developed RESTful APIs using Spring Boot, integrated graph neural network models, designed a MySQL database for efficient data operations, and coordinated the team to deliver the project.
   - Built the team project Wiki using Vue.js (Link: [https://2024.igem.wiki/tongji-software](https://2024.igem.wiki/tongji-software)).
   - The project won an international gold medal in the iGEM competition and received high recognition from dozens of international synthetic biology researchers. As one of the team leaders, presented the project in Paris, France.
-</div>
-</div>
-
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">MinmusOS</div><img src="images/minmusos.png" alt="image" width="100%"></div></div>
-<div class="paper-box-text" markdown="1">
-- *2024 / 07 - 2024 / 08*, MinmusOS: The Design and Implementation of an Operating System Based on Rust Language
-
-  *System Development*
-
-  - MinmusOS is a multitasking operating system developed in Rust, targeting the Intel IA-32 (x86) architecture.
-  - The project achieved separation between the system kernel and user space, covering core functionalities such as boot processes, task scheduling, memory management, and device drivers.
-  - Leveraging Rust's memory safety mechanisms, the project effectively addressed memory safety issues commonly found in traditional operating system kernels.
-  - Through this project, I gained a foundational understanding of Rust, deepened my knowledge of operating system principles, became familiar with Linux-related toolchains, and significantly improved my system development skills.
-</div>
-</div>
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Teamfight Tactics</div><img src="images/teamfight-tactics.png" alt="image" width="100%"></div></div>
-<div class="paper-box-text" markdown="1">
-- *2023 / 11 - 2023 / 12*, Teamfight Tactics: A Game Developed with Cocos2d-x
-
-  *Windows Application Development*
-
-  - Implemented core functionalities such as character control, combat systems, and equipment synthesis using object-oriented programming (encapsulation, inheritance, polymorphism).
-  - The project is open-sourced on GitHub and has received positive feedback and support from the open-source community.
-  - Through this project, I gained in-depth knowledge of Cocos2d-x game engine development and valuable experience in interacting with the open-source community and handling feedback.
-  - The project won the Bronze Award at Tongji University in the China International College Students Innovation Competition (2024) and the Bronze Award at the 9th "Huichuang Youth" Shanghai College Students Cultural and Creative Works Exhibition.
 </div>
 </div>
 
