@@ -37,7 +37,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
   - Rank: 14 / 199 (Top 7%)
   - English Proficiency: CET-6
 
-<div class="paper-box"><div class="paper-box-image"><div><img src="images/tongji.png" alt="image" width="100%"></div></div>
+<div class="paper-box"><img src="images/tongji.png" alt="image">
 <div class="paper-box-text" markdown="1">
 - *2022 / 08 - 2026 / 06*, Tongji University - School of Computer Science and Technology
   - Bachelor's Degree in Software Engineering
