@@ -31,7 +31,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 📖 Educations
 
-<div style="display: flex"><img src="images/tongji.png" alt="image" style="width: 200px; height: auto">
+<div style="display: flex"><img src="images/tongji.png" alt="image" style="width: 200px; height: 57px">
 <div markdown="1" style="flex: 1">
 - *2022 / 08 - 2026 / 06*, Tongji University - School of Computer Science and Technology
   - Bachelor's Degree in Software Engineering
