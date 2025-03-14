@@ -126,10 +126,12 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 🛠️ Skills
 
-- 🖥️ Proficient in Java programming language and Spring Boot framework, with the ability to develop systems and implement algorithms.
-- 🧰 Experienced in Vue.js ecosystem, possessing full-stack development experience.
-- ⚙️ Familiar with Linux environment and basic operations, skilled in development tools such as Git, Docker, and GitHub Actions CI/CD workflows.
+- 🖥️ Proficient in the fundamentals of the Java language and familiar with JVM principles, with the ability to develop systems and implement algorithms.
+- 🧰 Skilled in frameworks such as Spring Boot and MyBatis, with an understanding of Spring IoC and AOP principles, and experienced with Kafka message queues.
+- ⌨️ Experienced in the Vue.js ecosystem, with full-stack development capabilities.
+- ⚙️ Familiar with the Linux environment and basic operations, proficient in development tools such as Git, Docker, Maven, and GitHub Actions CI/CD workflows.
 - 🗃️ Capable of database design, with expertise in MySQL and Redis.
+- 📑 Knowledgeable in core computer science concepts such as data structures and algorithms, operating systems, and computer networks, with an understanding of common design patterns.
 
 <span class="anchor" id="student-activities"></span>
 
@@ -146,10 +148,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 💡 Self-Evaluation
 
-- 🎓 Achieved outstanding academic performance during undergraduate studies, proficient in core computer science knowledge such as data structures and algorithms, operating systems, computer networks, and design patterns, with strong system analysis and design capabilities.
-- ⏰ Served as the group leader for nearly all courses during undergraduate studies, demonstrating excellent project planning and team coordination skills, able to collaborate efficiently with team members and drive project progress effectively.
-- 📑 Passionate about technology, with strong programming habits, clear code structure, and attention to detail and maintainability, capable of quickly mastering new technologies and applying them to practical projects.
-- 🏃‍♂️‍➡️ Enthusiastic about sports, maintaining good physical fitness and a positive attitude towards life, able to handle high-intensity work challenges.
+During my undergraduate studies, I served as the group leader for nearly all courses, demonstrating strong project planning and team coordination skills, effectively driving project progress. I am passionate about technology and possess good programming habits, enabling me to quickly grasp new technologies and apply them to practical projects. I am also an avid sports enthusiast, maintaining excellent physical fitness and a positive attitude towards life, which allows me to handle high-intensity work challenges with ease.
 
 # 🥰 Take a look at my repositories and let's get in touch!
 
