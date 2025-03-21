@@ -57,6 +57,8 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 🔬 Scientific Research
 
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">National-level SITP</div><img src="images/lightweight-network-for-3d-image-sensor-signal-enhancement.png" alt="image" width="100%"></div></div>
+<div class="paper-box-text" markdown="1">
 - *2024 / 03 - 2025 / 03*, Lightweight Network for 3D Image Sensor Signal Enhancement
 
   *National-level College Student Innovation Training Project - Lead Researcher*
@@ -65,7 +67,11 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
   - Aimed to optimize model inference efficiency, reduce computational complexity, and ensure high-quality depth map and 3D point cloud imaging for applications like robotics, autonomous driving, and AR/VR.
   - Implemented dynamic kernel adjustment and reduced model parameters to create a lightweight architecture, deploying the algorithm on edge devices for real-time processing and low-power operation.
   - Successfully improved imaging quality and computational efficiency, enabling real-time 3D perception on edge devices and advancing the development of "sensing-computing integration" technology.
+</div>
+</div>
 
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Provincial-level SITP</div><img src="images/access-control-mask-detection-system.png" alt="image" width="100%"></div></div>
+<div class="paper-box-text" markdown="1">
 - *2023 / 03 - 2024 / 03*, Access Control Mask Detection System
 
   *Provincial-level College Student Innovation Training Project - Lead Researcher*
@@ -74,6 +80,8 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
   - Design and deploy a system to detect mask usage and proper wearing, reducing manual monitoring in places like schools and transit hubs.
   - Researched YOLO models and trained on open-source datasets for binary mask detection. Expanded datasets with improper mask usage images, fine-tuned model parameters, and improved accuracy. Evaluated performance and deployed the system into access control.
   - Built a high-accuracy, real-time mask detection system capable of identifying proper/improper mask usage. The system is scalable for high-traffic environments, aiding pandemic prevention while cutting labor costs.
+</div>
+</div>
 
 <span class="anchor" id="internships"></span>
 
