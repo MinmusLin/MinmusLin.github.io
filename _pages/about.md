@@ -61,7 +61,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 <div class="paper-box-text" markdown="1">
 - *2024 / 03 - 2025 / 03*, Lightweight Network for 3D Image Sensor Signal Enhancement
 
-  *National-level College Student Innovation Training Project - Lead Researcher*
+  *National-level Student Innovation Training Project - Lead Researcher*
 
   - Developed a lightweight 3D imaging processing algorithm to address the challenges of balancing power consumption and accuracy in Time-of-Flight (ToF) sensors for edge devices.
   - Aimed to optimize model inference efficiency, reduce computational complexity, and ensure high-quality depth map and 3D point cloud imaging for applications like robotics, autonomous driving, and AR/VR.
@@ -74,7 +74,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 <div class="paper-box-text" markdown="1">
 - *2023 / 03 - 2024 / 03*, Access Control Mask Detection System
 
-  *Provincial-level College Student Innovation Training Project - Lead Researcher*
+  *Provincial-level Student Innovation Training Project - Lead Researcher*
 
   - Post-COVID-19, mask-wearing became essential to prevent virus spread. Our team developed a real-time mask detection system using YOLOv8 for access control in high-traffic areas.
   - Design and deploy a system to detect mask usage and proper wearing, reducing manual monitoring in places like schools and transit hubs.
