@@ -122,9 +122,9 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 </div>
 </div>
 
-<span id="skills"></span>
+<span id="technical-skills"></span>
 
-# 🛠️ Skills
+# 🛠️ Technical Skills
 
 - 🖥️ Proficient in the fundamentals of the Java language and familiar with JVM principles, with the ability to develop systems and implement algorithms.
 - 🧰 Skilled in frameworks such as Spring Boot and MyBatis, with an understanding of Spring IoC and AOP principles, and experienced with Kafka message queues.
@@ -143,12 +143,6 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 - 🏆 2024 Huawei Developer Program (HSD) Tongji University Campus Ambassador
 - 💞 Member, Zhongying Public Welfare Promotion Association, Tongji University
 - 👨‍🏫 Senior Peer Mentor, Academic Guidance and Development Center, Tongji University
-
-<span class="anchor" id="self-evaluation"></span>
-
-# 💡 Self-Evaluation
-
-During my undergraduate studies, I served as the group leader for nearly all courses, demonstrating strong project planning and team coordination skills, effectively driving project progress. I am passionate about technology and possess good programming habits, enabling me to quickly grasp new technologies and apply them to practical projects. I am also an avid sports enthusiast, maintaining excellent physical fitness and a positive attitude towards life, which allows me to handle high-intensity work challenges with ease.
 
 # 🥰 Take a look at my repositories and let's get in touch!
 
