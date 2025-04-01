@@ -93,7 +93,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 💻 Internships
 
-<div style="display: flex; align-items: center"><img src="images/cpic-changjiangpension.png" style="width: 154px; height: 104px; margin-right: 20px">
+<div style="display: flex; align-items: center"><img src="images/cpic-changjiangpension.png" style="width: 154px; height: 154px; margin-right: 20px">
 <div markdown="1" style="flex: 1">
 - *2024 / 07 - 2024 / 08*, Changjiang Pension Insurance Co., Pacific Insurance Group
 
