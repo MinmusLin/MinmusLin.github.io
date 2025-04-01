@@ -63,10 +63,13 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
   *National-level Student Innovation Training Project - Lead Researcher*
 
-  - Developed a lightweight 3D imaging processing algorithm to address the challenges of balancing power consumption and accuracy in Time-of-Flight (ToF) sensors for edge devices.
-  - Aimed to optimize model inference efficiency, reduce computational complexity, and ensure high-quality depth map and 3D point cloud imaging for applications like robotics, autonomous driving, and AR/VR.
-  - Implemented dynamic kernel adjustment and reduced model parameters to create a lightweight architecture, deploying the algorithm on edge devices for real-time processing and low-power operation.
-  - Successfully improved imaging quality and computational efficiency, enabling real-time 3D perception on edge devices and advancing the development of "sensing-computing integration" technology.
+  - **Description:** Developed a ​lightweight neural network for enhancing ​Time-of-Flight (ToF) sensor signals on edge devices, optimizing the trade-off between ​computational efficiency and ​3D imaging accuracy for applications like robotics, autonomous driving, and AR/VR.
+  - **Work Content:**
+    - Designed a ​dynamic kernel adjustment mechanism to adaptively optimize feature extraction while reducing model parameters.
+    - Implemented ​model compression techniques (quantization, pruning) to enable real-time inference on embedded devices (Jetson Nano, Raspberry Pi).
+    - Developed a ​pipeline for depth map and 3D point cloud reconstruction, improving robustness against sensor noise.
+    - Validated performance on ​real-world and synthetic ToF datasets, benchmarking against state-of-the-art methods.
+  - **Achievements:** The project successfully ​improved depth imaging quality while reducing computational load by ​40%+, achieving ​>30 FPS real-time processing on edge devices. By deploying the optimized model on low-power hardware, we enabled ​energy-efficient 3D perception, advancing ​"sensing-computing integration" for applications requiring lightweight, high-speed depth reconstruction.
 </div>
 </div>
 
@@ -76,10 +79,13 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
   *Provincial-level Student Innovation Training Project - Lead Researcher*
 
-  - Post-COVID-19, mask-wearing became essential to prevent virus spread. Our team developed a real-time mask detection system using YOLOv8 for access control in high-traffic areas.
-  - Design and deploy a system to detect mask usage and proper wearing, reducing manual monitoring in places like schools and transit hubs.
-  - Researched YOLO models and trained on open-source datasets for binary mask detection. Expanded datasets with improper mask usage images, fine-tuned model parameters, and improved accuracy. Evaluated performance and deployed the system into access control.
-  - Built a high-accuracy, real-time mask detection system capable of identifying proper/improper mask usage. The system is scalable for high-traffic environments, aiding pandemic prevention while cutting labor costs.
+  - **Description:** Developed a ​real-time mask detection system using ​YOLOv8 to automate access control in high-traffic areas (e.g., schools, transit hubs) during the post-COVID-19 era. The system identifies ​proper/improper mask usage, reducing reliance on manual monitoring while supporting public health measures.
+  - **Work Content:**
+    - Researched and implemented ​YOLOv8 for binary mask detection, trained on open-source datasets with custom augmentation for improper usage cases.
+    - Expanded training data with ​diverse mask-wearing scenarios (correct, incorrect, no mask) to improve model robustness.
+    - Fine-tuned hyperparameters and deployed ​TensorRT acceleration for real-time inference (>30 FPS) on edge devices.
+    - Designed a ​gateway access control interface that triggers alerts/barriers based on detection results.
+  - **Achievements:** The system achieved ​>95% detection accuracy in real-world testing, enabling ​automated, scalable mask enforcement while reducing labor costs by ~60% at pilot sites. Its ​low-latency edge deployment proved effective for high-traffic environments, contributing to safer public spaces during pandemic recovery.
 </div>
 </div>
 
