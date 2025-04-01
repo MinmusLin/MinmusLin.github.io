@@ -31,7 +31,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 📖 Educations
 
-<div style="display: flex; align-items: center"><img src="images/tongji.png" alt="image" style="width: 200px; height: 57px; margin-right: 20px">
+<div style="display: flex; align-items: center"><img src="images/tongji.png" style="width: 200px; height: 57px; margin-right: 20px">
 <div markdown="1" style="flex: 1">
 - *2022 / 08 - 2026 / 06*, Tongji University - School of Computer Science and Technology
   - Bachelor's Degree in Software Engineering
@@ -57,7 +57,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 🔬 Scientific Research
 
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">National-level SITP</div><img src="images/lightweight-network-for-3d-image-sensor-signal-enhancement.png" alt="image" width="100%"></div></div>
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">National-level SITP</div><img src="images/lightweight-network-for-3d-image-sensor-signal-enhancement.png" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
 - *2024 / 03 - 2025 / 03*, Lightweight Network for 3D Image Sensor Signal Enhancement
 
@@ -73,7 +73,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 </div>
 </div>
 
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Provincial-level SITP</div><img src="images/access-control-mask-detection-system.png" alt="image" width="100%"></div></div>
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Provincial-level SITP</div><img src="images/access-control-mask-detection-system.png" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
 - *2023 / 03 - 2024 / 03*, Access Control Mask Detection System
 
@@ -93,6 +93,8 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 💻 Internships
 
+<div style="display: flex; align-items: center"><img src="images/cpic-changjiangpension.png" style="width: 154px; height: 104px; margin-right: 20px">
+<div markdown="1" style="flex: 1">
 - *2024 / 07 - 2024 / 08*, Changjiang Pension Insurance Co., Pacific Insurance Group
 
   *Intern, Information Technology Department*
@@ -100,6 +102,8 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
   - **Description:** Participated in the development and setup of the company's due diligence assistant, aimed at improving the efficiency of due diligence through automated workflows, addressing the issues of time consumption and high costs in traditional due diligence processes.
   - **Responsibilities:** Deployed Dify on local servers, designed and implemented the due diligence assistant Workflow, covering question classification, meeting minutes generation, opinion consistency analysis, and routine issue handling; integrated databases and leveraged LLM APIs for efficient processing, designed classification and processing logic, tested and optimized the Workflow to ensure accuracy and efficiency.
   - **Achievements:** Successfully deployed and launched the due diligence assistant, achieving over 95% accuracy in question classification. The meeting minutes generation and opinion analysis functions significantly improved efficiency, receiving positive feedback from the due diligence team.
+</div>
+</div>
 
 <span class="anchor" id="projects"></span>
 
@@ -107,9 +111,9 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 🎉 For more interesting and innovative projects, please visit my [GitHub repository](https://github.com/MinmusLin?tab=repositories).
 
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Zhimu Cloud</div><img src="images/zhimu-cloud.png" alt="image" width="100%"></div></div>
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Zhimu Cloud</div><img src="images/zhimu-cloud.png" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
-- *2024 / 10 – 2025 / 02*, Zhimu Cloud: Intelligent Curtain Wall Dataset Management Platform
+- *2024 / 10 – 2025 / 03*, Zhimu Cloud: Intelligent Curtain Wall Dataset Management Platform
 
   *Full-stack Application Development and Database Maintenance*
 
@@ -124,7 +128,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 </div>
 </div>
 
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="images/atlas-y.png" alt="image" width="100%"></div></div>
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="images/atlas-y.png" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
 - *2024 / 03 – 2024 / 10*, Atlas.Y: Advanced Targeting and Localization Assistance System for Yeast
 
