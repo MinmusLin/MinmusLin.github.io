@@ -66,7 +66,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
   - **Description:** Developed a ​lightweight neural network for enhancing ​Time-of-Flight (ToF) sensor signals on edge devices, optimizing the trade-off between ​computational efficiency and ​3D imaging accuracy for applications like robotics, autonomous driving, and AR/VR.
   - **Responsibilities:**
     - Designed a ​dynamic kernel adjustment mechanism to adaptively optimize feature extraction while reducing model parameters.
-    - Implemented ​model compression techniques (quantization, pruning) to enable real-time inference on embedded devices (Jetson Nano, Raspberry Pi).
+    - Implemented ​model compression techniques (quantization, pruning) to enable real-time inference on embedded devices (NVIDIA Jetson Orin NX).
     - Developed a ​pipeline for depth map and 3D point cloud reconstruction, improving robustness against sensor noise.
     - Validated performance on ​real-world and synthetic ToF datasets, benchmarking against state-of-the-art methods.
   - **Achievements:** The project successfully ​improved depth imaging quality while reducing computational load by ​40%+, achieving ​>30 FPS real-time processing on edge devices. By deploying the optimized model on low-power hardware, we enabled ​energy-efficient 3D perception, advancing ​"sensing-computing integration" for applications requiring lightweight, high-speed depth reconstruction.
@@ -83,7 +83,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
   - **Responsibilities:**
     - Researched and implemented ​YOLOv8 for binary mask detection, trained on open-source datasets with custom augmentation for improper usage cases.
     - Expanded training data with ​diverse mask-wearing scenarios (correct, incorrect, no mask) to improve model robustness.
-    - Fine-tuned hyperparameters and deployed ​TensorRT acceleration for real-time inference (>30 FPS) on edge devices.
+    - Fine-tuned hyperparameters for real-time inference (>30 FPS) on edge devices.
     - Designed a ​gateway access control interface that triggers alerts/barriers based on detection results.
   - **Achievements:** The system achieved ​>95% detection accuracy in real-world testing, enabling ​automated, scalable mask enforcement while reducing labor costs by ~60% at pilot sites. Its ​low-latency edge deployment proved effective for high-traffic environments, contributing to safer public spaces during pandemic recovery.
 </div>
