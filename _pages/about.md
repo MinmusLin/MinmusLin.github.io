@@ -140,6 +140,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
     - Led full-stack development, building a system for molecular tag design and optimization, ensuring efficient data processing and model integration.
     - Designed a ​MySQL database to store multi-dimensional data (signal peptides, linkers, user query logs, etc.), optimizing indexes to reduce query latency.
     - Integrated ​AlphaFold and ​Rosetta for fusion protein generation and stability assessment, and implemented protein directed evolution using a graph neural network model.
+    - In the process of fusion protein generation and directed evolution, using a Bloom filter to determine whether a specific molecular tag combination has already been computed significantly reduces computational resource consumption.
     - Established an encrypted ​SSH tunnel to bypass port restrictions on the ​AutoDL computing platform, ensuring stable GPU service access.
     - Resolved ​NGL library rendering issues for 3D protein visualization by analyzing source code due to outdated official documentation.
   - **Achievements:** The project won an ​iGEM Gold Medal (top 10% globally) and received high praise from nearly 100 international synthetic biology researchers. The software has been adopted by research teams at ​MIT, Tsinghua University, East China University of Science and Technology, and others. As one of the team leaders, I represented Tongji University at the ​in-person Grand Jamboree in Paris, France, to showcase the project.
