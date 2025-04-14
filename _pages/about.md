@@ -63,13 +63,14 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
   *National-level Student Innovation Training Project - Lead Researcher*
 
-  - **Description:** Developed a ​lightweight neural network for enhancing ​Time-of-Flight (ToF) sensor signals on edge devices, optimizing the trade-off between ​computational efficiency and ​3D imaging accuracy for applications like robotics, autonomous driving, and AR/VR.
+  - **Description:** This research addresses the issues of high power consumption and computational complexity in Time-of-Flight (ToF) 3D imaging technology on edge devices by proposing a lightweight, high-performance 3D image processing algorithm. Through dynamic convolution kernel design, multi-scale detail optimization, and network pruning techniques, the model's parameter count and computational burden are significantly reduced while maintaining high-precision imaging performance, providing a feasible solution for ToF sensor applications in mobile and embedded devices.
   - **Responsibilities:**
-    - Designed a ​dynamic kernel adjustment mechanism to adaptively optimize feature extraction while reducing model parameters.
-    - Implemented ​model compression techniques (quantization, pruning) to enable real-time inference on embedded devices (NVIDIA Jetson Orin NX).
-    - Developed a ​pipeline for depth map and 3D point cloud reconstruction, improving robustness against sensor noise.
-    - Validated performance on ​real-world and synthetic ToF datasets, benchmarking against state-of-the-art methods.
-  - **Achievements:** The project successfully ​improved depth imaging quality while reducing computational load by ​40%+, achieving ​>30 FPS real-time processing on edge devices. By deploying the optimized model on low-power hardware, we enabled ​energy-efficient 3D perception, advancing ​"sensing-computing integration" for applications requiring lightweight, high-speed depth reconstruction.
+    - Designed multi-scale dynamic convolution kernels with adaptive kernel range adjustment to enhance detail capture capability, achieving a 15% reduction in computational complexity on the DeepCGLR network.
+    - Combined weight pruning (L1 regularization) with sparse connection strategies to eliminate redundant parameters, reducing model parameters by 40% and compressing memory usage to 35% of the original model.
+    - Successfully deployed the algorithm on the NVIDIA Jetson Orin NX platform, achieving a 50% reduction in power consumption, a 2x improvement in inference speed, and meeting real-time requirements (30fps).
+    - Tested with real ToF sensor data, maintaining a PSNR above 32dB on CPU/integrated GPU environments, significantly outperforming traditional methods (28dB).
+    - Proposed a collaborative optimization framework for lightweight models and sensor hardware, providing algorithmic support for future "sensor-computing integration" chip design.
+  - **Achievements:** The project successfully achieved lightweight and efficient ToF 3D imaging algorithms, reducing model parameters by 40%, improving edge inference speed by 2x, and lowering power consumption by 50%, with real-time validation (30fps) on Jetson Orin NX. The technology can be applied to smartphones, AR/VR, and autonomous driving, advancing 3D imaging toward low-power, high-real-time edge computing scenarios.
 </div>
 </div>
 
@@ -79,13 +80,13 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
   *Provincial-level Student Innovation Training Project - Lead Researcher*
 
-  - **Description:** Developed a ​real-time mask detection system using ​YOLOv8 to automate access control in high-traffic areas (e.g., schools, transit hubs) during the post-COVID-19 era. The system identifies ​proper/improper mask usage, reducing reliance on manual monitoring while supporting public health measures.
+  - **Description:** In the post-pandemic era, we developed a ​​multi-class real-time mask detection system​​ based on ​​YOLOv8​​ for automated access control in high-traffic areas (e.g., schools, transit hubs). The system not only identifies whether masks are worn but also further distinguishes between ​​proper wearing, improper wearing, and no mask​​ states, significantly improving control accuracy and scenario adaptability.
   - **Responsibilities:**
-    - Researched and implemented ​YOLOv8 for binary mask detection, trained on open-source datasets with custom augmentation for improper usage cases.
-    - Expanded training data with ​diverse mask-wearing scenarios (correct, incorrect, no mask) to improve model robustness.
-    - Fine-tuned hyperparameters for real-time inference (>30 FPS) on edge devices.
-    - Designed a ​gateway access control interface that triggers alerts/barriers based on detection results.
-  - **Achievements:** The system achieved ​>95% detection accuracy in real-world testing, enabling ​automated, scalable mask enforcement while reducing labor costs by ~60% at pilot sites. Its ​low-latency edge deployment proved effective for high-traffic environments, contributing to safer public spaces during pandemic recovery.
+    - Implemented a ​​multi-class mask detection model​​ using the ​​YOLOv8 framework​​, enhancing small-object detection performance through network structure optimization.
+    - Conducted systematic ​​data collection and cleaning​​, employing oversampling techniques and class weighting to address class imbalance during model training.
+    - Developed a ​​visual interface for the access control system​​ using the ​​Qt framework​​, integrating real-time detection, alarm logging, and permission management functionalities.
+    - Designed a dynamic threshold mechanism to automatically adjust detection sensitivity based on crowd density, balancing false positive rates and recall.
+  - **Achievements:** The system achieved ​​>95% detection accuracy in real-world testing​​, enabling ​​automated, scalable mask enforcement​​ while reducing labor costs by ​​~60% at pilot sites​​. Its ​​low-latency edge deployment​​ proved highly effective in high-traffic environments, contributing to safer public spaces during pandemic recovery.
 </div>
 </div>
 
