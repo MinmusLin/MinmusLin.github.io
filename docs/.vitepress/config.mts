@@ -72,15 +72,15 @@ export default defineConfig({
       link: 'https://github.com/MinmusLin'
     }],
     footer: {
-      message: 'Released under the <a href="https://github.com/MinmusLin/MinmusLin.github.io/blob/main/LICENSE">MIT License</a>.',
-      copyright: 'Copyright © 2025-Present <a href="https://github.com/MinmusLin">Jishen Lin</a>'
+      message: 'Released under the <a href="https://github.com/MinmusLin/MinmusLin.github.io/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>.',
+      copyright: 'Copyright © 2025-Present <a href="https://github.com/MinmusLin" target="_blank" rel="noopener noreferrer">Jishen Lin</a>'
     },
     editLink: {
       pattern: 'https://github.com/MinmusLin/MinmusLin.github.io/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页'
     },
     lastUpdated: {
-      text: '最后更新于：'
+      text: '最后更新于'
     },
     docFooter: {
       prev: '上一篇文章',
