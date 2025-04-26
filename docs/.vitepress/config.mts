@@ -4,7 +4,7 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
   title: 'MinmusLin\'s Blog',
   description: "Stack Trace | MinmusLin's Blog | 记录代码、Bug 与偶尔的灵光一现",
-  head: [['link', {rel: 'icon', href: '/favicon.ico'}]],
+  head: [['link', {rel: 'icon', href: '/public/favicon.ico'}]],
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
@@ -72,11 +72,11 @@ export default defineConfig({
       link: 'https://github.com/MinmusLin'
     }],
     footer: {
-      message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
+      message: 'Released under the <a href="https://github.com/MinmusLin/MinmusLin.github.io/blob/main/LICENSE">MIT License</a>.',
       copyright: 'Copyright © 2025-Present <a href="https://github.com/MinmusLin">Jishen Lin</a>'
     },
     editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      pattern: 'https://github.com/MinmusLin/MinmusLin.github.io/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页'
     },
     lastUpdated: {
