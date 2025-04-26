@@ -4,7 +4,7 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
   title: 'MinmusLin\'s Blog',
   description: "Stack Trace | MinmusLin's Blog | 记录代码、Bug 与偶尔的灵光一现",
-  head: [['link', {rel: 'icon', href: '/public/favicon.ico'}]],
+  head: [['link', {rel: 'icon', href: '/favicon.ico'}]],
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
