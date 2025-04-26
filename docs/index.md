@@ -40,11 +40,4 @@ features:
     target:
 ---
 
-## Getting Started
-
-You can get started using VitePress right away using `npx`!
-
-```sh
-npm init
-npx vitepress init
-```
+我是林继申！可以点击“我的简历”查看我的 PDF 简历。个人博客网站正在更新和配置中，暂未完工~
