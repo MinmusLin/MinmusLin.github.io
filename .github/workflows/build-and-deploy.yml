@@ -1,4 +1,4 @@
-name: Deploy VitePress site to Pages
+name: deploy-vitepress-site
 
 on:
   push:
@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: Build
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,11 +33,11 @@ jobs:
           cache: pnpm
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      - name: Install dependencies
+      - name: Install Dependencies
         run: pnpm install
       - name: Build with VitePress
         run: pnpm build
-      - name: Upload artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
