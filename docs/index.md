@@ -11,14 +11,10 @@ hero:
   actions:
     - theme: brand
       text: 关于我
-      link: /markdown-examples
-      target:
-      rel:
+      link: /about
     - theme: alt
       text: 我的简历
-      link: /api-examples
-      target:
-      rel:
+      link: https://raw.githubusercontent.com/MinmusLin/MinmusLin.github.io/main/docs/public/cv/cv.pdf
 
 features:
   - icon: 🛠️
