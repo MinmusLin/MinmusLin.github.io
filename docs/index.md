@@ -40,4 +40,8 @@ features:
     target:
 ---
 
-我是林继申！可以点击“我的简历”查看我的 PDF 简历。个人博客网站正在更新和配置中，暂未完工~
+I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [School of Computer Science and Technology](https://cs.tongji.edu.cn), [Tongji University](https://www.tongji.edu.cn). I am passionate about full-stack development and committed to practicing elegant engineering solutions. I enjoy collaborating with diverse teams to explore cutting-edge technologies and solve real-world problems through innovative and efficient solutions. With experience in full-stack development, AI research, and open-source projects, I am always seeking new challenges and opportunities to learn and grow.
+
+<img src="https://profile-counter.glitch.me/MinmusLin/count.svg" style="margin: 0 auto">
+
+欢迎来到我的博客！博客正在搭建中，尚未完工，可以点击“我的简历”查看我的简历~
