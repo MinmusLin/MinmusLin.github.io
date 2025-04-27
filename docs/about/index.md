@@ -10,7 +10,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 📖 Educations
 
-<div style="display: flex; align-items: center"><img src="images/tongji.png" style="width: 200px; height: 57px; margin-right: 20px">
+<div style="display: flex; align-items: center"><img src="/images/tongji.png" style="width: 200px; height: 57px; margin-right: 20px">
 <div markdown="1" style="flex: 1">
 - *2022 / 08 - 2026 / 06*, Tongji University - School of Computer Science and Technology
   - Bachelor's Degree in Software Engineering
@@ -32,7 +32,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 🔬 Scientific Research
 
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">National-level SITP</div><img src="images/lightweight-network-for-3d-image-sensor-signal-enhancement.png" width="100%"></div></div>
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">National-level SITP</div><img src="/images/lightweight-network-for-3d-image-sensor-signal-enhancement.png" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
 - *2024 / 03 - 2025 / 03*, Lightweight Network for 3D Image Sensor Signal Enhancement
 
@@ -49,7 +49,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 </div>
 </div>
 
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Provincial-level SITP</div><img src="images/access-control-mask-detection-system.png" width="100%"></div></div>
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Provincial-level SITP</div><img src="/images/access-control-mask-detection-system.png" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
 - *2023 / 03 - 2024 / 03*, Access Control Mask Detection System
 
@@ -67,7 +67,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 # 💻 Internships
 
-<div style="display: flex; align-items: center"><img src="images/cpic-changjiangpension.png" style="width: 154px; height: 154px; margin-right: 20px">
+<div style="display: flex; align-items: center"><img src="/images/cpic-changjiangpension.png" style="width: 154px; height: 154px; margin-right: 20px">
 <div markdown="1" style="flex: 1">
 - *2024 / 07 - 2024 / 08*, Changjiang Pension Insurance Co., Pacific Insurance Group
 
@@ -83,7 +83,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 
 🎉 For more interesting and innovative projects, please visit my [GitHub repository](https://github.com/MinmusLin?tab=repositories).
 
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Zhimu Cloud</div><img src="images/zhimu-cloud.png" width="100%"></div></div>
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Zhimu Cloud</div><img src="/images/zhimu-cloud.png" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
 - *2024 / 10 – 2025 / 03*, Zhimu Cloud: Intelligent Curtain Wall Dataset Management Platform
 
@@ -100,7 +100,7 @@ I'm Jishen Lin, an undergraduate student majoring in Software Engineering at [Sc
 </div>
 </div>
 
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="images/atlas-y.png" width="100%"></div></div>
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">Atlas.Y</div><img src="/images/atlas-y.png" width="100%"></div></div>
 <div class="paper-box-text" markdown="1">
 - *2024 / 03 – 2024 / 10*, Atlas.Y: Advanced Targeting and Localization Assistance System for Yeast
 
