@@ -10,13 +10,23 @@
 
 举例如下：假如现在一共有 3 个将军 A，B 和 C，每个将军都有一个随机时间的倒计时器，倒计时一结束，这个将军就把自己当成大将军候选人，然后派信使传递选举投票的信息给将军 B 和 C，如果将军 B 和 C 还没有把自己当作候选人（自己的倒计时还没有结束），并且没有把选举票投给其他人，它们就会把票投给将军 A，信使回到将军 A 时，将军 A 知道自己收到了足够的票数，成为大将军。在有了大将军之后，是否需要进攻就由大将军 A 决定，然后再去派信使通知另外两个将军，自己已经成为了大将军。如果一段时间还没收到将军 B 和 C 的回复（信使可能会被暗杀），那就再重派一个信使，直到收到回复。
 
+## 复制状态机
+
+复制状态机的核心思想：**相同的初始状态 + 相同的输入 = 相同的结束状态**
+
+<img src="/images/2025-04-26_23-33-05.png" style="margin: 0 auto">
+
+多个节点上，从相同的初始状态开始，执行相同的一串命令，产生相同的最终状态。
+
+在 Raft 中，Leader 将客户端请求（Command）封装到一个个 log entry 中，将这些 log entries 复制到所有 follower 节点，然后大家按相同顺序应用 log entries 中的 command，根据复制状态机的理论，大家的结束状态肯定是一致的。
+
 ## 共识算法
 
 共识是可容错系统中的一个基本问题：即使面对故障，服务器也可以在共享状态上达成一致。
 
 共识算法允许一组节点像一个整体一样一起工作，即使其中的一些节点出现故障也能够继续工作下去，其正确性主要是源于复制状态机的性质：一组 Server 的状态机计算相同状态的副本，即使有一部分的 Server 宕机了它们仍然能够继续运行。
 
-<img src="/images/2025-04-26_23-33-05.png" style="margin: 0 auto">
+**我们使用共识算法，就是为了实现复制状态机。**
 
 一般通过使用复制日志来实现复制状态机。
 
@@ -31,7 +41,7 @@
 * **一致性不依赖时序**：错误的时钟和极端的消息延迟，在最坏的情况下也只会造成可用性问题，而不会产生一致性问题。
 * **在集群中大多数服务器响应，命令就可以完成**：不会被少数运行缓慢的服务器来影响整体系统性能。
 
-## Raft 基础
+## 状态简化
 
 ### 节点类型
 
@@ -47,30 +57,39 @@
 
 ### 任期
 
-Raft 算法将时间划分为任意长度的任期（term），任期用连续的数字表示，看作当前 term 号。每一个任期的开始都是一次选举，在选举开始时，一个或多个 Candidate 会尝试成为 Leader。如果一个 Candidate 赢得了选举，它就会在该任期内担任 Leader。如果没有选出 Leader，将会开启另一个任期，并立刻开始下一次选举。Raft 算法保证在给定的一个任期最少要有一个 Leader。
+Raft 算法将时间划分为任意长度的任期（term），任期用连续的数字表示，看作当前 term 号。每一个任期的开始都是一次选举，在选举开始时，一个或多个 Candidate 会尝试成为 Leader。如果一个 Candidate 赢得了选举，它就会在该任期内担任 Leader。如果没有选出 Leader，将会开启另一个任期，并立刻开始下一次选举。**Raft 算法保证在任意一个任期内，最多只有一个 Leader。**
 
 <img src="/images/2025-04-27_13-50-45.png" style="margin: 0 auto">
 
-每个节点都会存储当前的 term 号，当服务器之间进行通信时会交换当前的 term 号；如果有服务器发现自己的 term 号比其他人小，那么他会更新到较大的 term 值。如果一个 Candidate 或者 Leader 发现自己的 term 过期了，他会立即退回成 Follower。如果一台服务器收到的请求的 term 号是过期的，那么它会拒绝此次请求。
+### RPC 通信
+
+Raft 算法中服务器节点之间使用 RPC 进行通信，并且 Raft 中只有两种主要的 RPC：
+
+* **RequestVote RPC（请求投票）**：由 Candidate 在选举期间发起。
+* **AppendEntries RPC（追加条目）**：由 Leader 发起，用来复制日志和提供一种心跳机制。
+
+每个节点都会存储当前的 term 号，当服务器之间进行通信时会交换当前的 term 号：
+
+* 如果有服务器发现自己的 term 号比其他人小，那么他会更新到较大的 term 值。
+* 如果一个 Candidate 或者 Leader 发现自己的 term 过期了，他会立即退回成 Follower。
+* 如果一台服务器收到的请求的 term 号是过期的，那么它会拒绝此次请求。
 
 ### 日志
 
-* **entry**：每一个事件成为 entry，只有 Leader 可以创建 entry。entry 的内容为 `<term, index, cmd>` 其中 cmd 是可以应用到状态机的操作。
+* **entry**：每一个事件成为 entry，只有 Leader 可以创建 entry。entry 的内容为 `<term, index, cmd>`，其中 cmd 是可以应用到状态机的操作。
 * **log**：由 entry 构成的数组，每一个 entry 都有一个表明自己在 log 中的 index。只有 Leader 才可以改变其他节点的 log。entry 总是先被 Leader 添加到自己的 log 数组中，然后再发起共识请求，获得同意后才会被 Leader 提交给状态机。Follower 只能从 Leader 获取新日志和当前的 commitIndex，然后把对应的 entry 应用到自己的状态机中。
 
 ## 领导人选举
 
-Raft 使用 **心跳机制** 来触发 Leader 的选举。
-
-如果一台服务器能够收到来自 Leader 或者 Candidate 的有效信息，那么它会一直保持为 Follower 状态，并且刷新自己的 electionElapsed，重新计时。
+Raft 使用 **心跳机制** 来触发 Leader 的选举。如果一台服务器能够收到来自 Leader 或者 Candidate 的有效信息，那么它会一直保持为 Follower 状态，并且刷新自己的 electionElapsed，重新计时。
 
 Leader 会向所有的 Follower 周期性发送心跳来保证自己的 Leader 地位。如果一个 Follower 在一个周期内没有收到心跳信息，就叫做选举超时，然后它就会认为此时没有可用的 Leader，并且开始进行一次选举以选出一个新的 Leader。
 
-为了开始新的选举，Follower 会自增自己的 term 号并且转换状态为 Candidate。然后他会向所有节点发起 RequestVoteRPC 请求， Candidate 的状态会持续到以下情况发生：
+为了开始新的选举，Follower 会 **自增自己的 term 号** 并且 **转换状态为 Candidate**。然后他会 **投票给自己**，并且并行地向所有节点发起 RequestVote RPC 请求，Candidate 的状态会持续到以下情况发生：
 
-* 赢得选举
-* 其他节点赢得选举
-* 一轮选举结束，无人胜出
+* **获得超过半数选票赢得选举**：成为 Leader 并开始发送心跳。
+* **其他节点赢得选举**：收到新 Leader 的心跳后，如果新 Leader 的任期号不小于自己当前的任期号，那么就从 Candidate 回到 Follower 状态。
+* **一轮选举结束无人胜出**：每个 Candidate 都在一个自己的随机选举超时时间后增加任期号开始新一轮投票。
 
 赢得选举的条件是：一个 Candidate 在一个任期内收到了来自集群内的多数选票（$\frac{N}{2}+1$），就可以成为 Leader。
 
@@ -80,6 +99,33 @@ Leader 会向所有的 Follower 周期性发送心跳来保证自己的 Leader �
 * 该 Leader 的 term 号小于自己的 term 号，那么会拒绝该请求并让该节点更新 term。
 
 由于可能同一时刻出现多个 Candidate，导致没有 Candidate 获得大多数选票，如果没有其他手段来重新分配选票的话，那么可能会无限重复下去。Raft 使用了 **随机的选举超时时间** 来避免上述情况。每一个 Candidate 在发起选举后，都会随机化一个新的选举超时时间，这种机制使得各个服务器能够分散开来，在大多数情况下只有一个服务器会率先超时；它会在其他服务器超时之前赢得选举。
+
+```c:line-numbers {1}
+// 请求投票 RPC Request // [!code highlight]
+struct RequestVoteRequest {
+    int term;         // 自己当前的任期号
+    int candidateId;  // 自己的 ID
+    int lastLogIndex; // 自己最后一个日志号
+    int lastLogTerm;  // 自己最后一个日志的任期
+}
+```
+
+```c:line-numbers {1}
+// 请求投票 RPC Response // [!code highlight]
+struct RequestVoteResponse {
+    int  term;        // 自己当前的任期号
+    bool voteGranted; // 自己是否投票给这个 Candidate
+}
+```
+
+
+
+
+
+
+
+
+
 
 ## 日志复制
 
