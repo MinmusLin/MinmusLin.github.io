@@ -118,58 +118,129 @@ struct RequestVoteResponse {
 }
 ```
 
-
-
-
-
-
-
-
-
+对于没有成为 Candidate 的 Follower 节点，对于同一个任期，会按照 **先来先得** 的原则投出自己的选票。
 
 ## 日志复制
 
-一旦选出了 Leader，它就开始接受客户端的请求。每一个客户端的请求都包含一条需要被复制状态机（Replicated State Machine）执行的命令。Leader 收到客户端请求后，会生成一个 entry，包含 `<index, term, cmd>`，再将这个 entry 添加到自己的日志末尾后，向所有的节点广播该 entry，要求其他服务器复制这条 entry。如果 Follower 接受该 entry，则会将 entry 添加到自己的日志后面，同时返回给 Leader 同意。如果 Leader 收到了多数的成功响应，Leader 会将这个 entry 应用到自己的状态机中，之后可以称这个 entry 是 committed 的，并且向客户端返回执行结果。
+一条日志（`<index, term, cmd>`）中需要具有三个信息：
+
+* 日志号（`index`）
+* Leader 的任期号（`term`）
+* 状态机指令（`cmd`）
+
+<img src="/images/2025-04-28_00-21-24.png" style="margin: 0 auto">
+
+一旦选出了 Leader，它就开始接受客户端的请求。每一个客户端的请求都包含一条需要被复制状态机（Replicated State Machine）执行的命令。Leader 收到客户端请求后，会生成一个 entry，包含 `<index, term, cmd>`，再将这个 entry 添加到自己的日志末尾后，向所有的节点广播该 entry（Leader 并行发送 **AppendEntries RPC** 给 Follower），要求其他服务器复制这条 entry。如果 Follower 接受该 entry，则会将 entry 添加到自己的日志后面，同时返回给 Leader 同意。如果 Leader 收到了超过半数的成功响应，Leader 会将这个 entry 应用到自己的状态机中，之后可以称这个 entry 是 **提交** 的，并且向客户端返回执行结果。
+
+::: tip 日志复制超过了半数的节点后，是否就会百分百会提交呢？
+不是。因为从 Follower 复制完成，到 Follower 通知 Leader，再到 Leader 完成提交，是需要时间的。在这个时间内如果 Leader 宕机了，日志复制虽然超过了半数的节点，但是未能完成提交。
+:::
 
 Raft 保证以下两个性质：
 
-* 在两个日志里，有两个 entry 拥有相同的 index 和 term，那么它们一定有相同的 cmd。
-* 在两个日志里，有两个 entry 拥有相同的 index 和 term，那么它们前面的 entry 也一定相同。
+* 在两个日志里，有两个 entry 拥有相同的 index 和 term，那么它们一定有相同的 cmd。**（通过“仅有 Leader 可以生成 entry”来保证第一个性质）**
+* 在两个日志里，有两个 entry 拥有相同的 index 和 term，那么它们前面的 entry 也一定相同。**（通过“一致性检查”来保证第二个性质）**
 
-通过“仅有 Leader 可以生成 entry”来保证第一个性质，第二个性质需要一致性检查来进行保证。一般情况下，Leader 和 Follower 的日志保持一致，然后，Leader 的崩溃会导致日志不一样，这样一致性检查会产生失败。Leader 通过强制 Follower 复制自己的日志来处理日志的不一致。这就意味着，在 Follower 上的冲突日志会被领导者的日志覆盖。
+在此过程中，Leader 或 Follower 随时都有崩溃或缓慢的可能性，Raft 必须要在有宕机的情况下继续支持日志复制，并且保证每个副本日志顺序的一致，以保证复制状态机的实现。具体有三种可能：
+
+1. 如果有 Follower 因为某些原因没有给 Leader 响应，那么 Leader 会不断地重发追加条目请求（**AppendEntries RPC**），哪怕 Leader 已经回复了客户端。
+2. 如果有 Follower 崩溃后恢复，这时 Raft 追加条目的一致性检查生效，保证 Follower 能按顺序恢复崩溃后缺失的日志。
+
+::: tip Raft 的一致性检查
+Leader 在每一个发往 Follower 的追加条目 RPC 中，会放入前一个日志条目的索引位置和任期号，如果 Follower 在它的日志中找不到前一个日志，那么它就会拒绝此日志，Leader 收到 Follower 的拒绝后，会发送前一个日志条目，从而逐渐向前定位到 Follower 第一个缺失的日志。
+:::
+
+3. 如果 Leader 崩溃，那么崩溃的 Leader 可能已经复制了日志到部分 Follower 但还没有提交，而被选出的新 Leader 又可能不具备这些日志，这样就有部分 Follower 中的日志和新 Leader 的日志不相同。Raft 在这种情况下，Leader 通过 **强制 Follower 复制它的日志** 来解决不一致的问题，这意味着 Follower 中跟 Leader 冲突的日志条目会被新 Leader 的日志条目覆盖（因为没有提交，所以不违反外部一致性）。
+
+<img src="/images/2025-04-28_00-47-17.png" style="margin: 0 auto">
+
+::: tip 总结
+通过这种机制，Leader 在当权之后就不需要任何特殊的操作来使日志恢复到一致状态。
+
+Leader 只需要进行正常的操作，然后日志就能在回复 AppendEntries 一致性检查失败的时候自动趋于一致。
+
+Leader 从来不会覆盖或者删除自己的日志条目（**Append-Only**）。
+
+这样的日志复制机制，就可以保证一致性特性：
+
+1. 只要过半的服务器能正常运行，Raft 就能够接受、复制并应用新的日志条目；
+2. 在正常情况下，新的日志条目可以在一个 RPC 来回中被复制给集群中的过半机器；
+3. 单个运行慢的 Follower 不会影响整体的性能。
+:::
+
+```c:line-numbers {1}
+// 追加日志 RPC Request // [!code highlight]
+struct AppendEntriesRequest {
+    int term;         // 自己当前的任期号
+    int leaderId;     // Leader (自己) 的 ID
+    int prevLogIndex; // 前一个日志的日志号
+    int prevLogTerm;  // 前一个日志的任期号
+    byte[] entries;   // 当前日志体
+    int leaderCommit; // Leader 的已提交日志号
+}
+```
+
+```c:line-numbers {1}
+// 追加日志 RPC Response // [!code highlight]
+struct AppendEntriesResponse {
+    int  term;    // 自己当前的任期号
+    bool success; // Follower 是否包括前一个日志
+}
+```
+
+如果 leaderCommit > commitIndex，那么把 commitIndex 设为 MIN(leaderCommit, index of last new entry)。
 
 为了使得 Follower 的日志和自己的日志一致，Leader 需要找到 Follower 与它日志一致的地方，然后删除 Follower 在该位置之后的日志，接着把这之后的日志发送给 Follower。Leader 给每一个 Follower 维护了一个 nextIndex，它表示 Leader 将要发送给该追随者的下一条日志条目的索引。当一个 Leader 开始掌权时，它会将 nextIndex 初始化为它的最新的日志条目索引数 +1。如果一个 Follower 的日志和 Leader 的不一致，AppendEntries 一致性检查会在下一次 AppendEntries RPC 时返回失败。在失败之后，Leader 会将 nextIndex 递减然后重试 AppendEntries RPC。最终 nextIndex 会达到一个 Leader 和 Follower 日志一致的地方。这时，AppendEntries 会返回成功，Follower 中冲突的日志条目都被移除了，并且添加所缺少的上了 Leader 的日志条目。一旦 AppendEntries 返回成功，Follower 和 Leader 的日志就一致了，这样的状态会保持到该任期结束。
 
 ## 安全性
 
-### 选举限制
+### Leader 宕机处理：选举限制
 
-Leader 需要保证自己存储全部已经提交的日志条目。这样才可以使日志条目只有一个流向：从 Leader 流向 Follower，Leader 永远不会覆盖已经存在的日志条目。
+如果一个 Follower 落后了 Leader 若干条日志（但没有漏一整个任期），那么在下次选举中，按照领导者选举里的规则，它依旧有可能当选 Leader。它在当选新 Leader 后就永远也无法补上之前缺失的那部分日志，从而造成状态机之间的不一致。
 
-每个 Candidate 发送 RequestVoteRPC 时，都会带上最后一个 entry 的信息。所有节点收到投票信息时，会对该 entry 进行比较，如果发现自己的更新，则拒绝投票给该 Candidate。
+**所以 Leader 需要保证自己存储全部已经提交的日志条目。这样才可以使日志条目只有一个流向：从 Leader 流向 Follower，Leader 永远不会覆盖已经存在的日志条目。**
 
-判断日志新旧的方式：如果两个日志的 term 不同，term 大的更新；如果 term 相同，更长的 index 更新。
+**RequestVote RPC** 执行了这样的限制：RPC 中包含了 Candidate 的日志信息，如果投票者自己的日志比 Candidate 的还新，它会拒绝掉该投票请求。
 
-### 节点崩溃
+Raft 通过比较两份日志中最后一条日志条目的索引值和任期号来定义谁的日志比较新：
+
+* 如果两个日志的 term 不同，term 大的更新；
+* 如果 term 相同，更长的 index 更新。
+
+### Leader 宕机处理：新 Leader 是否提交之前任期内的日志条目
+
+一旦当前任期内的某个日志条目已经存储到过半的服务器节点上，Leader 就知道该日志条目可以被 **提交** 了。
+
+如果某个 Leader 在提交某个日志条目之前崩溃了，以后的 Leader 会试图完成该日志条目的 **复制**。复制，而非提交，不能通过心跳提交老日志。
+
+**Raft 永远不会通过计算副本数目的方式来提交之前任期内的日志条目。**
+
+只有 Leader 当前任期内的日志条目才通过计算副本数目的方式来提交。一旦当前任期的某个日志条目以这种方式提交，那么由于日志匹配特性，之前的所有日志条目也都会被间接地提交。
+
+### Follower 和 Candidate 宕机处理
 
 如果 Leader 崩溃，集群中的节点在 electionTimeout 时间内没有收到 Leader 的心跳信息就会触发新一轮的选举，在选举期间整个集群对外是不可用的。
 
-如果 Follower 和 Candidate 崩溃，处理方式会简单很多。之后发送给它的 RequestVoteRPC 和 AppendEntriesRPC 会失败。由于 Raft 的所有请求都是幂等的，所以失败的话会无限的重试。如果崩溃恢复后，就可以收到新的请求，然后选择追加或者拒绝 entry。
+如果 Follower 和 Candidate 崩溃，处理方式会简单很多。之后发送给它的 RequestVote RPC 和 AppendEntries RPC 会失败。由于 **Raft 的所有请求都是幂等的**，所以失败的话会无限的重试。如果崩溃恢复后，就可以收到新的请求，然后选择追加或者拒绝 entry。
 
 ### 时间与可用性
 
-Raft 的要求之一就是安全性不依赖于时间：系统不能仅仅因为一些事件发生的比预想的快一些或者慢一些就产生错误。为了保证上述要求，最好能满足以下的时间条件：
+Raft 的要求之一就是安全性不依赖于时间：系统不能仅仅因为一些事件发生的比预想的快一些或者慢一些就产生错误。
+
+只要整个系统满足下面的时间要求，Raft 就可以选举出并维持一个稳定的 Leader：
 
 $$
 \text{broadcastTime} << \text{electionTimeout} << \text{MTBF}
 $$
 
-* **broadcastTime**：向其他节点并发发送消息的平均响应时间。
-* **electionTimeout**：选举超时时间。
-* **MTBF(mean time between failures)**：单台机器的平均健康时间。
+* **broadcastTime（广播时间）**：向其他节点并发发送消息的平均响应时间。
+* **electionTimeout（选举超时时间）**：选举超时时间。
+* **MTBF（平均故障时间）**：单台机器的平均健康时间。
 
 broadcastTime 应该比 electionTimeout 小一个数量级，为的是使 Leader 能够持续发送心跳信息（heartbeat）来阻止 Follower 开始选举。
 
 electionTimeout 也要比 MTBF 小几个数量级，为的是使得系统稳定运行。当 Leader 崩溃时，大约会在整个 electionTimeout 的时间内不可用；我们希望这种情况仅占全部时间的很小一部分。
 
-由于 broadcastTime 和 MTBF 是由系统决定的属性，因此需要决定 electionTimeout 的时间。一般来说，broadcastTime 一般为 0.5～20ms，electionTimeout 可以设置为 10～500ms，MTBF 一般为一两个月。
+由于 broadcastTime 和 MTBF 是由系统决定的属性，因此需要决定 electionTimeout 的时间。一般来说，broadcastTime 一般为 0.5～20ms，electionTimeout 可以设置为 10～500ms，MTBF 一般为几个月甚至更长。
+
+## 集群成员变更
