@@ -113,5 +113,8 @@ export default defineConfig({
         }
       }
     }
+  },
+  markdown: {
+    math: true
   }
 })
