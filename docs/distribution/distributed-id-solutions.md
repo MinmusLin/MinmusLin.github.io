@@ -101,9 +101,9 @@ WHERE  `biz_type` = 101;
 * **优点**：ID 有序递增、存储消耗空间小。
 * **缺点**：存在数据库单点问题（可以使用数据库集群解决，不过增加了复杂度）、ID 没有具体业务含义、安全问题（比如根据订单 ID 的递增规律就能推算出每天的订单量）。
 
-## 非关系型数据库
+### 非关系型数据库
 
-### Redis
+#### Redis
 
 一般情况下，NoSQL 方案使用 Redis 多一些。我们通过 Redis 的 `incr` 命令即可实现对 ID 原子顺序递增。
 
@@ -125,7 +125,7 @@ Redis 方案的优缺点：
 * **优点**：性能不错并且生成的 ID 是有序递增的。
 * **缺点**：和数据库主键自增方案的缺点类似。
 
-### MongoDB
+#### MongoDB
 
 除了 Redis 之外，MongoDB ObjectId 经常也会被拿来当做分布式 ID 的解决方案。
 
@@ -141,9 +141,9 @@ MongoDB 方案的优缺点：
 * **优点**：性能不错并且生成的 ID 是有序递增的
 * **缺点**：需要解决重复 ID 问题（当机器时间不对的情况下，可能导致会产生重复 ID）、有安全性问题（ID 生成有规律性）
 
-## 算法
+### 算法
 
-### UUID
+#### UUID
 
 UUID 是 Universally Unique Identifier（通用唯一标识符）的缩写。UUID 包含 32 个 16 进制数字（8-4-4-4-12）。
 
@@ -167,7 +167,7 @@ UUID 的优缺点：
 优点：生成速度通常比较快、简单易用。
 缺点：存储消耗空间大（32 个字符，128 位）、不安全（基于 MAC 地址生成 UUID 的算法会造成 MAC 地址泄露）、无序（非自增）、没有具体业务含义、需要解决重复 ID 问题（当机器时间不对的情况下，可能导致会产生重复 ID）。
 
-### Snowflake（雪花算法）
+#### Snowflake（雪花算法）
 
 Snowflake 是 Twitter 开源的分布式 ID 生成算法。Snowflake 由 64 bit 的二进制数字组成，这 64bit 的二进制被分成了几部分，每一部分存储的数据都有特定的含义：
 
@@ -187,9 +187,9 @@ Snowflake 算法的优缺点：
 
 有很多基于 Snowflake 算法的开源实现比如美团的 Leaf、百度的 UidGenerator，并且这些开源实现对原有的 Snowflake 算法进行了优化，性能更优秀，还解决了 Snowflake 算法的时间回拨问题和依赖机器 ID 的问题。并且，Seata 还提出了“改良版雪花算法”，针对原版雪花算法进行了一定的优化改良，解决了时间回拨问题，大幅提高的 QPS。
 
-## 开源框架
+### 开源框架
 
-### UidGenerator（百度）
+#### UidGenerator（百度）
 
 UidGenerator 是百度开源的一款基于 Snowflake（雪花算法）的唯一 ID 生成器。不过，UidGenerator 对 Snowflake（雪花算法）进行了改进，生成的唯一 ID 组成如下：
 
@@ -202,7 +202,7 @@ UidGenerator 是百度开源的一款基于 Snowflake（雪花算法）的唯一
 
 可以看出，和原始 Snowflake（雪花算法）生成的唯一 ID 的组成不太一样。并且，上面这些参数我们都可以自定义。
 
-### Leaf（美团）
+#### Leaf（美团）
 
 Leaf 是美团开源的一个分布式 ID 解决方案 。
 
@@ -214,7 +214,7 @@ Leaf 对原有的号段模式进行改进，比如它这里增加了双号段避
 
 <img src="/images/2025-04-29_13-55-04.png" style="margin: 0 auto">
 
-### Tinyid（滴滴）
+#### Tinyid（滴滴）
 
 Tinyid 是滴滴开源的一款基于数据库号段模式的唯一 ID 生成器。
 
@@ -242,7 +242,7 @@ Tinyid 的原理比较简单，其架构如下图所示：
 * **增加多 DB 支持**：支持多个 DB，并且，每个 DB 都能生成唯一 ID，提高了可用性。
 * **增加 tinyid-client**：纯本地操作，无 HTTP 请求消耗，性能和可用性都有很大提升。
 
-### IdGenerator
+#### IdGenerator
 
 和 UidGenerator、Leaf 一样，IdGenerator 也是一款基于 Snowflake（雪花算法）的唯一 ID 生成器。
 
