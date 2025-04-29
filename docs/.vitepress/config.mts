@@ -60,6 +60,20 @@ export default defineConfig({
               link: '/distribution/raft-algorithm'
             }
           ]
+        },
+        {
+          text: '分布式 ID',
+          collapsed: false,
+          items: [
+            {
+              text: '分布式 ID 实现',
+              link: '/distribution/distributed-id-solutions'
+            },
+            {
+              text: '分布式 ID 场景',
+              link: '/distribution/distributed-id-scenarios'
+            }
+          ]
         }
       ]
     },
