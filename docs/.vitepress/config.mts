@@ -79,7 +79,7 @@ export default defineConfig({
     },
     socialLinks: [{
       icon: 'github',
-      link: 'https://github.com/MinmusLin'
+      link: 'https://github.com/MinmusLin/MinmusLin.github.io'
     }],
     footer: {
       message: 'Released under the <a href="https://github.com/MinmusLin/MinmusLin.github.io/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>.',
