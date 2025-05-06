@@ -21,10 +21,6 @@ export default defineConfig({
             link: '/distribution/'
           }
         ]
-      },
-      {
-        text: '关于',
-        link: '/about/'
       }
     ],
     sidebar: {
