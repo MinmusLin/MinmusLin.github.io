@@ -87,7 +87,7 @@ export default defineConfig({
       },
       {
         icon: 'qq',
-        link: 'https://raw.githubusercontent.com/MinmusLin/MinmusLin.github.io/main/docs/public/qq/qq-qrcode.jpg'
+        link: 'https://raw.githubusercontent.com/MinmusLin/MinmusLin.github.io/main/docs/public/contact/qq-qrcode.jpg'
       },
       {
         icon: 'xiaohongshu',
