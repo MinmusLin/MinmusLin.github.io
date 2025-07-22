@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-  name: "Stack Trace"
-  text: "MinmusLin's Blog"
+  name: MinmusLin's Blog
+  text: Code, Bugs & Sudden Enlightenment
   tagline: 记录代码、Bug 与偶尔的灵光一现
   image:
     src: /logos/homepage-logo.png
@@ -24,9 +24,9 @@ features:
   - icon:
       src: /logos/bytedance-logo.svg
     title: 字节跳动
-    details: 我目前在字节跳动抖音电商部门电商消费者业务后端开发 ByteIntern 中。
-    link: https://bytedance.larkoffice.com/docx/DF5CdRQfKoBxFkx63lXcI8rGnbc
-    linkText: 了解抖音电商
+    details: 我目前在字节跳动抖音电商部门电商消费者业务服务端开发 ByteIntern 中。
+    link: https://www.larkoffice.com/invitation/page/add_contact/?token=154v9ded-7060-4f8d-a18c-1ca756b04766
+    linkText: 我的飞书名片
   - icon:
       dark: /logos/tongji-logo-dark.png
       light: /logos/tongji-logo-light.png
@@ -41,10 +41,15 @@ features:
     details: 作为软件开发组负责人，我带领团队斩获国际基因工程机器大赛（软件与人工智能赛道）金奖。
     link: https://2024.igem.wiki/tongji-software
     linkText: Atlas.Y Wiki
-  - icon: 🔍
+  - icon:
+      src: /logos/golang-logo.svg
     title: 技术探索
-    details: 我热衷于攻克技术难题，乐于在协作中碰撞灵感，打造真正解决问题的方案。
+    details: 我热衷于攻克技术难题，在协作中碰撞灵感，打造真正解决问题的方案。目前主攻 Golang 服务端方向。
+    link: https://go.dev
+    linkText: Go 编程语言
   - icon: 🌱
     title: 持续学习
     details: 我始终保持学习心态，对新兴技术和行业最佳实践充满探索热情。
+    link: mailto:minmuslin@outlook.com
+    linkText: 邮件联系我
 ---

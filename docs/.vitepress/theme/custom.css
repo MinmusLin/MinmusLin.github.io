@@ -23,6 +23,10 @@
   );
 }
 
+.VPHome .text {
+  font-size: 34px;
+}
+
 @media (min-width: 960px) {
   .VPHome .image-container .image-src {
     max-width: 220px;
@@ -122,6 +126,7 @@ sub {
     padding-bottom: 0 !important;
   }
 
+  /* noinspection CssInvalidHtmlTagReference */
   mjx-container svg * {
     stroke: none;
   }

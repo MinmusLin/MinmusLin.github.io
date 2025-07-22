@@ -1,6 +1,19 @@
 {
   "name": "www.minmuslin.cn",
   "version": "v1.0.0",
+  "description": "MinmusLin's Blog | Code, Bugs & Sudden Enlightenment | 记录代码、Bug 与偶尔的灵光一现",
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0",
+  "author": {
+    "name": "Jishen Lin",
+    "email": "minmuslin@outlook.com",
+    "url": "https://github.com/MinmusLin"
+  },
+  "homepage": "https://www.minmuslin.cn",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MinmusLin/MinmusLin.github.io.git"
+  },
+  "docs": "https://vitepress.dev",
   "type": "module",
   "private": true,
   "scripts": {

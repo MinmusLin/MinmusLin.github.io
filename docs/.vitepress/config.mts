@@ -3,7 +3,7 @@ import {defineConfig} from 'vitepress'
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({
   title: 'MinmusLin\'s Blog',
-  description: "Stack Trace | MinmusLin's Blog | 记录代码、Bug 与偶尔的灵光一现",
+  description: 'MinmusLin\'s Blog | Code, Bugs & Sudden Enlightenment | 记录代码、Bug 与偶尔的灵光一现',
   head: [
     ['link', {rel: 'icon', href: '/favicon.ico'}]
   ],
@@ -99,7 +99,7 @@ export default defineConfig({
       }
     ],
     footer: {
-      message: 'Released under the <a href="https://github.com/MinmusLin/MinmusLin.github.io/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>.',
+      message: 'Released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="noopener noreferrer">Attribution-NonCommercial-ShareAlike 4.0 International</a>',
       copyright: 'Copyright © 2025-Present <a href="mailto:minmuslin@outlook.com" target="_blank" rel="noopener noreferrer">Jishen Lin</a>'
     },
     editLink: {
@@ -120,9 +120,9 @@ export default defineConfig({
     returnToTopLabel: '返回顶部',
     langMenuLabel: '切换语言',
     notFound: {
-      quote: "您访问的页面不存在或已被移除",
-      linkText: "返回首页",
-      linkLabel: "返回首页",
+      quote: '您访问的页面不存在或已被移除',
+      linkText: '返回首页',
+      linkLabel: '返回首页',
     },
     search: {
       provider: 'local',
