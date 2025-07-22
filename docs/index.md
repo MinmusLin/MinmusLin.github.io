@@ -6,7 +6,7 @@ hero:
   text: "MinmusLin's Blog"
   tagline: 记录代码、Bug 与偶尔的灵光一现
   image:
-    src: https://profile-counter.glitch.me/MinmusLin/count.svg
+    src: /logos/homepage-logo.png
   actions:
     - theme: brand
       text: 我的 GitHub

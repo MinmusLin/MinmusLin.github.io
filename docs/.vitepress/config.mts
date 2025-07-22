@@ -4,10 +4,13 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
   title: 'MinmusLin\'s Blog',
   description: "Stack Trace | MinmusLin's Blog | 记录代码、Bug 与偶尔的灵光一现",
-  head: [['link', {rel: 'icon', href: '/favicon.ico'}]],
+  head: [
+    ['link', {rel: 'icon', href: '/favicon.ico'}]
+  ],
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
+    logo: '/favicon.ico',
     nav: [
       {
         text: '首页',
@@ -80,6 +83,18 @@ export default defineConfig({
     socialLinks: [{
       icon: 'github',
       link: 'https://github.com/MinmusLin/MinmusLin.github.io'
+    }, {
+      icon: 'wechat',
+      link: 'https://github.com/MinmusLin/MinmusLin.github.io'
+    }, {
+      icon: 'xiaohongshu',
+      link: 'https://github.com/MinmusLin/MinmusLin.github.io'
+    }, {
+      icon: 'qq',
+      link: 'https://github.com/MinmusLin/MinmusLin.github.io'
+    }, {
+      icon: 'zhihu',
+      link: 'https://github.com/MinmusLin/MinmusLin.github.io'
     }],
     footer: {
       message: 'Released under the <a href="https://github.com/MinmusLin/MinmusLin.github.io/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>.',
@@ -102,6 +117,11 @@ export default defineConfig({
     sidebarMenuLabel: '菜单',
     returnToTopLabel: '返回顶部',
     langMenuLabel: '切换语言',
+    notFound: {
+      quote: "您访问的页面不存在或已被移除",
+      linkText: "返回首页",
+      linkLabel: "返回首页",
+    },
     search: {
       provider: 'local',
       options: {
