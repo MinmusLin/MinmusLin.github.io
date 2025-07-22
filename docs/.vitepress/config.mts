@@ -80,25 +80,27 @@ export default defineConfig({
       level: [2, 4],
       label: '目录'
     },
-    socialLinks: [{
-      icon: 'github',
-      link: 'https://github.com/MinmusLin/MinmusLin.github.io'
-    }, {
-      icon: 'wechat',
-      link: 'https://github.com/MinmusLin/MinmusLin.github.io'
-    }, {
-      icon: 'xiaohongshu',
-      link: 'https://github.com/MinmusLin/MinmusLin.github.io'
-    }, {
-      icon: 'qq',
-      link: 'https://github.com/MinmusLin/MinmusLin.github.io'
-    }, {
-      icon: 'zhihu',
-      link: 'https://github.com/MinmusLin/MinmusLin.github.io'
-    }],
+    socialLinks: [
+      {
+        icon: 'wechat',
+        link: 'https://raw.githubusercontent.com/MinmusLin/MinmusLin.github.io/main/docs/public/contact/wechat-qrcode.jpg'
+      },
+      {
+        icon: 'qq',
+        link: 'https://raw.githubusercontent.com/MinmusLin/MinmusLin.github.io/main/docs/public/qq/qq-qrcode.jpg'
+      },
+      {
+        icon: 'xiaohongshu',
+        link: 'https://www.xiaohongshu.com/user/profile/63e0dc710000000026012b11'
+      },
+      {
+        icon: 'github',
+        link: 'https://github.com/MinmusLin'
+      }
+    ],
     footer: {
       message: 'Released under the <a href="https://github.com/MinmusLin/MinmusLin.github.io/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>.',
-      copyright: 'Copyright © 2025-Present <a href="https://github.com/MinmusLin" target="_blank" rel="noopener noreferrer">Jishen Lin</a>'
+      copyright: 'Copyright © 2025-Present <a href="mailto:minmuslin@outlook.com" target="_blank" rel="noopener noreferrer">Jishen Lin</a>'
     },
     editLink: {
       pattern: 'https://github.com/MinmusLin/MinmusLin.github.io/edit/main/docs/:path',
