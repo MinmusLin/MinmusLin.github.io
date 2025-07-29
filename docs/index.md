@@ -3,7 +3,8 @@ layout: home
 
 hero:
   name: MinmusLin's Blog
-  text: Code, Bugs & Sudden Enlightenment
+  text: Code, Bugs & Sudden
+  textsuffix: Enlightenment
   tagline: 记录代码、Bug 与偶尔的灵光一现
   image:
     src: /logos/homepage-logo.png
@@ -53,3 +54,5 @@ features:
     link: mailto:minmuslin@outlook.com
     linkText: 邮件联系我
 ---
+
+<Underline></Underline>

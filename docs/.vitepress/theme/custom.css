@@ -333,3 +333,9 @@ a {
 .vp-code-group .tabs label:after {
   transition: background-color 0.15s;
 }
+
+/* Underline Style */
+
+.hero-svg {
+  transform: translateY(24px);
+}

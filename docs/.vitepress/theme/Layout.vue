@@ -1,3 +1,7 @@
+<template>
+  <Layout/>
+</template>
+
 <script setup lang='ts'>
 import {useData} from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
@@ -6,8 +10,8 @@ import {nextTick, provide} from 'vue'
 const {isDark} = useData()
 
 const enableTransitions = () =>
-    'startViewTransition' in document &&
-    window.matchMedia('(prefers-reduced-motion: no-preference)').matches
+  'startViewTransition' in document &&
+  window.matchMedia('(prefers-reduced-motion: no-preference)').matches
 
 provide('toggle-appearance', async ({clientX: x, clientY: y}: MouseEvent) => {
   if (!enableTransitions()) {
@@ -18,8 +22,8 @@ provide('toggle-appearance', async ({clientX: x, clientY: y}: MouseEvent) => {
   const clipPath = [
     `circle(0px at ${x}px ${y}px)`,
     `circle(${Math.hypot(
-        Math.max(x, innerWidth - x),
-        Math.max(y, innerHeight - y)
+      Math.max(x, innerWidth - x),
+      Math.max(y, innerHeight - y)
     )}px at ${x}px ${y}px)`
   ]
 
@@ -29,20 +33,20 @@ provide('toggle-appearance', async ({clientX: x, clientY: y}: MouseEvent) => {
   }).ready
 
   document.documentElement.animate(
-      {clipPath: isDark.value ? clipPath.reverse() : clipPath},
-      {
-        duration: 300,
-        easing: 'ease-in',
-        fill: 'forwards',
-        pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`
-      }
+    {
+      clipPath: isDark.value ? clipPath.reverse() : clipPath
+    },
+    {
+      duration: 300,
+      easing: 'ease-in',
+      fill: 'forwards',
+      pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`
+    }
   )
 })
-</script>
 
-<template>
-  <DefaultTheme.Layout/>
-</template>
+const {Layout} = DefaultTheme;
+</script>
 
 <style>
 ::view-transition-old(root), ::view-transition-new(root) {
@@ -50,18 +54,22 @@ provide('toggle-appearance', async ({clientX: x, clientY: y}: MouseEvent) => {
   mix-blend-mode: normal;
 }
 
+/* noinspection CssUnusedSymbol */
 ::view-transition-old(root), .dark::view-transition-new(root) {
   z-index: 1;
 }
 
+/* noinspection CssUnusedSymbol */
 ::view-transition-new(root), .dark::view-transition-old(root) {
   z-index: 9999;
 }
 
+/* noinspection CssUnusedSymbol */
 .VPSwitchAppearance {
   width: 22px !important;
 }
 
+/* noinspection CssUnusedSymbol */
 .VPSwitchAppearance .check {
   transform: none !important;
 }

@@ -1,4 +1,5 @@
 import {defineConfig} from 'vitepress'
+import {figure} from '@mdit/plugin-figure'
 
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({
@@ -57,20 +58,6 @@ export default defineConfig({
             {
               text: 'Raft 算法',
               link: '/distribution/raft-algorithm'
-            }
-          ]
-        },
-        {
-          text: '分布式 ID',
-          collapsed: false,
-          items: [
-            {
-              text: '分布式 ID 实现',
-              link: '/distribution/distributed-id-solutions'
-            },
-            {
-              text: '分布式 ID 场景',
-              link: '/distribution/distributed-id-scenarios'
             }
           ]
         }
@@ -147,6 +134,9 @@ export default defineConfig({
     }
   },
   markdown: {
-    math: true
+    math: true,
+    config: (md) => {
+      md.use(figure)
+    }
   }
 })
