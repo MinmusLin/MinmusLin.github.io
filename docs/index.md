@@ -18,7 +18,7 @@ hero:
 
 features:
   - icon: 👋
-    title: 欢迎来到我的博客！
+    title: 欢迎来到我的博客！本站访问量：<span id="busuanzi_value_site_pv"/>
     details: 我是林继申，一名全栈开发爱好者，致力于通过优雅的工程实践解决现实问题。
     link: https://github.com/MinmusLin
     linkText: 我的 GitHub
