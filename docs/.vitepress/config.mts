@@ -1,5 +1,8 @@
 import {defineConfig} from 'vitepress'
 import {figure} from '@mdit/plugin-figure'
+import {MermaidMarkdown, MermaidPlugin} from 'vitepress-plugin-mermaid'
+import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
+import vitepressProtectPlugin from "vitepress-protect-plugin"
 
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({
@@ -137,6 +140,24 @@ export default defineConfig({
     math: true,
     config: (md) => {
       md.use(figure)
+      md.use(MermaidMarkdown)
+      md.use(markdownItTaskCheckbox)
+    }
+  },
+  vite: {
+    plugins: [
+      MermaidPlugin(),
+      vitepressProtectPlugin({
+        disableF12: true,
+        disableCopy: false,
+        disableSelect: false
+      })
+    ],
+    optimizeDeps: {
+      include: ['mermaid']
+    },
+    ssr: {
+      noExternal: ['mermaid']
     }
   }
 })

@@ -1,14 +1,64 @@
 import DefaultTheme from 'vitepress/theme'
 import Layout from './Layout.vue'
 import {Underline} from '@theojs/lumen'
-import './custom.css'
+import {onMounted, watch, nextTick} from 'vue'
+import {useData, useRoute, inBrowser} from 'vitepress'
+import giscusTalk from 'vitepress-plugin-comment-with-giscus'
+import mediumZoom from 'medium-zoom'
+import {NProgress} from 'nprogress-v2/dist/index.js'
+import busuanzi from 'busuanzi.pure.js'
+import 'nprogress-v2/dist/index.css'
 import '@theojs/lumen/pic'
+import './custom.css'
 
 // noinspection JSUnusedGlobalSymbols
 export default {
   extends: DefaultTheme,
   Layout: Layout,
-  enhanceApp: ({app}) => {
+  enhanceApp: ({app, router}) => {
     app.component('Underline', Underline)
+    if (inBrowser) {
+      NProgress.configure({showSpinner: false})
+      router.onBeforeRouteChange = () => {
+        NProgress.start()
+      }
+      router.onAfterRouteChanged = () => {
+        busuanzi.fetch()
+        NProgress.done()
+      }
+    }
+  },
+  setup() {
+    const route = useRoute()
+    const initZoom = () => {
+      mediumZoom('.main img', {background: 'var(--vp-c-bg)'})
+    }
+    onMounted(() => {
+      initZoom()
+    })
+    watch(
+      () => route.path,
+      () => nextTick(() => initZoom())
+    )
+    const {frontmatter} = useData()
+    giscusTalk({
+        repo: 'MinmusLin/MinmusLin.github.io',
+        repoId: 'R_kgDOOgDDUw',
+        category: 'General',
+        categoryId: 'DIC_kwDOOgDDU84CukN6',
+        mapping: 'pathname',
+        strict: '0',
+        reactionsEnabled: '1',
+        emitMetadata: '0',
+        inputPosition: 'bottom',
+        theme: 'preferred_color_scheme',
+        lang: 'zh-CN',
+        loading: 'lazy'
+      },
+      {
+        frontmatter, route
+      },
+      true
+    )
   }
 }
