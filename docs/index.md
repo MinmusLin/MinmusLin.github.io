@@ -25,14 +25,14 @@ features:
   - icon:
       src: /logos/bytedance-logo.svg
     title: 字节跳动
-    details: 我目前在字节跳动抖音电商部门电商消费者业务服务端开发 ByteIntern 中。
+    details: 我任职于北京字节跳动科技有限公司，在电商消费者业务部门担任服务端开发工程师。
     link: https://www.larkoffice.com/invitation/page/add_contact/?token=154v9ded-7060-4f8d-a18c-1ca756b04766
     linkText: 我的飞书名片
   - icon:
       dark: /logos/tongji-logo-dark.png
       light: /logos/tongji-logo-light.png
     title: 同济大学
-    details: 我目前在同济大学计算机科学与技术学院软件工程专业本科就读，预计 2026 年毕业。
+    details: 我毕业于同济大学计算机科学与技术学院软件工程专业（2026 届）。
     link: https://github.com/MinmusLin/TJSE_Course_Materials
     linkText: 软件工程专业课程材料合集
   - icon:
