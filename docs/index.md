@@ -25,7 +25,7 @@ features:
   - icon:
       src: /logos/bytedance-logo.svg
     title: 字节跳动
-    details: 我任职于北京字节跳动科技有限公司，在电商消费者业务部门担任服务端开发工程师。
+    details: 我任职于北京字节跳动科技有限公司，在电商消费者业务部门担任后端开发工程师。
     link: https://www.larkoffice.com/invitation/page/add_contact/?token=154v9ded-7060-4f8d-a18c-1ca756b04766
     linkText: 我的飞书名片
   - icon:
