@@ -20,6 +20,9 @@ export default {
     if (inBrowser) {
       router.beforeEach((to, from, next) => {
         switch (to.path) {
+          case '/cv':
+            next('/cv/cv.pdf')
+            break
           case '/contact/qq':
             next('/contact/qq-qrcode.jpg')
             break
