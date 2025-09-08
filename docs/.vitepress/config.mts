@@ -11,6 +11,11 @@ export default defineConfig({
   head: [
     ['link', {rel: 'icon', href: '/favicon.ico'}]
   ],
+  rewrites: {
+    'cv': 'cv/cv.pdf',
+    'contact/qq': 'contact/qq-qrcode.jpg',
+    'contact/wechat': 'contact/wechat-qrcode.jpg'
+  },
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
