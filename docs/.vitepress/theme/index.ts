@@ -18,24 +18,6 @@ export default {
   enhanceApp: ({app, router}) => {
     app.component('Underline', Underline)
     if (inBrowser) {
-      router.beforeEach((to, from, next) => {
-        switch (to.path) {
-          case '/cv':
-            next('/cv/cv.pdf')
-            break
-          case '/contact/qq':
-            next('/contact/qq-qrcode.jpg')
-            break
-          case '/contact/wechat':
-            next('/contact/wechat-qrcode.jpg')
-            break
-          case '/contact/xiaohongshu':
-            window.location.href = 'https://www.xiaohongshu.com/user/profile/63e0dc710000000026012b11'
-            break
-          default:
-            next()
-        }
-      })
       NProgress.configure({showSpinner: false})
       router.onBeforeRouteChange = () => {
         NProgress.start()
