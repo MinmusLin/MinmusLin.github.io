@@ -14,7 +14,7 @@ hero:
       link: https://github.com/MinmusLin
     - theme: alt
       text: 我的简历
-      link: https://raw.githubusercontent.com/MinmusLin/MinmusLin.github.io/main/docs/public/cv/cv.pdf
+      link: https://minmuslin.cn/cv
 
 features:
   - icon: 👋
