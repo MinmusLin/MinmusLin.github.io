@@ -16,20 +16,6 @@ export default {
   extends: DefaultTheme,
   Layout: Layout,
   enhanceApp: ({app, router}) => {
-    if (inBrowser) {
-      router.beforeEach((to) => {
-        const redirects = {
-          '/cv': '/cv/cv.pdf',
-          '/contact/qq': '/contact/qq-qrcode.jpg',
-          '/contact/wechat': '/contact/wechat-qrcode.jpg',
-          '/contact/xiaohongshu': 'https://www.xiaohongshu.com/user/profile/63e0dc710000000026012b11'
-        }
-        if (redirects[to.path]) {
-          window.location.href = redirects[to.path]
-          return false
-        }
-      })
-    }
     app.component('Underline', Underline)
     if (inBrowser) {
       NProgress.configure({showSpinner: false})

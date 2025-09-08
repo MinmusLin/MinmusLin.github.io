@@ -73,15 +73,15 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'wechat',
-        link: 'https://www.minmuslin.cn/contact/wechat-qrcode.jpg'
+        link: '/contact/wechat'
       },
       {
         icon: 'qq',
-        link: 'https://www.minmuslin.cn/contact/qq-qrcode.jpg'
+        link: '/contact/qq'
       },
       {
         icon: 'xiaohongshu',
-        link: 'https://www.xiaohongshu.com/user/profile/63e0dc710000000026012b11'
+        link: '/contact/xiaohongshu'
       },
       {
         icon: 'github',
