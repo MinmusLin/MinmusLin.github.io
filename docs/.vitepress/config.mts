@@ -15,6 +15,7 @@ export default defineConfig({
     'cv': 'cv/cv.pdf',
     'contact/qq': 'contact/qq-qrcode.jpg',
     'contact/wechat': 'contact/wechat-qrcode.jpg'
+    'contact/xiaohongshu': 'https://www.xiaohongshu.com/user/profile/63e0dc710000000026012b11'
   },
   cleanUrls: true,
   lastUpdated: true,
