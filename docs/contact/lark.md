@@ -2,9 +2,6 @@
 layout: page
 title: Redirecting...
 navbar: false
-sidebar: false
-aside: false
-outline: false
 footer: false
 ---
 
@@ -19,6 +16,10 @@ import {onMounted} from 'vue'
 import {inBrowser} from 'vitepress'
 
 onMounted(() => {
+  const nav = document.querySelector('.VPLocalNav.empty.fixed')
+  if (nav) {
+    nav.remove()
+  }
   if (inBrowser) {
     window.location.href = 'https://www.larkoffice.com/invitation/page/add_contact/?token=154v9ded-7060-4f8d-a18c-1ca756b04766'
   }
