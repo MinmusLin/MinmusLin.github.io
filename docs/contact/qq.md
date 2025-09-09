@@ -4,6 +4,7 @@ title: QQ
 navbar: false
 sidebar: false
 aside: false
+outline: false
 footer: false
 ---
 
