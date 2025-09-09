@@ -1,10 +1,15 @@
 ---
 layout: page
+title: Redirecting...
+navbar: false
+footer: false
 ---
 
-<br>
-<p style="text-align: center">Redirecting...</p>
-<br>
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh">
+  <div style="text-align: center">
+    <p>Redirecting...</p>
+  </div>
+</div>
 
 <script setup>
 import {onMounted} from 'vue'
