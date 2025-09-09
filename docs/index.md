@@ -14,7 +14,7 @@ hero:
       link: https://github.com/MinmusLin
     - theme: alt
       text: 我的简历
-      link: /cv/cv.pdf
+      link: https://minmuslin.cn/Resume_Template/cv.pdf
       target: _blank
 
 features:
