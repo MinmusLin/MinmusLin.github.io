@@ -2,6 +2,8 @@
 layout: page
 title: WeChat
 navbar: false
+sidebar: false
+aside: false
 footer: false
 ---
 

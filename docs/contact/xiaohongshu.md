@@ -2,6 +2,8 @@
 layout: page
 title: Redirecting...
 navbar: false
+sidebar: false
+aside: false
 footer: false
 ---
 
