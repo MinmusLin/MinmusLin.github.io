@@ -4,6 +4,10 @@ import {MermaidMarkdown, MermaidPlugin} from 'vitepress-plugin-mermaid'
 import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
 import vitepressProtectPlugin from "vitepress-protect-plugin"
 
+function customTokenizer(text: string): string[] {
+  return Array.from(new Intl.Segmenter('cn', {granularity: 'word'}).segment(text.replace(/ /g, ''))).map(item => item.segment)
+}
+
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({
   title: 'MinmusLin\'s Blog',
@@ -132,6 +136,11 @@ export default defineConfig({
               closeText: '关闭'
             }
           }
+        }
+      },
+      miniSearch: {
+        options: {
+          tokenize: customTokenizer
         }
       }
     }
