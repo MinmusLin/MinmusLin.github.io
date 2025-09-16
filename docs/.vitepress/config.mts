@@ -29,10 +29,6 @@ export default defineConfig({
         ]
       },
       {
-        text: '课程',
-        link: '/course'
-      },
-      {
         text: '随笔',
         link: '/essay'
       }
@@ -70,12 +66,6 @@ export default defineConfig({
               link: '/distribution/raft-algorithm'
             }
           ]
-        }
-      ],
-      '/course': [
-        {
-          text: '课程',
-          link: '/course'
         }
       ],
       '/essay': [
