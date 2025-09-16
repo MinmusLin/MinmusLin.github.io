@@ -29,6 +29,10 @@ export default defineConfig({
         ]
       },
       {
+        text: '课程',
+        link: '/course'
+      },
+      {
         text: '随笔',
         link: '/essay'
       }
@@ -66,6 +70,22 @@ export default defineConfig({
               link: '/distribution/raft-algorithm'
             }
           ]
+        }
+      ],
+      '/course': [
+        {
+          text: '课程',
+          link: '/course'
+        }
+      ],
+      '/essay': [
+        {
+          text: '我的随笔',
+          link: '/essay'
+        },
+        {
+          text: '2025-05-07｜从放弃保研到字节暑期实习上岸：聊聊同济软件工程科班三年带给我了什么',
+          link: '/essay/2025-05-07'
         }
       ]
     },

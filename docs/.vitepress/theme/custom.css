@@ -131,12 +131,6 @@ sub {
   }
 }
 
-/* Image Color Inversion Style */
-
-.dark .vp-doc img:not([alt*="&keep-color"]) {
-  filter: invert(100%) hue-rotate(180deg) contrast(80%);
-}
-
 /* Tip Container Style */
 
 :root {
