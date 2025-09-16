@@ -1,5 +1,4 @@
 /* Homepage Style */
-
 .VPHome {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
@@ -35,7 +34,6 @@
 }
 
 /* Blurred Glass Style */
-
 @media only screen and (min-width: 1280px) {
   :root {
     --vp-nav-bg-color: #FFFFFF55;
@@ -80,7 +78,6 @@
 }
 
 /* Superscript and Subscript Style */
-
 sup, sub {
   font-size: 75%;
   line-height: 0;
@@ -97,7 +94,6 @@ sub {
 }
 
 /* Markdown Table Style */
-
 .vp-doc table {
   margin: auto;
   display: table;
@@ -108,7 +104,6 @@ sub {
 }
 
 /* Print Style */
-
 @media print {
   .VPNav, .VPLocalNav, .prev-next, .edit-link-button {
     display: none !important;
@@ -132,7 +127,6 @@ sub {
 }
 
 /* Tip Container Style */
-
 :root {
   --vp-c-tip-1: var(--vp-c-green-1);
   --vp-c-tip-2: var(--vp-c-green-2);
@@ -142,7 +136,6 @@ sub {
 }
 
 /* Details Container Style */
-
 summary {
   --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E");
   list-style: none;
@@ -175,7 +168,6 @@ details[open] > summary::before {
 }
 
 /* Link Style */
-
 a {
   --link-soft: var(--vp-c-brand-soft);
   --link-color: var(--vp-c-brand-1);
@@ -258,7 +250,6 @@ a {
 }
 
 /* Animation Style */
-
 @keyframes fade-in {
   from {
     transform: translateY(10px);
@@ -328,7 +319,6 @@ a {
 }
 
 /* Underline Style */
-
 .hero-svg {
   transform: translateY(24px);
 }
