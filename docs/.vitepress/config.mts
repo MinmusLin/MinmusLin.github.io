@@ -2,11 +2,11 @@ import {defineConfig} from 'vitepress'
 import {figure} from '@mdit/plugin-figure'
 import {MermaidMarkdown, MermaidPlugin} from 'vitepress-plugin-mermaid'
 import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
-import vitepressProtectPlugin from "vitepress-protect-plugin"
+import vitepressProtectPlugin from 'vitepress-protect-plugin'
 
 export default defineConfig({
-  title: 'MinmusLin\'s Blog',
-  description: 'MinmusLin\'s Blog | Code, Bugs & Sudden Enlightenment | 记录代码、Bug 与偶尔的灵光一现',
+  title: "MinmusLin's Blog",
+  description: "MinmusLin's Blog | Code, Bugs & Sudden Enlightenment | 记录代码、Bug 与偶尔的灵光一现",
   head: [
     ['link', {rel: 'icon', href: '/favicon.ico'}]
   ],
