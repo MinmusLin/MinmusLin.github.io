@@ -6,6 +6,7 @@ import {useData, useRoute, inBrowser} from 'vitepress'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import {NProgress} from 'nprogress-v2/dist/index.js'
 import busuanzi from 'busuanzi.pure.js'
+import mediumZoom from 'medium-zoom'
 import 'nprogress-v2/dist/index.css'
 import '@theojs/lumen/pic'
 import './custom.css'
@@ -29,6 +30,16 @@ export default {
   setup() {
     const route = useRoute()
     const {frontmatter} = useData()
+    const initZoom = () => {
+      mediumZoom('.main img', {background: 'var(--vp-c-bg)'})
+    }
+    onMounted(() => {
+      initZoom()
+    })
+    watch(
+      () => route.path,
+      () => nextTick(() => initZoom())
+    )
     giscusTalk({
         repo: 'MinmusLin/MinmusLin.github.io',
         repoId: 'R_kgDOOgDDUw',

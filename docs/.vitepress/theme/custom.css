@@ -336,3 +336,17 @@ a {
   border-top-color: var(--vp-c-indigo-3);
   border-left-color: var(--vp-c-indigo-3);
 }
+
+/* Image Scaling */
+.medium-zoom-overlay {
+  background-color: var(--vp-c-bg) !important;
+  z-index: 100;
+}
+
+.medium-zoom-overlay~img {
+  z-index: 101;
+}
+
+.medium-zoom--opened .medium-zoom-overlay {
+  opacity: 0.9 !important;
+}

@@ -165,6 +165,9 @@ export default defineConfig({
       md.use(figure)
       md.use(MermaidMarkdown)
       md.use(markdownItTaskCheckbox)
+    },
+    image: {
+      lazyLoading: true
     }
   },
   vite: {
