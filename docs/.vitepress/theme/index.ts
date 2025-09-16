@@ -11,7 +11,6 @@ import 'nprogress-v2/dist/index.css'
 import '@theojs/lumen/pic'
 import './custom.css'
 
-// noinspection JSUnusedGlobalSymbols
 export default {
   extends: DefaultTheme,
   Layout: Layout,

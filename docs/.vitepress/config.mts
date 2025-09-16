@@ -4,11 +4,6 @@ import {MermaidMarkdown, MermaidPlugin} from 'vitepress-plugin-mermaid'
 import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
 import vitepressProtectPlugin from "vitepress-protect-plugin"
 
-function customTokenizer(text: string): string[] {
-  return Array.from(new Intl.Segmenter('cn', {granularity: 'word'}).segment(text.replace(/ /g, ''))).map(item => item.segment)
-}
-
-// noinspection JSUnusedGlobalSymbols
 export default defineConfig({
   title: 'MinmusLin\'s Blog',
   description: 'MinmusLin\'s Blog | Code, Bugs & Sudden Enlightenment | 记录代码、Bug 与偶尔的灵光一现',
@@ -29,16 +24,20 @@ export default defineConfig({
         items: [
           {
             text: '分布式',
-            link: '/distribution/'
+            link: '/distribution'
           }
         ]
+      },
+      {
+        text: '随笔',
+        link: '/essay'
       }
     ],
     sidebar: {
-      '/distribution/': [
+      '/distribution': [
         {
           text: '分布式概述',
-          link: '/distribution/'
+          link: '/distribution'
         },
         {
           text: '分布式理论',
@@ -116,7 +115,7 @@ export default defineConfig({
     notFound: {
       quote: '您访问的页面不存在或已被移除',
       linkText: '返回首页',
-      linkLabel: '返回首页',
+      linkLabel: '返回首页'
     },
     search: {
       provider: 'local',
@@ -136,11 +135,6 @@ export default defineConfig({
               closeText: '关闭'
             }
           }
-        }
-      },
-      miniSearch: {
-        options: {
-          tokenize: customTokenizer
         }
       }
     }

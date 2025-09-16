@@ -21,10 +21,7 @@ provide('toggle-appearance', async ({clientX: x, clientY: y}: MouseEvent) => {
 
   const clipPath = [
     `circle(0px at ${x}px ${y}px)`,
-    `circle(${Math.hypot(
-      Math.max(x, innerWidth - x),
-      Math.max(y, innerHeight - y)
-    )}px at ${x}px ${y}px)`
+    `circle(${Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y))}px at ${x}px ${y}px)`
   ]
 
   await document.startViewTransition(async () => {
@@ -45,7 +42,7 @@ provide('toggle-appearance', async ({clientX: x, clientY: y}: MouseEvent) => {
   )
 })
 
-const {Layout} = DefaultTheme;
+const {Layout} = DefaultTheme
 </script>
 
 <style>
@@ -54,22 +51,18 @@ const {Layout} = DefaultTheme;
   mix-blend-mode: normal;
 }
 
-/* noinspection CssUnusedSymbol */
 ::view-transition-old(root), .dark::view-transition-new(root) {
   z-index: 1;
 }
 
-/* noinspection CssUnusedSymbol */
 ::view-transition-new(root), .dark::view-transition-old(root) {
   z-index: 9999;
 }
 
-/* noinspection CssUnusedSymbol */
 .VPSwitchAppearance {
   width: 22px !important;
 }
 
-/* noinspection CssUnusedSymbol */
 .VPSwitchAppearance .check {
   transform: none !important;
 }

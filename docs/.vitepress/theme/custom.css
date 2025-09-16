@@ -126,7 +126,6 @@ sub {
     padding-bottom: 0 !important;
   }
 
-  /* noinspection CssInvalidHtmlTagReference */
   mjx-container svg * {
     stroke: none;
   }

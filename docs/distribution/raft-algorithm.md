@@ -18,7 +18,7 @@
 
 复制状态机的核心思想：**相同的初始状态 + 相同的输入 = 相同的结束状态**
 
-<img src="/images/2025-04-26_23-33-05.png" style="margin: 0 auto">
+![](/distribution/2025-04-26_23-33-05.png)
 
 多个节点上，从相同的初始状态开始，执行相同的一串命令，产生相同的最终状态。
 
@@ -30,15 +30,15 @@
 
 1. 数据量非常小，如集群成员信息、配置文件、分布式锁、小容量分布式任务队列。可以采用无 Leader 的共识算法（如 **Basic Paxos**），实现有 Chubby、ZooKeeper 等。
 
-<img src="/images/2025-04-28_19-18-23.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_19-18-23.png)
 
 2. 数据量比较大但可以拆分为不相干的各部分，如大规模存储系统。可以采用有 Leader 的共识算法（如 **Multi Paxos**、**Raft**），实现有 GFS、HDFS 等。
 
-<img src="/images/2025-04-28_19-19-18.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_19-19-18.png)
 
 3. 不仅数据量大，数据之间还存在关联，这时一个共识算法集群容纳不了所有的数据。这种情况下，就要把数据分片到多个状态机中，状态机之间通过 **两阶段提交** 来保证一致性。这类场景主要是一些如 Spanner、OceanBase、TiDB 等支持分布式事务的分布式数据库。它们通常会对 Paxos 或 Raft 等共识算法进行一定的改造，来满足事务级的要求。
 
-<img src="/images/2025-04-28_19-21-49.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_19-21-49.png)
 
 ## 共识算法
 
@@ -68,7 +68,7 @@ Raft 区分于其他共识算法的三个特征：
 
 长生命周期的强 Leader，是 Raft 实现起来简单，并区别于其他共识算法最重要的特点。但不可忽视的是，这一点也使得 Raft 在性能上存在很大的隐患。因为 Raft 日志流的单向性，Raft 选举出的 Leader 必须具有完整的日志。为了保证时时刻刻都能有具备完整日志的节点可以成为 Leader，Raft 又必须使用 **顺序日志复制** 的方法来避免日志空洞。这就是 Raft 的三个子问题 **领导人选举**、**日志复制**、**安全性** 的闭环逻辑。
 
-<img src="/images/2025-04-28_19-53-19.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_19-53-19.png)
 
 ::: tip no-op（no-operation）补丁
 一个节点当选 Leader 后，立刻发送一个自己当前任期的空日志体的 AppendEntries RPC。这样就可以把之前任期内满足提交条件的日志都提交了。
@@ -90,13 +90,13 @@ Raft 区分于其他共识算法的三个特征：
 
 在正常的情况下，只有一个服务器是 Leader，剩下的服务器是 Follower。Follower 是被动的，它们不会发送任何请求，只是响应来自 Leader 和 Candidate 的请求。
 
-<img src="/images/2025-04-26_23-42-29.png" style="margin: 0 auto">
+![](/distribution/2025-04-26_23-42-29.png)
 
 ### 任期
 
 Raft 算法将时间划分为任意长度的任期（term），任期用连续的数字表示，看作当前 term 号。每一个任期的开始都是一次选举，在选举开始时，一个或多个 Candidate 会尝试成为 Leader。如果一个 Candidate 赢得了选举，它就会在该任期内担任 Leader。如果没有选出 Leader，将会开启另一个任期，并立刻开始下一次选举。**Raft 算法保证在任意一个任期内，最多只有一个 Leader。**
 
-<img src="/images/2025-04-27_13-50-45.png" style="margin: 0 auto">
+![](/distribution/2025-04-27_13-50-45.png)
 
 ### RPC 通信
 
@@ -165,7 +165,7 @@ struct RequestVoteResponse {
 * Leader 的任期号（`term`）
 * 状态机指令（`cmd`）
 
-<img src="/images/2025-04-28_00-21-24.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_00-21-24.png)
 
 一旦选出了 Leader，它就开始接收客户端的请求。每一个客户端的请求都包含一条需要被复制状态机（Replicated State Machine）执行的命令。Leader 收到客户端请求后，会生成一个 entry，包含 `<index, term, cmd>`，再将这个 entry 添加到自己的日志末尾后，向所有的节点广播该 entry（Leader 并行发送 **AppendEntries RPC** 给 Follower），要求其他服务器复制这条 entry。如果 Follower 接收该 entry，则会将 entry 添加到自己的日志后面，同时返回给 Leader 同意。如果 Leader 收到了超过半数的成功响应，Leader 会将这个 entry 应用到自己的状态机中，之后可以称这个 entry 是 **提交** 的，并且向客户端返回执行结果。
 
@@ -189,7 +189,7 @@ Leader 在每一个发往 Follower 的追加条目 RPC 中，会放入前一个�
 
 3. 如果 Leader 崩溃，那么崩溃的 Leader 可能已经复制了日志到部分 Follower 但还没有提交，而被选出的新 Leader 又可能不具备这些日志，这样就有部分 Follower 中的日志和新 Leader 的日志不相同。Raft 在这种情况下，Leader 通过 **强制 Follower 复制它的日志** 来解决不一致的问题，这意味着 Follower 中跟 Leader 冲突的日志条目会被新 Leader 的日志条目覆盖（因为没有提交，所以不违反外部一致性）。
 
-<img src="/images/2025-04-28_00-47-17.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_00-47-17.png)
 
 ::: tip 总结
 通过这种机制，Leader 在当权之后就不需要任何特殊的操作来使日志恢复到一致状态。
@@ -286,7 +286,7 @@ electionTimeout 也要比 MTBF 小几个数量级，为的是使得系统稳定�
 
 在需要改变集群配置的时候（如增删节点、替换宕机的机器或者改变复制的程度），Raft 可以进行配置变更自动化。自动化配置变更机制最大的难点是 **保证转换过程中不会出现同一任期的两个 Leader**，因为转换期间整个集群可能划分为 **两个独立的大多数**。（脑裂问题）
 
-<img src="/images/2025-04-28_12-54-02.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_12-54-02.png)
 
 图片所示为 3 节点集群（S1、S2、S3）扩容到 5 节点集群（S1、S2、S3、S4、S5）。S1、S2 为老配置集群，S3、S4、S5 为新配置集群。老配置为 3 节点，S1、S2 可以选出一个 Leader，新配置为 5 节点，S3、S4、S5 可以选出一个 Leader。
 
@@ -309,23 +309,23 @@ electionTimeout 也要比 MTBF 小几个数量级，为的是使得系统稳定�
 2. Leader 在 $C_{old,new}$ 已提交但 $C_{new}$ 未发起时宕机
 3. Leader 在 $C_{new}$ 已发起时宕机
 
-<img src="/images/2025-04-28_13-12-47.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_13-12-47.png)
 
 图片所示为 3 节点集群（S1、S2、S3）扩容到 5 节点集群（S1、S2、S3、S4、S5）。其中 S3 是当前任期的 Leader，这时我们增加 S4、S5 两个节点，Raft 会先将它们设置为只读，等到它们追上日志进度后，才会开始集群成员变成。然后现任 Leader S3 发起 $C_{old,new}$ 并复制给了 S4、S5，这时的 S3、S4、S5 已经进入了联合一致状态，他们的决策要在新旧两个配置中都达到大多数才算成功。
 
 **1. Leader 在 $C_{old,new}$ 未提交时宕机**
 
-<img src="/images/2025-04-28_13-23-47.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_13-23-47.png)
 
 S1、S2 超时，开始进行选举，并且可以产生一个老配置的 Leader。但是，在联合一致状态下，S3 必须要在老配置（S1、S2、S3）和新配置（S1、S2、S3、S4、S5）下都拿到超过半数选票才能当选。
 
 所以 S3 无法当选 Leader，集群中只能选出 S1、S2 中的一个 Leader。这样集群成员变更就失败了，但不会出现两个 Leader。
 
-<img src="/images/2025-04-28_13-25-52.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_13-25-52.png)
 
 这里还有一种可能，选出的新 Leader 具有 $C_{old,new}$，但按照安全性限制，这个新 Leader 无法提交 $C_{old,new}$。可以让他继续发送 $C_{new}$，继续进行集群成员变更。
 
-<img src="/images/2025-04-28_15-45-17.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_15-45-17.png)
 
 如图，Leader 复制 $C_{old,new}$ 到新老配置的大多数节点，满足联合一致，但 Leader 在 $C_{old,new}$ 未提交时宕机，这时 S1 当选 Leader，根据安全性规则，S1 不可以直接提交 $C_{old,new}$，所以 S1 只能继续复制 $C_{new}$，这时它把 $C_{new}$ 复制到了 S1、S4、S5 节点，构成了新配置集群的大多数，但这时能提交 $C_{new}$ 吗？
 
@@ -337,11 +337,11 @@ S1、S2 超时，开始进行选举，并且可以产生一个老配置的 Leade
 
 在这种情况下，Leader 的 $C_{old,new}$ 日志在新旧两种配置的集群中超过半数了，$C_{old,new}$ 就可以被提交了。
 
-<img src="/images/2025-04-28_13-28-16.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_13-28-16.png)
 
 如果 Leader 在 $C_{old,new}$ 已提交但 $C_{new}$ 未发起时宕机，选举限制安全性规则决定了选出的新 Leader 一定具有 $C_{old,new}$，也就是符合在两种配置集群中都超过半数，已经不存在出现脑裂问题的可能了。
 
-<img src="/images/2025-04-28_13-34-13.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_13-34-13.png)
 
 联合一致状态下，也是可以正常执行命令的，但也需要在两个配置集群中都达到大多数才能提交。
 
@@ -349,11 +349,11 @@ S1、S2 超时，开始进行选举，并且可以产生一个老配置的 Leade
 
 $C_{old,new}$ 提交后，Leader 就会发起 $C_{new}$，这时 Leader 只要满足新配置中的条件，就可以提交日志。要 $C_{new}$ 发起，意味着 $C_{old,new}$ 已经被复制到了大多数节点，就不需要再去管老配置。
 
-<img src="/images/2025-04-28_13-36-54.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_13-36-54.png)
 
 如果 Leader 在 $C_{new}$ 已发起时宕机，已经复制了 $C_{new}$ 的节点会 **只按新配置选举**，没有复制 $C_{new}$ 的节点会 **按新老配置选举**。有没有复制 $C_{new}$ 的节点都有可能当上 Leader。没有复制 $C_{new}$ 的节点选举成功也会发 $C_{new}$。
 
-<img src="/images/2025-04-28_13-42-19.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_13-42-19.png)
 
 图片所示为 5 节点集群（S1、S2、S3、S4、S5）缩容到 3 节点集群（S1、S2、S3）。这时如果 Leader 宕机了，$C_{new}$ 会不会被覆盖？
 
@@ -361,7 +361,7 @@ $C_{old,new}$ 提交后，Leader 就会发起 $C_{new}$，这时 Leader 只要�
 
 ### 总结
 
-<img src="/images/2025-04-28_17-18-28.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_17-18-28.png)
 
 在 $C_{old,new}$ 发起但未提交时，Raft 集群还未进入联合一致状态。这时 Leader 宕机，可以仅靠老配置选出来的新 Leader。
 
@@ -400,7 +400,7 @@ $C_{old,new}$ 提交后，Leader 就可以发起 $C_{new}$，从 $C_{new}$ 开�
 
 旧配置的大多数和新配置的大多数必须包含至少一个重叠节点（即两者交集非空）。
 
-<img src="/images/2025-04-28_20-12-06.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_20-12-06.png)
 
 **2. 重叠节点的投票是互斥的**
 
@@ -428,7 +428,7 @@ Raft 要求每个节点在同一任期内只能投一次票。因此重叠节点
 
 集群要从 3 节点切换到 4 节点：
 
-<img src="/images/2025-04-28_21-00-19.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_21-00-19.png)
 
 1. 完成增加节点的日志同步
 
@@ -439,7 +439,7 @@ Raft 要求每个节点在同一任期内只能投一次票。因此重叠节点
 2. 当前的 Leader S3 开始产生并发送 $C_{new}$。和联合一致方法一样，当前的 Leader S3 有 $C_{new}$ 的日志后，它就按照新配置来执行了。也就是说 $C_{new}$ 只有复制到了三个节点以上才能完成提交。
 3. $C_{new}$ 复制到了 S1 和 S4 中，S3 完成了 $C_{new}$ 的提交，单节点成员集群变更完成。
 
-<img src="/images/2025-04-28_21-07-35.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_21-07-35.png)
 
 ::: warning 在 $C_{new}$ 没有复制到大多数节点时 Leader 宕机：
 1. 选出的新 Leader 可能是 S4，具有 $C_{new}$，那么它会继续进行集群成员变更。
@@ -457,9 +457,9 @@ Raft 要求每个节点在同一任期内只能投一次票。因此重叠节点
    * 因为 (a,b)、(a,c)、(b,c) 是新老配置的最小交集，只要它们都复制了 $C_{new}$，就可以保证选出的新 Leader 一定是新配置的，所以不会发生脑裂问题。
 3. 连续的两次变更，如果第一步变更的过程中如果出现了切主，那么紧跟着的下一次变更可能出现错误。
 
-<img src="/images/2025-04-28_22-11-10.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_22-11-10.png)
 
-<img src="/images/2025-04-28_22-42-06.png" style="margin: 0 auto">
+![](/distribution/2025-04-28_22-42-06.png)
 
 ::: danger 可能出现的错误
 集群准备从 4 节点增加两个节点到 6 节点，分为两次单节点成员变更进行。Leader S3 把 $C_{new1}$ 复制到了 S5（要增加的节点），之后 S3 宕机，重新选举，S1 依靠 S2、S4 的两票当选 Leader，这时认为 $C_{new1}$ 变更失败，新 Leader S1 开始 $C_{new2}$ 的复制，$C_{new2}$ 向集群中增加节点 S6，这时的新 Leader S1 不认为集群中存在 S5，所以 $C_{new2}$ 还是把集群从 4 节点变成 5 节点。所以 S1 把 $C_{new2}$ 复制到了 S1、S2、S6 后，就达到了 5 节点的大多数，可以提交 $C_{new2}$ 了，认为单节点集群成员变更完成。之后 S1 宕机，S3 依靠 S3、S4、S5 的选票重新当选 Leader，这时对于 S3 而言还是 $C_{new1}$ 的配置，认为集群是 S1 到 S5 五个节点，所以只需要三票就可以当选。S3 当选 Leader 后，就会把 $C_{new1}$ 复制到所有的节点，造成已提交的 $C_{new2}$ 被覆盖，S3 根本不知道 S6 的存在，所以 S6 上的 $C_{new2}$ 不会被覆盖。**这里已提交的 $C_{new2}$ 被覆盖了。**
@@ -477,7 +477,7 @@ Raft 采用的是一种快照技术，每个节点在达到一定条件之后，
 
 快照中一个 key 只会留有最新的一份 value，占用空间比日志小很多。
 
-<img src="/images/2025-04-29_00-46-08.png" style="margin: 0 auto">
+![](/distribution/2025-04-29_00-46-08.png)
 
 ::: tip 一个 Follower 落后 Leader 很多，如果老的日志被清理了，Leader 怎么同步给 Follower 呢？
 Raft 的策略是直接向 Follower 发送自己的快照。
@@ -489,7 +489,7 @@ Raft 的策略是直接向 Follower 发送自己的快照。
 
 **线性一致性读（强一致性读）的定义**：读到的结果要是读请求发起时已经完成提交的结果（快照）。
 
-<img src="/images/2025-04-29_00-48-43.png" style="margin: 0 auto">
+![](/distribution/2025-04-29_00-48-43.png)
 
 在 Leader 和其他节点发生了网络分区的情况下，其他节点可能已经重新选出了一个 Leader，而如果老 Leader 在没有访问其他节点的情况下直接拿自身的值返回客户端，这个读取的结果就有可能不是最新的。
 
@@ -528,7 +528,7 @@ Raft 的策略是直接向 Follower 发送自己的快照。
 3. **Pipeline**：Leader 不用等待 Follower 的回复，就继续给 Follower 发送下一个日志。
 4. **Multi-Raft**：将数据分组，每组数据是独立的，用自己的 Raft 来同步。
 
-<img src="/images/2025-04-29_01-14-41.png" style="margin: 0 auto">
+![](/distribution/2025-04-29_01-14-41.png)
 
 ## Raft 与 Paxos 比较
 
