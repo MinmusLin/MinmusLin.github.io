@@ -4,7 +4,6 @@ import {Underline} from '@theojs/lumen'
 import {onMounted, watch, nextTick} from 'vue'
 import {useData, useRoute, inBrowser} from 'vitepress'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
-import mediumZoom from 'medium-zoom'
 import {NProgress} from 'nprogress-v2/dist/index.js'
 import busuanzi from 'busuanzi.pure.js'
 import 'nprogress-v2/dist/index.css'
@@ -29,16 +28,6 @@ export default {
   },
   setup() {
     const route = useRoute()
-    const initZoom = () => {
-      mediumZoom('.main img', {background: 'var(--vp-c-bg)'})
-    }
-    onMounted(() => {
-      initZoom()
-    })
-    watch(
-      () => route.path,
-      () => nextTick(() => initZoom())
-    )
     const {frontmatter} = useData()
     giscusTalk({
         repo: 'MinmusLin/MinmusLin.github.io',

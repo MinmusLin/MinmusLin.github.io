@@ -323,15 +323,6 @@ a {
   transform: translateY(24px);
 }
 
-/* Image Scaling */
-.medium-zoom-overlay {
-  z-index: 30;
-}
-
-.medium-zoom-image {
-  z-index: 9999 !important;
-}
-
 /* Route Redirection Progress Bar */
 .nprogress .bar {
   background: var(--vp-c-indigo-3);
