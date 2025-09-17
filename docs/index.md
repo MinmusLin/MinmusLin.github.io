@@ -57,3 +57,18 @@ features:
 ---
 
 <Underline></Underline>
+
+<script setup lang='ts'>
+import {onMounted} from 'vue'
+
+onMounted(() => {
+  const checkBusuanzi = setInterval(() => {
+    const counter = document.getElementById('busuanzi_value_site_pv')
+    if (counter && counter.innerText) {
+      clearInterval(checkBusuanzi)
+      const originalValue = parseInt(counter.innerText)
+      counter.innerText = Math.floor(originalValue / 2)
+    }
+  }, 100)
+})
+</script>
