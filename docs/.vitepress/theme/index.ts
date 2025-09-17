@@ -17,16 +17,12 @@ export default {
   enhanceApp: ({app, router}) => {
     app.component('Underline', Underline)
     if (inBrowser) {
-      let isBusuanziInitialized = false
       NProgress.configure({showSpinner: false})
       router.onBeforeRouteChange = () => {
         NProgress.start()
       }
       router.onAfterRouteChanged = () => {
-        if (!isBusuanziInitialized) {
-          busuanzi.fetch()
-          isBusuanziInitialized = true
-        }
+        busuanzi.fetch()
         NProgress.done()
       }
     }
