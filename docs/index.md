@@ -19,7 +19,7 @@ hero:
 
 features:
   - icon: 👋
-    title: 欢迎来到我的博客！本站访问量：<span id="busuanzi_value_site_pv"/>
+    title: 欢迎来到我的博客！<span id="busuanzi_container_site_pv">本站访问量：<span id="busuanzi_value_site_pv"></span></span>
     details: 我是林继申，一名全栈开发爱好者，致力于通过优雅的工程实践解决现实问题。
     link: https://github.com/MinmusLin
     linkText: 我的 GitHub
@@ -57,18 +57,3 @@ features:
 ---
 
 <Underline></Underline>
-
-<script setup lang='ts'>
-import {onMounted} from 'vue'
-
-onMounted(() => {
-  const checkBusuanzi = setInterval(() => {
-    const counter = document.getElementById('busuanzi_value_site_pv')
-    if (counter && counter.innerText) {
-      clearInterval(checkBusuanzi)
-      const originalValue = parseInt(counter.innerText)
-      counter.innerText = Math.floor(originalValue / 2)
-    }
-  }, 100)
-})
-</script>
