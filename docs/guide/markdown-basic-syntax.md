@@ -487,6 +487,8 @@ Markdown 允许直接使用符号 `<` 和 `&`，并自动进行转义。若 `&` 
 
 出于安全原因，并非所有 Markdown 应用程序都支持在 Markdown 文档中添加 HTML，某些 Markdown 应用程序只支持部分 HTML 标签的子集。
 
-对于 HTML 块级标签 `<div>`、`<table>`、`<pre>` 和 `<p>`，应在其前后添加空白行以与其它内容进行分隔。尽量不要使用空格（Spaces）或制表符（Tabs）对 HTML 标签进行缩进，否则将影响 Markdown 文档格式。
+对于 HTML 行级内联标签，如 `<span>`、`<cite>` 和 `<del>` 等，可以在 Markdown 文档的段落、列表或标题中任意使用，不受限制。根据个人习惯，甚至可以不使用 Markdown 格式而使用 HTML 标签来进行格式化。
+
+对于 HTML 块级标签，如 `<div>`、`<table>`、`<pre>` 和 `<p>` 等，应在其前后添加空白行以与其它内容进行分隔。尽量不要使用空格（Spaces）或制表符（Tabs）对 HTML 标签进行缩进，否则将影响 Markdown 文档格式。
 
 在 HTML 块级标签内不能使用 Markdown 语法。如 `<p>*Italic Text* and **Bold Text**</p>` 将不起作用。
