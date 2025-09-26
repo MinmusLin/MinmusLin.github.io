@@ -31,6 +31,10 @@ export default defineConfig({
       {
         text: '随笔',
         link: '/essay'
+      },
+      {
+        text: '指南',
+        link: '/guide'
       }
     ],
     sidebar: {
@@ -76,6 +80,40 @@ export default defineConfig({
         {
           text: '2025-05-07｜从放弃保研到字节暑期实习上岸：聊聊同济软件工程科班三年带给我了什么',
           link: '/essay/2025-05-07'
+        }
+      ],
+      '/guide': [
+        {
+          text: '贡献者指南',
+          link: '/guide'
+        },
+        {
+          text: 'VitePress',
+          collapsed: false,
+          items: [
+            {
+              text: '简介',
+              link: '/guide/vitepress-introduction'
+            },
+            {
+              text: '构建与部署',
+              link: '/guide/vitepress-build-and-deploy'
+            }
+          ]
+        },
+        {
+          text: 'Markdown 写作',
+          collapsed: false,
+          items: [
+            {
+              text: '基本语法',
+              link: '/guide/markdown-basic-syntax'
+            },
+            {
+              text: '扩展语法',
+              link: '/guide/markdown-extended-syntax'
+            }
+          ]
         }
       ]
     },
@@ -158,6 +196,13 @@ export default defineConfig({
     },
     image: {
       lazyLoading: true
+    },
+    container: {
+      tipLabel: '提示',
+      warningLabel: '警告',
+      dangerLabel: '危险',
+      infoLabel: '信息',
+      detailsLabel: '详细信息'
     }
   },
   vite: {
