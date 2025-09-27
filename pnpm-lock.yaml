@@ -17,6 +17,9 @@ importers:
       busuanzi.pure.js:
         specifier: ^1.0.3
         version: 1.0.3
+      canvas-confetti:
+        specifier: ^1.9.3
+        version: 1.9.3
       markdown-it-mathjax3:
         specifier: ^4.3.2
         version: 4.3.2
@@ -776,6 +779,9 @@ packages:
 
   busuanzi.pure.js@1.0.3:
     resolution: {integrity: sha512-tPULdyx+8NNb9geZYDpktKmHAYx9f2LEOBaHyWCaM7iPEMIa/43KgYAUluuU7YG9UFSOFpj4dO7Nj2Vlu3V9Rg==}
+
+  canvas-confetti@1.9.3:
+    resolution: {integrity: sha512-rFfTURMvmVEX1gyXFgn5QMn81bYk70qa0HLzcIOSVEyl57n6o9ItHeBtUSWdvKAPY0xlvBHno4/v3QPrT83q9g==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -2267,6 +2273,8 @@ snapshots:
   boolbase@1.0.0: {}
 
   busuanzi.pure.js@1.0.3: {}
+
+  canvas-confetti@1.9.3: {}
 
   ccount@2.0.1: {}
 

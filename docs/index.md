@@ -56,4 +56,5 @@ features:
     linkText: 邮件联系我
 ---
 
-<Underline></Underline>
+<Underline/>
+<Confetti/>

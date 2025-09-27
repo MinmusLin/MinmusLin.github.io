@@ -356,7 +356,7 @@ Markdown 链接语法：`[链接文本](链接地址 "链接Title(可选)")`
 [My Blog](https://www.minmuslin.cn "我的博客")<br>
 [My Email](mailto:minmuslin@outlook.com "我的电子邮箱")
 
-外部链接会以 [](https://www.minmuslin.cn/guide/markdown-basic-syntax) 标志结尾。
+外部链接会以 [](https://github.com/MinmusLin) 标志结尾。
 
 使用尖括号可以将链接或电子邮箱地址变为可点击的链接。
 

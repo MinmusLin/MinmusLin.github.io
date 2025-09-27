@@ -3,6 +3,7 @@ import Layout from './Layout.vue'
 import {Underline} from '@theojs/lumen'
 import {onMounted, watch, nextTick} from 'vue'
 import {useData, useRoute, inBrowser} from 'vitepress'
+import Confetti from './components/Confetti.vue'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import {NProgress} from 'nprogress-v2/dist/index.js'
 import busuanzi from 'busuanzi.pure.js'
@@ -16,6 +17,7 @@ export default {
   Layout: Layout,
   enhanceApp: ({app, router}) => {
     app.component('Underline', Underline)
+    app.component('Confetti', Confetti)
     if (inBrowser) {
       NProgress.configure({showSpinner: false})
       router.onBeforeRouteChange = () => {
