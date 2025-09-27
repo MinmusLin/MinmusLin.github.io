@@ -2,6 +2,7 @@ import {defineConfig} from 'vitepress'
 import {figure} from '@mdit/plugin-figure'
 import {MermaidMarkdown, MermaidPlugin} from 'vitepress-plugin-mermaid'
 import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
+import footnote_plugin from 'markdown-it-footnote'
 import vitepressProtectPlugin from 'vitepress-protect-plugin'
 
 export default defineConfig({
@@ -193,6 +194,7 @@ export default defineConfig({
       md.use(figure)
       md.use(MermaidMarkdown)
       md.use(markdownItTaskCheckbox)
+      md.use(footnote_plugin)
     },
     image: {
       lazyLoading: true

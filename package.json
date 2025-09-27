@@ -26,6 +26,7 @@
     "@theojs/lumen": "^6.4.4",
     "busuanzi.pure.js": "^1.0.3",
     "canvas-confetti": "^1.9.3",
+    "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
     "markdown-it-task-checkbox": "^1.0.6",
     "medium-zoom": "^1.1.0",
