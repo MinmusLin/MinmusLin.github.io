@@ -126,13 +126,14 @@ sub {
   }
 }
 
-/* Tip Container Style */
+/* Tip Container and Badge Style */
 :root {
   --vp-c-tip-1: var(--vp-c-green-1);
   --vp-c-tip-2: var(--vp-c-green-2);
   --vp-c-tip-3: var(--vp-c-green-3);
   --vp-c-tip-soft: var(--vp-c-green-soft);
-  --vp-badge-tip-bg: var(--vp-c-brand-soft);
+  --vp-badge-tip-text: var(--vp-c-green-1);
+  --vp-badge-tip-bg: var(--vp-c-green-soft);
 }
 
 /* Details Container Style */

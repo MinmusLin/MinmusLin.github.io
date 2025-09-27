@@ -1,5 +1,9 @@
 # Markdown 基本语法
 
+Markdown 是一种轻量级标记语言，由 John Gruber 于 2004 年创建，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与 HTML 混合编写，可导出 HTML、PDF 以及本身 `.md` 格式的文件。因简洁、高效、易读、易写，Markdown 被大量使用，如 [Github](https://github.com)、[GitLab](https://about.gitlab.com)、[StackOverflow](https://stackoverflow.com)、[Wikipedia](https://www.wikipedia.org) 等。
+
+Markdown 基本语法是 John Gruber 的原始设计文档中列出的元素。所有 Markdown 应用程序都支持这些元素。
+
 ## 标题
 
 要创建标题，应在文本前添加 `#` 号，`#` 号的数量代表了标题的级别。
@@ -346,7 +350,7 @@ Markdown 链接语法：`[链接文本](链接地址 "链接Title(可选)")`
 
 **渲染效果：**
 
-[Guide](/guide)<br>
+[Guide](/guide/)<br>
 [My Blog](https://www.minmuslin.cn)<br>
 [My Email](mailto:minmuslin@outlook.com)<br>
 [My Blog](https://www.minmuslin.cn "我的博客")<br>
@@ -354,22 +358,19 @@ Markdown 链接语法：`[链接文本](链接地址 "链接Title(可选)")`
 
 外部链接会以 [](https://www.minmuslin.cn/guide/markdown-basic-syntax) 标志结尾。
 
-使用尖括号可以将链接或电子邮箱地址变为可点击的链接。大部分 Markdown 应用程序都能够自动检测链接或电子邮箱地址，无需手动添加尖括号。
+使用尖括号可以将链接或电子邮箱地址变为可点击的链接。
 
 ```Markdown:line-numbers
 <https://www.minmuslin.cn>
 <minmuslin@outlook.com>
-
-https://www.minmuslin.cn
-minmuslin@outlook.com
 ```
 
 不同的 Markdown 应用程序处理链接中空格的方式不一致。为保证兼容性，应使用 `%20` 替代空格。
 
 **渲染效果：**
 
-https://www.minmuslin.cn<br>
-minmuslin@outlook.com
+<https://www.minmuslin.cn><br>
+<minmuslin@outlook.com>
 
 ### 格式化链接
 
