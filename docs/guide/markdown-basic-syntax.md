@@ -2,6 +2,10 @@
 
 Markdown 是一种轻量级标记语言，由 John Gruber 于 2004 年创建，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与 HTML 混合编写，可导出 HTML、PDF 以及本身 `.md` 格式的文件。因简洁、高效、易读、易写，Markdown 被大量使用，如 [Github](https://github.com)、[GitLab](https://about.gitlab.com)、[StackOverflow](https://stackoverflow.com)、[Wikipedia](https://www.wikipedia.org) 等。
 
+Markdown 应用程序通过 Markdown 处理器（也通常称为“解析器”或“实现”）将 Markdown 格式文本输出为 HTML 格式。
+
+![](/guide/markdown-rendering-process.png)
+
 Markdown 基本语法是 John Gruber 的原始设计文档中列出的元素。所有 Markdown 应用程序都支持这些元素。
 
 ## 标题
@@ -405,7 +409,7 @@ _[My Blog](https://www.minmuslin.cn)_<br>
 
 第二部分（定义处）语法：`[标签]: 链接地址 "链接Title(可选)"`
 
-标签位于方括号中，其后紧跟一个冒号和若干空格，链接地址可以选择将其包含在尖括号中，链接 Title 可以选择将其包含在双引号，单引号或圆括号中。可以将引用链接的第二部分（定义处）放在 Markdown 文档中的任意位置。
+标签位于方括号中，其后紧跟一个冒号 `:` 和若干空格，链接地址可以选择将其包含在尖括号中，链接 Title 可以选择将其包含在双引号，单引号或圆括号中。可以将引用链接的第二部分（定义处）放在 Markdown 文档中的任意位置。
 
 以下示例格式对于引用链接第二部分（定义处）效果相同：
 
@@ -420,7 +424,7 @@ _[My Blog](https://www.minmuslin.cn)_<br>
 [1]: <https://www.minmuslin.cn> (我的博客)
 ```
 
-为保证兼容性，第一部分（使用处）第一组和第二组方括号之间应不保留空格，第二部分（定义处）冒号后应紧跟一个空格。
+为保证兼容性，第一部分（使用处）第一组和第二组方括号之间应不保留空格，第二部分（定义处）冒号 `:` 后应紧跟一个空格。
 
 **渲染效果：**
 
