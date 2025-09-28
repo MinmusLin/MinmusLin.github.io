@@ -207,9 +207,9 @@ Markdown footnotes support a single paragraph[^1] as well as multiple paragraphs
 
     Other elements are also supported in footnotes.
 
-## 标题锚点 {#custom-anchor}
+## 标题锚点 {#title-anchor}
 
-许多 Markdown 应用程序支持为标题添加自定义 ID（标题锚点），一些 Markdown 应用程序会自动为标题添加锚点。
+许多 Markdown 应用程序支持为标题添加自定义 ID（标题锚点），一些 Markdown 应用程序会自动为标题添加锚点：
 
 ```Markdown:line-numbers
 [www.minmuslin.cn/guide/markdown-extended-syntax#标题锚点](/guide/markdown-extended-syntax#标题锚点)
@@ -219,19 +219,19 @@ Markdown footnotes support a single paragraph[^1] as well as multiple paragraphs
 
 [www.minmuslin.cn/guide/markdown-extended-syntax#标题锚点](/guide/markdown-extended-syntax#标题锚点)
 
-要为标题添加自定义 ID（标题锚点），而不是使用默认自动生成的锚点，应向标题添加后缀。
+要为标题添加自定义 ID（标题锚点），而不是使用默认自动生成的锚点，应向标题添加后缀：
 
 ```Markdown:line-numbers
-## 标题锚点 {#custom-anchor}
+## 标题锚点 {#title-anchor}
 
-[www.minmuslin.cn/guide/markdown-extended-syntax#custom-anchor](/guide/markdown-extended-syntax#custom-anchor)
+[www.minmuslin.cn/guide/markdown-extended-syntax#title-anchor](/guide/markdown-extended-syntax#title-anchor)
 ```
 
-这允许将对应标题链接为 `#custom-anchor`，而不是默认自动生成的 `#标题锚点`。
+这允许将对应标题链接为 `#title-anchor`，而不是默认自动生成的 `#标题锚点`。
 
 **渲染效果：**
 
-[www.minmuslin.cn/guide/markdown-extended-syntax#custom-anchor](/guide/markdown-extended-syntax#custom-anchor)
+[www.minmuslin.cn/guide/markdown-extended-syntax#title-anchor](/guide/markdown-extended-syntax#title-anchor)
 
 ## 任务列表
 
