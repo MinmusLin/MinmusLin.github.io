@@ -235,6 +235,22 @@ Markdown footnotes support a single paragraph[^1] as well as multiple paragraphs
 
 ## 任务列表
 
+可以创建带有复选框的项目列表作为任务列表，在支持任务列表的 Markdown 应用程序中，复选框将显示在任务列表项左侧。
+
+要创建任务列表，应先按照 Markdown [列表](/guide/markdown-basic-syntax#列表)语法创建有序列表或无序列表，之后在任务列表项之前添加方括号 `[ ]` 表示复选框。要勾选一个复选框，应在方括号 `[ ]` 内添加 `x`。
+
+```Markdown:line-numbers
+* [x] First Item
+* [ ] Second Item
+* [ ] Third Item
+```
+
+**渲染效果：**
+
+* [x] First Item
+* [ ] Second Item
+* [ ] Third Item
+
 ## Emoji 表情
 
 ## 自动链接
