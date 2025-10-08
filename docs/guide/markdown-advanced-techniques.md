@@ -151,10 +151,26 @@ H<sub>2</sub>O
 E = mc^2^<br>
 H~2~O
 
+## 缩写
+
+要创建缩写，应在方括号内添加缩写，在 `[` 前添加星号 `*`，在 `]` 后添加冒号 `:` 和一个空格，之后添加缩写全称。
+
+```Markdown:line-numbers
+*[W3C]: World Wide Web Consortium
+```
+
+**渲染效果：**
+
+*[W3C]: World Wide Web Consortium
+
+The HTML specification is written by the W3C.
+
+本功能也可用于评论或注释。
+
+
+
 
 
 
 
 :fa-github:
-
-<abbr title="Hyper Text Markup Language">HTML</abbr>

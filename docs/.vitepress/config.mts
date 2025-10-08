@@ -8,6 +8,7 @@ import markdownItMark from 'markdown-it-mark'
 import markdownItIns from 'markdown-it-ins'
 import markdownItSub from 'markdown-it-sub'
 import markdownItSup from 'markdown-it-sup'
+import markdownItAbbr from 'markdown-it-abbr'
 import vitepressProtectPlugin from 'vitepress-protect-plugin'
 
 export default defineConfig({
@@ -209,6 +210,7 @@ export default defineConfig({
       md.use(markdownItIns)
       md.use(markdownItSub)
       md.use(markdownItSup)
+      md.use(markdownItAbbr)
     },
     image: {
       lazyLoading: true
