@@ -1,0 +1,25 @@
+.VPDoc h1 {
+  background: linear-gradient(
+    120deg,
+    #746DC1 40%,
+    #228CC2
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
+
+.dark .VPDoc h1 {
+  background: linear-gradient(
+    120deg,
+    #7D76CC 40%,
+    #41D1FF
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
