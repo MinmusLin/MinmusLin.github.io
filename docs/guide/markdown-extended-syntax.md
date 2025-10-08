@@ -1,6 +1,6 @@
 # Markdown 扩展语法
 
-John Gruber 的原始设计文档中概述的[基本语法](/guide/markdown-basic-syntax)主要是为了应付大多数情况下的日常所需元素，一些个人和组织通过添加其他元素（例如删除线、表格、代码块和脚注等）来扩展基本语法。
+John Gruber 的原始设计文档中概述的[基本语法](/guide/markdown-basic-syntax)主要是为了应付大多数情况下的日常所需元素，一些个人和组织通过添加其他元素（例如表格、代码块和脚注等）来扩展基本语法。
 
 Markdown 扩展语法通过添加额外功能扩展了 Markdown 基本语法。但是并非所有 Markdown 应用程序都支持这些元素。许多受欢迎的 Markdown 应用程序使用以下轻量级标记语言之一：
 
@@ -9,18 +9,6 @@ Markdown 扩展语法通过添加额外功能扩展了 Markdown 基本语法。�
 * [Markdown Extra](https://michelf.ca/projects/php-markdown/extra)
 * [MultiMarkdown](https://fletcherpenney.net/multimarkdown)
 * [R Markdown](https://rmarkdown.rstudio.com)
-
-## 删除线
-
-要在文本上添加删除线，应在文本前后添加两个破浪号 `~`。
-
-```Markdown:line-numbers
-~~Deleted Text~~
-```
-
-**渲染效果：**
-
-~~Deleted Text~~
 
 ## 表格
 
@@ -233,6 +221,40 @@ Markdown footnotes support a single paragraph[^1] as well as multiple paragraphs
 
 [www.minmuslin.cn/guide/markdown-extended-syntax#title-anchor](/guide/markdown-extended-syntax#title-anchor)
 
+## 定义列表
+
+部分 Markdown 应用程序支持创建术语及其对应的定义列表。要创建定义列表，应在第一行输入术语，在下一行输入冒号 `:`，后跟一个空格和定义。
+
+```Markdown:line-numbers
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is the first definition of the second term.
+: This is the second definition of the second term.
+```
+
+**渲染效果：**
+
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is the first definition of the second term.
+: This is the second definition of the second term.
+
+## 删除线
+
+要在文本上添加删除线，应在文本前后添加两个破浪号 `~`。
+
+```Markdown:line-numbers
+~~Deleted Text~~
+```
+
+**渲染效果：**
+
+~~Deleted Text~~
+
 ## 任务列表
 
 可以创建带有复选框的项目列表作为任务列表，在支持任务列表的 Markdown 应用程序中，复选框将显示在任务列表项左侧。
@@ -253,4 +275,30 @@ Markdown footnotes support a single paragraph[^1] as well as multiple paragraphs
 
 ## Emoji 表情
 
+有两种方法可以将 Emoji 表情添加到 Markdown 文档中：将 Emoji 表情复制并粘贴到 Markdown 文档中，或输入 Emoji Shortcodes。
+
+```Markdown:line-numbers
+:heart:
+```
+
+**渲染效果：**
+
+:heart:
+
+这里可以查询 VitePress 支持的所有 [Emoji Shortcodes](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.mjs)。
+
 ## 自动链接
+
+大部分 Markdown 应用程序会自动将链接或电子邮箱地址转换为可点击的链接，而无需使用尖括号。
+
+```Markdown:line-numbers
+https://www.minmuslin.cn
+minmuslin@outlook.com
+```
+
+不同的 Markdown 应用程序处理链接中空格的方式不一致。为保证兼容性，应使用 `%20` 替代空格。
+
+**渲染效果：**
+
+<https://www.minmuslin.cn><br>
+<minmuslin@outlook.com>
