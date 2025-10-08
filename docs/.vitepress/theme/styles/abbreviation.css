@@ -4,6 +4,8 @@ abbr[title] {
   text-decoration-color: var(--vp-c-text-2);
   cursor: help;
   transition: text-decoration-color 0.25s ease;
+  text-underline-position: under;
+  -webkit-text-underline-position: under;
 }
 
 abbr[title]:hover {
