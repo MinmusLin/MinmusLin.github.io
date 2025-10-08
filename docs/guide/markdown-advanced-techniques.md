@@ -6,15 +6,16 @@
 
 ## 下划线
 
-要在文本上添加下划线，应使用 HTML 的 `<ins>` 标签。
+要在文本上添加下划线，应在文本前后添加两个加号 `+`，与 HTML 的 `<ins>` 标签等价。
 
 ```Markdown:line-numbers
+++Underlined Text++
 <ins>Underlined Text</ins>
 ```
 
 **渲染效果：**
 
-<ins>Underlined Text</ins>
+++Underlined Text++
 
 ## 缩进
 
@@ -135,17 +136,23 @@ Paragraph 3
 
 ## 上标和下标
 
-可以使用 HTML 的 `<sup>` 和 `<sub>` 标签来分别实现上标和下标。
+要在文本上添加上标 / 下标，应在文本前后添加符号 `^` / `~`，与 HTML 的 `<sup>` / `<sub>` 标签等价。
 
 ```Markdown:line-numbers
+E = mc^2^
+H~2~O
+
 E = mc<sup>2</sup>
 H<sub>2</sub>O
 ```
 
 **渲染效果：**
 
-E = mc<sup>2</sup><br>
-H<sub>2</sub>O
+E = mc^2^<br>
+H~2~O
+
+
+
 
 
 :fa-github:

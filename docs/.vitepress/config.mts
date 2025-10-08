@@ -5,6 +5,9 @@ import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
 import footnote_plugin from 'markdown-it-footnote'
 import deflist from 'markdown-it-deflist'
 import markdownItMark from 'markdown-it-mark'
+import markdownItIns from 'markdown-it-ins'
+import markdownItSub from 'markdown-it-sub'
+import markdownItSup from 'markdown-it-sup'
 import vitepressProtectPlugin from 'vitepress-protect-plugin'
 
 export default defineConfig({
@@ -203,6 +206,9 @@ export default defineConfig({
       md.use(footnote_plugin)
       md.use(deflist)
       md.use(markdownItMark)
+      md.use(markdownItIns)
+      md.use(markdownItSub)
+      md.use(markdownItSup)
     },
     image: {
       lazyLoading: true

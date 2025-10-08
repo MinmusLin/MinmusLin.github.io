@@ -26,12 +26,21 @@ importers:
       markdown-it-footnote:
         specifier: ^4.0.0
         version: 4.0.0
+      markdown-it-ins:
+        specifier: ^4.0.0
+        version: 4.0.0
       markdown-it-mark:
         specifier: ^4.0.0
         version: 4.0.0
       markdown-it-mathjax3:
         specifier: ^4.3.2
         version: 4.3.2
+      markdown-it-sub:
+        specifier: ^2.0.0
+        version: 2.0.0
+      markdown-it-sup:
+        specifier: ^2.0.0
+        version: 2.0.0
       markdown-it-task-checkbox:
         specifier: ^1.0.6
         version: 1.0.6
@@ -1195,11 +1204,20 @@ packages:
   markdown-it-footnote@4.0.0:
     resolution: {integrity: sha512-WYJ7urf+khJYl3DqofQpYfEYkZKbmXmwxQV8c8mO/hGIhgZ1wOe7R4HLFNwqx7TjILbnC98fuyeSsin19JdFcQ==}
 
+  markdown-it-ins@4.0.0:
+    resolution: {integrity: sha512-sWbjK2DprrkINE4oYDhHdCijGT+MIDhEupjSHLXe5UXeVr5qmVxs/nTUVtgi0Oh/qtF+QKV0tNWDhQBEPxiMew==}
+
   markdown-it-mark@4.0.0:
     resolution: {integrity: sha512-YLhzaOsU9THO/cal0lUjfMjrqSMPjjyjChYM7oyj4DnyaXEzA8gnW6cVJeyCrCVeyesrY2PlEdUYJSPFYL4Nkg==}
 
   markdown-it-mathjax3@4.3.2:
     resolution: {integrity: sha512-TX3GW5NjmupgFtMJGRauioMbbkGsOXAAt1DZ/rzzYmTHqzkO1rNAdiMD4NiruurToPApn2kYy76x02QN26qr2w==}
+
+  markdown-it-sub@2.0.0:
+    resolution: {integrity: sha512-iCBKgwCkfQBRg2vApy9vx1C1Tu6D8XYo8NvevI3OlwzBRmiMtsJ2sXupBgEA7PPxiDwNni3qIUkhZ6j5wofDUA==}
+
+  markdown-it-sup@2.0.0:
+    resolution: {integrity: sha512-5VgmdKlkBd8sgXuoDoxMpiU+BiEt3I49GItBzzw7Mxq9CxvnhE/k09HFli09zgfFDRixDQDfDxi0mgBCXtaTvA==}
 
   markdown-it-task-checkbox@1.0.6:
     resolution: {integrity: sha512-7pxkHuvqTOu3iwVGmDPeYjQg+AIS9VQxzyLP9JCg9lBjgPAJXGEkChK6A2iFuj3tS0GV3HG2u5AMNhcQqwxpJw==}
@@ -2765,6 +2783,8 @@ snapshots:
 
   markdown-it-footnote@4.0.0: {}
 
+  markdown-it-ins@4.0.0: {}
+
   markdown-it-mark@4.0.0: {}
 
   markdown-it-mathjax3@4.3.2:
@@ -2773,6 +2793,10 @@ snapshots:
       mathjax-full: 3.2.2
     transitivePeerDependencies:
       - encoding
+
+  markdown-it-sub@2.0.0: {}
+
+  markdown-it-sup@2.0.0: {}
 
   markdown-it-task-checkbox@1.0.6: {}
 
