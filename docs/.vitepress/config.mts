@@ -1,15 +1,15 @@
 import {defineConfig} from 'vitepress'
 import {figure} from '@mdit/plugin-figure'
 import {MermaidMarkdown, MermaidPlugin} from 'vitepress-plugin-mermaid'
-import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
-import footnote_plugin from 'markdown-it-footnote'
-import deflist from 'markdown-it-deflist'
-import markdownItMark from 'markdown-it-mark'
+import vitepressProtectPlugin from 'vitepress-protect-plugin'
+import markdownItAbbr from 'markdown-it-abbr'
+import markdownItDeflist from 'markdown-it-deflist'
+import markdownItFootnote from 'markdown-it-footnote'
 import markdownItIns from 'markdown-it-ins'
+import markdownItMark from 'markdown-it-mark'
 import markdownItSub from 'markdown-it-sub'
 import markdownItSup from 'markdown-it-sup'
-import markdownItAbbr from 'markdown-it-abbr'
-import vitepressProtectPlugin from 'vitepress-protect-plugin'
+import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
 
 export default defineConfig({
   title: "MinmusLin's Blog",
@@ -204,8 +204,8 @@ export default defineConfig({
       md.use(figure)
       md.use(MermaidMarkdown)
       md.use(markdownItTaskCheckbox)
-      md.use(footnote_plugin)
-      md.use(deflist)
+      md.use(markdownItFootnote)
+      md.use(markdownItDeflist)
       md.use(markdownItMark)
       md.use(markdownItIns)
       md.use(markdownItSub)
