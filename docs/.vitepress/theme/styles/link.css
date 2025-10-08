@@ -1,0 +1,80 @@
+a {
+  --link-soft: var(--vp-c-brand-soft);
+  --link-color: var(--vp-c-brand-1);
+}
+
+.custom-block.tip a {
+  --link-soft: var(--vp-c-tip-soft);
+  --link-color: var(--vp-c-tip-1);
+}
+
+.custom-block.important a {
+  --link-soft: var(--vp-c-purple-soft);
+  --link-color: var(--vp-c-purple-1);
+}
+
+.custom-block.warning a {
+  --link-soft: var(--vp-c-warning-soft);
+  --link-color: var(--vp-c-warning-1);
+}
+
+.custom-block.caution a {
+  --link-soft: var(--vp-c-caution-soft);
+  --link-color: var(--vp-c-caution-1);
+}
+
+.custom-block.danger a {
+  --link-soft: var(--vp-c-caution-soft);
+  --link-color: var(--vp-c-caution-1);
+}
+
+.vp-doc a[target="_blank"]::after {
+  content: "";
+  width: 0.7em !important;
+  height: 0.7em !important;
+  margin-left: 0.1em !important;
+  color: inherit !important;
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.vp-doc a {
+  padding-bottom: 0.12em;
+  color: var(--link-color);
+  text-decoration: none;
+  position: relative;
+  border-radius: 1px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 0 100%;
+  transition: background-color 0.2s, box-shadow 0.2s, background-size 0.3s;
+  background-image: linear-gradient(
+    transparent calc(100% - 0.1em),
+    var(--link-color) 0.1em
+  );
+}
+
+.vp-doc a:hover {
+  color: var(--link-color) !important;
+  background-color: var(--link-soft);
+  box-shadow: var(--link-soft) 0 0 0 3px;
+  opacity: 1 !important;
+  background-position: left;
+  background-size: 100% 100%;
+}
+
+.vp-doc a:active {
+  opacity: 0.6 !important;
+}
+
+.edit-link-button:active {
+  opacity: 0.6;
+}
+
+.escape-animate a {
+  box-shadow: none !important;
+}
+
+.vp-doc a:hover > code {
+  color: inherit;
+}

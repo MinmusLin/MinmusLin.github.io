@@ -4,6 +4,7 @@ import {MermaidMarkdown, MermaidPlugin} from 'vitepress-plugin-mermaid'
 import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
 import footnote_plugin from 'markdown-it-footnote'
 import deflist from 'markdown-it-deflist'
+import markdownItMark from 'markdown-it-mark'
 import vitepressProtectPlugin from 'vitepress-protect-plugin'
 
 export default defineConfig({
@@ -114,6 +115,10 @@ export default defineConfig({
             {
               text: '扩展语法',
               link: '/guide/markdown-extended-syntax'
+            },
+            {
+              text: '高级技巧',
+              link: '/guide/markdown-advanced-techniques'
             }
           ]
         }
@@ -197,6 +202,7 @@ export default defineConfig({
       md.use(markdownItTaskCheckbox)
       md.use(footnote_plugin)
       md.use(deflist)
+      md.use(markdownItMark)
     },
     image: {
       lazyLoading: true

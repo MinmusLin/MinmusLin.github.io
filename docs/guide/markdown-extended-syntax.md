@@ -51,6 +51,22 @@ Markdown 扩展语法通过添加额外功能扩展了 Markdown 基本语法。�
 
 可以通过 [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables) 等图形界面工具创建 Markdown 表格。
 
+::: tip 在表格中创建换行或列表
+Markdown 不支持在表格中创建换行或列表，但可以通过 HTML 解决。
+
+```Markdown:line-numbers
+| Col 1         | Col 2                                 | Col 3                                  |
+|---------------|---------------------------------------|----------------------------------------|
+| Alpha<br>Beta | <ol><li>Gamma</li><li>Delta</li></ol> | <ul><li>Epsilon</li><li>Zeta</li></ul> |
+```
+
+**渲染效果：**
+
+| Col 1         | Col 2                                 | Col 3                                  |
+|---------------|---------------------------------------|----------------------------------------|
+| Alpha<br>Beta | <ol><li>Gamma</li><li>Delta</li></ol> | <ul><li>Epsilon</li><li>Zeta</li></ul> |
+:::
+
 ## 代码块
 
 可以通过将代码的每一行缩进至少四个空格或一个制表符来创建[代码块](/guide/markdown-basic-syntax#代码块)。
@@ -292,7 +308,7 @@ Second Term
 大部分 Markdown 应用程序会自动将链接或电子邮箱地址转换为可点击的链接，而无需使用尖括号。
 
 ```Markdown:line-numbers
-https://www.minmuslin.cn
+https://github.com/MinmusLin
 minmuslin@outlook.com
 ```
 
@@ -300,5 +316,5 @@ minmuslin@outlook.com
 
 **渲染效果：**
 
-<https://www.minmuslin.cn><br>
+<https://github.com/MinmusLin><br>
 <minmuslin@outlook.com>

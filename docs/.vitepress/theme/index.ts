@@ -10,7 +10,7 @@ import busuanzi from 'busuanzi.pure.js'
 import mediumZoom from 'medium-zoom'
 import 'nprogress-v2/dist/index.css'
 import '@theojs/lumen/pic'
-import './custom.css'
+import './style.css'
 
 export default {
   extends: DefaultTheme,

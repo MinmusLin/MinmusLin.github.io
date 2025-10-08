@@ -1,0 +1,42 @@
+@media only screen and (min-width: 1280px) {
+  :root {
+    --vp-nav-bg-color: #FFFFFF55;
+  }
+
+  .dark {
+    --vp-nav-bg-color: #1B1B1F70;
+  }
+
+  .content-body {
+    backdrop-filter: blur(15px);
+  }
+
+  .home .content-body {
+    backdrop-filter: none;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .VPNavBar.home {
+    backdrop-filter: blur(15px);
+    --vp-nav-bg-color: #FFFFFF55;
+  }
+
+  .dark .VPNavBar.home {
+    --vp-nav-bg-color: #1B1B1F70;
+  }
+
+  .VPNavBar.home.top {
+    backdrop-filter: none;
+  }
+}
+
+.VPLocalNavOutlineDropdown .items {
+  backdrop-filter: blur(15px);
+  background: transparent;
+  --vp-c-bg-soft: #FFFFFF99;
+}
+
+.dark .VPLocalNavOutlineDropdown .items {
+  --vp-c-bg-soft: #1B1B1F90;
+}

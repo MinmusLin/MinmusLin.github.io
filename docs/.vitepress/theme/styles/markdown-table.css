@@ -1,0 +1,8 @@
+.vp-doc table {
+  margin: auto;
+  display: table;
+}
+
+.vp-doc thead:not(:has(th:not(:empty))) {
+  display: none;
+}

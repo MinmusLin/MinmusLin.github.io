@@ -346,18 +346,18 @@ Markdown 链接语法：`[链接文本](链接地址 "链接Title(可选)")`
 
 ```Markdown:line-numbers
 [Guide](/guide)
-[My Blog](https://www.minmuslin.cn)
+[My GitHub](https://github.com/MinmusLin)
 [My Email](mailto:minmuslin@outlook.com)
-[My Blog](https://www.minmuslin.cn "我的博客")
+[My GitHub](https://github.com/MinmusLin "我的 GitHub")
 [My Email](mailto:minmuslin@outlook.com "我的电子邮箱")
 ```
 
 **渲染效果：**
 
 [Guide](/guide/)<br>
-[My Blog](https://www.minmuslin.cn)<br>
+[My GitHub](https://github.com/MinmusLin)<br>
 [My Email](mailto:minmuslin@outlook.com)<br>
-[My Blog](https://www.minmuslin.cn "我的博客")<br>
+[My GitHub](https://github.com/MinmusLin "我的 GitHub")<br>
 [My Email](mailto:minmuslin@outlook.com "我的电子邮箱")
 
 外部链接会以 [](https://github.com/MinmusLin) 标志结尾。
@@ -365,7 +365,7 @@ Markdown 链接语法：`[链接文本](链接地址 "链接Title(可选)")`
 使用尖括号可以将链接或电子邮箱地址变为可点击的链接。
 
 ```Markdown:line-numbers
-<https://www.minmuslin.cn>
+<https://github.com/MinmusLin>
 <minmuslin@outlook.com>
 ```
 
@@ -373,7 +373,7 @@ Markdown 链接语法：`[链接文本](链接地址 "链接Title(可选)")`
 
 **渲染效果：**
 
-<https://www.minmuslin.cn><br>
+<https://github.com/MinmusLin><br>
 <minmuslin@outlook.com>
 
 ### 格式化链接
@@ -381,16 +381,16 @@ Markdown 链接语法：`[链接文本](链接地址 "链接Title(可选)")`
 在链接语法前后添加星号 `*` 或下划线 `_` 以强调链接，在链接文本前后添加反引号 `` ` `` 以表示行内代码。
 
 ```Markdown:line-numbers
-*[My Blog](https://www.minmuslin.cn)*
-_[My Blog](https://www.minmuslin.cn)_
-[`My Blog`](https://www.minmuslin.cn)
+*[My GitHub](https://github.com/MinmusLin)*
+_[My GitHub](https://github.com/MinmusLin)_
+[`My GitHub`](https://github.com/MinmusLin)
 ```
 
 **渲染效果：**
 
-*[My Blog](https://www.minmuslin.cn)*<br>
-_[My Blog](https://www.minmuslin.cn)_<br>
-[`My Blog`](https://www.minmuslin.cn)
+*[My GitHub](https://github.com/MinmusLin)*<br>
+_[My GitHub](https://github.com/MinmusLin)_<br>
+[`My GitHub`](https://github.com/MinmusLin)
 
 ### 引用链接
 
@@ -403,8 +403,8 @@ _[My Blog](https://www.minmuslin.cn)_<br>
 以下示例格式对于引用链接第一部分（使用处）效果相同：
 
 ```Markdown:line-numbers
-[My Blog][1]
-[My Blog] [1]
+[My GitHub][1]
+[My GitHub] [1]
 ```
 
 第二部分（定义处）语法：`[标签]: 链接地址 "链接Title(可选)"`
@@ -414,23 +414,23 @@ _[My Blog](https://www.minmuslin.cn)_<br>
 以下示例格式对于引用链接第二部分（定义处）效果相同：
 
 ```Markdown:line-numbers
-[1]: https://www.minmuslin.cn
-[1]: https://www.minmuslin.cn "我的博客"
-[1]: https://www.minmuslin.cn '我的博客'
-[1]: https://www.minmuslin.cn (我的博客)
-[1]: <https://www.minmuslin.cn>
-[1]: <https://www.minmuslin.cn> "我的博客"
-[1]: <https://www.minmuslin.cn> '我的博客'
-[1]: <https://www.minmuslin.cn> (我的博客)
+[1]: https://github.com/MinmusLin
+[1]: https://github.com/MinmusLin "我的 GitHub"
+[1]: https://github.com/MinmusLin '我的 GitHub'
+[1]: https://github.com/MinmusLin (我的 GitHub)
+[1]: <https://github.com/MinmusLin>
+[1]: <https://github.com/MinmusLin> "我的 GitHub"
+[1]: <https://github.com/MinmusLin> '我的 GitHub'
+[1]: <https://github.com/MinmusLin> (我的 GitHub)
 ```
 
 为保证兼容性，第一部分（使用处）第一组和第二组方括号之间应不保留空格，第二部分（定义处）冒号 `:` 后应紧跟一个空格。
 
 **渲染效果：**
 
-[My Blog][1]
+[My GitHub][1]
 
-[1]: https://www.minmuslin.cn "我的博客"
+[1]: https://github.com/MinmusLin "我的 GitHub"
 
 ## 图像
 
