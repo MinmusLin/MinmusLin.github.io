@@ -203,14 +203,14 @@ export default defineConfig({
     config: (md) => {
       md.use(figure)
       md.use(MermaidMarkdown)
-      md.use(markdownItTaskCheckbox)
-      md.use(markdownItFootnote)
+      md.use(markdownItAbbr)
       md.use(markdownItDeflist)
-      md.use(markdownItMark)
+      md.use(markdownItFootnote)
       md.use(markdownItIns)
+      md.use(markdownItMark)
       md.use(markdownItSub)
       md.use(markdownItSup)
-      md.use(markdownItAbbr)
+      md.use(markdownItTaskCheckbox)
     },
     image: {
       lazyLoading: true
