@@ -165,12 +165,4 @@ H~2~O
 
 The HTML specification is written by the W3C.
 
-本功能也可用于评论或注释。
-
-
-
-
-
-
-
-:fa-github:
+鼠标悬浮至缩写位置即可查看缩写全称。本功能也可用于评论或注释。
