@@ -67,7 +67,7 @@ Markdown 不支持在表格中创建换行或列表，但可以通过 HTML 解�
 | Alpha<br>Beta | <ol><li>Gamma</li><li>Delta</li></ol> | <ul><li>Epsilon</li><li>Zeta</li></ul> |
 :::
 
-## 代码块
+## 代码块 {#code-block}
 
 可以通过将代码的每一行缩进至少四个空格或一个制表符来创建[代码块](/guide/markdown-basic-syntax#代码块)。
 
@@ -211,31 +211,33 @@ Markdown footnotes support a single paragraph[^1] as well as multiple paragraphs
 
     Other elements are also supported in footnotes.
 
-## 标题锚点 {#title-anchor}
+## 标题锚点
 
 许多 Markdown 应用程序支持为标题添加自定义 ID（标题锚点），一些 Markdown 应用程序会自动为标题添加锚点：
 
 ```Markdown:line-numbers
-[www.minmuslin.cn/guide/markdown-extended-syntax#标题锚点](/guide/markdown-extended-syntax#标题锚点)
+[www.minmuslin.cn/guide/markdown-extended-syntax#表格](#表格)
+[www.minmuslin.cn/guide/markdown-extended-syntax#表格](/guide/markdown-extended-syntax#表格)
 ```
 
 **渲染效果：**
 
-[www.minmuslin.cn/guide/markdown-extended-syntax#标题锚点](/guide/markdown-extended-syntax#标题锚点)
+[www.minmuslin.cn/guide/markdown-extended-syntax#表格](#表格)
 
 要为标题添加自定义 ID（标题锚点），而不是使用默认自动生成的锚点，应向标题添加后缀：
 
 ```Markdown:line-numbers
-## 标题锚点 {#title-anchor}
+## 代码块 {#code-block}
 
-[www.minmuslin.cn/guide/markdown-extended-syntax#title-anchor](/guide/markdown-extended-syntax#title-anchor)
+[www.minmuslin.cn/guide/markdown-extended-syntax#code-block](#code-block)
+[www.minmuslin.cn/guide/markdown-extended-syntax#code-block](/guide/markdown-extended-syntax#code-block)
 ```
 
-这允许将对应标题链接为 `#title-anchor`，而不是默认自动生成的 `#标题锚点`。
+这允许将对应标题链接为 `#code-block`，而不是默认自动生成的 `#代码块`。
 
 **渲染效果：**
 
-[www.minmuslin.cn/guide/markdown-extended-syntax#title-anchor](/guide/markdown-extended-syntax#title-anchor)
+[www.minmuslin.cn/guide/markdown-extended-syntax#code-block](#code-block)
 
 ## 定义列表
 

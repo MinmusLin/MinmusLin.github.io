@@ -6,16 +6,21 @@
 
 ## 下划线
 
-要在文本上添加下划线，应在文本前后添加两个加号 `+`，与 HTML 的 `<ins>` 标签等价。
+要在文本上添加下划线，应在文本前后添加两个加号 `+`，与 HTML 的 `<ins>` 与 `<u>` 标签等价。
 
 ```Markdown:line-numbers
 ++Underlined Text++
 <ins>Underlined Text</ins>
+<u>Underlined Text</u>
 ```
 
 **渲染效果：**
 
 ++Underlined Text++
+
+::: tip HTML 的 `<ins>` 与 `<u>` 标签
+HTML 的 `<ins>` 标签用于标记文档中新增的内容（语义化），而 `<u>` 标签仅提供视觉下划线（无语义）。建议修订文档时使用 `<ins>` 标签，纯装饰下划线使用 CSS（如 `text-decoration: underline`），避免滥用 `<u>` 标签。
+:::
 
 ## 缩进
 
