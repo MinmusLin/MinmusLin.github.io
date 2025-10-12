@@ -46,7 +46,7 @@ features:
   - icon:
       src: /logos/golang-logo.svg
     title: 技术探索
-    details: 我热衷于攻克技术难题，在协作中碰撞灵感，打造真正解决问题的方案。目前主攻 Golang 服务端方向。
+    details: 我热衷于攻克技术难题，在协作中碰撞灵感。目前主攻 Golang 服务端方向。
     link: https://go.dev
     linkText: Go 编程语言
   - icon: 🌱
