@@ -22,7 +22,7 @@
     "preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@mdit/plugin-figure": "^0.22.1",
+    "@mdit/plugin-figure": "^0.22.2",
     "@theojs/lumen": "^6.4.4",
     "busuanzi.pure.js": "^1.0.3",
     "canvas-confetti": "^1.9.3",
