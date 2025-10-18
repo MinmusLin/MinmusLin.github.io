@@ -216,11 +216,14 @@ export default defineConfig({
       lazyLoading: true
     },
     container: {
+      infoLabel: '信息',
+      noteLabel: '备注',
       tipLabel: '提示',
       warningLabel: '警告',
       dangerLabel: '危险',
-      infoLabel: '信息',
-      detailsLabel: '详细信息'
+      detailsLabel: '详细信息',
+      importantLabel: '重要',
+      cautionLabel: '注意'
     }
   },
   vite: {
