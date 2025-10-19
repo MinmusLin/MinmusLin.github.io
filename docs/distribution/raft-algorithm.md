@@ -137,7 +137,7 @@ Leader 会向所有的 Follower 周期性发送心跳来保证自己的 Leader �
 
 由于可能同一时刻出现多个 Candidate，导致没有 Candidate 获得大多数选票，如果没有其他手段来重新分配选票的话，那么可能会无限重复下去。Raft 使用了 **随机的选举超时时间** 来避免上述情况。每一个 Candidate 在发起选举后，都会随机化一个新的选举超时时间，这种机制使得各个服务器能够分散开来，在大多数情况下只有一个服务器会率先超时；它会在其他服务器超时之前赢得选举。
 
-```C:line-numbers {1}
+```C {1}
 // 请求投票 RPC Request // [!code highlight]
 struct RequestVoteRequest {
     int term;         // 自己当前的任期号
@@ -147,7 +147,7 @@ struct RequestVoteRequest {
 }
 ```
 
-```C:line-numbers {1}
+```C {1}
 // 请求投票 RPC Response // [!code highlight]
 struct RequestVoteResponse {
     int  term;        // 自己当前的任期号
@@ -205,7 +205,7 @@ Leader 从来不会覆盖或者删除自己的日志条目（**Append-Only**）�
 3. 单个运行慢的 Follower 不会影响整体的性能。
 :::
 
-```C:line-numbers {1}
+```C {1}
 // 追加日志 RPC Request // [!code highlight]
 struct AppendEntriesRequest {
     int term;         // 自己当前的任期号
@@ -217,7 +217,7 @@ struct AppendEntriesRequest {
 }
 ```
 
-```C:line-numbers {1}
+```C {1}
 // 追加日志 RPC Response // [!code highlight]
 struct AppendEntriesResponse {
     int  term;    // 自己当前的任期号

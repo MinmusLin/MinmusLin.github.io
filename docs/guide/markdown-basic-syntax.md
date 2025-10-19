@@ -12,7 +12,7 @@ Markdown 基本语法是 John Gruber 的原始设计文档中列出的元素。�
 
 要创建标题，应在文本前添加 `#` 号，`#` 号的数量代表了标题的级别。
 
-```Markdown:line-numbers
+```Markdown
 # Heading Level 1
 ## Heading Level 2
 ### Heading Level 3
@@ -23,7 +23,7 @@ Markdown 基本语法是 John Gruber 的原始设计文档中列出的元素。�
 
 还可以在文本下方添加任意数量的 `=` 号来标识一级标题，或者 `-` 号来标识二级标题。
 
-```Markdown:line-numbers
+```Markdown
 Heading Level 1
 ===============
 Heading Level 2
@@ -36,7 +36,7 @@ Heading Level 2
 
 要创建段落，应使用空白行将一行或多行文本进行分隔。
 
-```Markdown:line-numbers
+```Markdown
 Paragraph 1
 
 Paragraph 2
@@ -48,7 +48,7 @@ Paragraph 2
 
 几乎所有 Markdown 应用程序都支持两个或多个空格进行换行，称为结尾空格（Trailing Whitespace），部分 Markdown 应用程序也支持在行尾添加反斜杠 `\` 的方式实现换行。
 
-```Markdown:line-numbers
+```Markdown
 Line 1··
 Line 2
 
@@ -58,7 +58,7 @@ Line 2
 
 为保证兼容性和可读性，应通过在行尾添加 HTML `<br>` 标签的方式来实现换行。
 
-```Markdown:line-numbers
+```Markdown
 Line 1<br>
 Line 2
 ```
@@ -71,7 +71,7 @@ Line 2
 
 要同时使用斜体和粗体显示文本，应在文本前后添加三个星号 `*` 或下划线 `_`。
 
-```Markdown:line-numbers
+```Markdown
 *Italic Text*
 **Bold Text**
 ***Italic and Bold Text***
@@ -95,7 +95,7 @@ ___Italic and Bold Text___
 
 要创建块引用，应在段落前添加一个 `>` 符号。
 
-```Markdown:line-numbers
+```Markdown
 > Quote Paragraph
 ```
 
@@ -105,7 +105,7 @@ ___Italic and Bold Text___
 
 块引用可以包含多个段落，为段落之间的空白行添加一个 `>` 符号。
 
-```Markdown:line-numbers
+```Markdown
 > Quote Paragraph 1
 >
 > Quote Paragraph 2
@@ -121,7 +121,7 @@ ___Italic and Bold Text___
 
 块引用可以嵌套，在要嵌套的段落前额外添加一个 `>` 符号。
 
-```Markdown:line-numbers
+```Markdown
 > Quote Paragraph 1
 >> Quote Paragraph 2
 >>> Quote Paragraph 3
@@ -139,7 +139,7 @@ ___Italic and Bold Text___
 
 要创建有序列表，应在每个列表项前添加数字并紧跟一个英文句点。数字不必按顺序排列，但是列表应当以数字 1 起始。缩进一个或多个列表项可以创建嵌套列表。
 
-```Markdown:line-numbers
+```Markdown
 1. First Item
 2. Second Item
    1. Indented Item
@@ -174,7 +174,7 @@ ___Italic and Bold Text___
 
 要创建无序列表，应在每个列表项前添加减号 `-`、星号 `*` 或加号 `+`。缩进一个或多个列表项可以创建嵌套列表。
 
-```Markdown:line-numbers
+```Markdown
 - First Item
 - Second Item
   - Indented Item
@@ -208,7 +208,7 @@ ___Italic and Bold Text___
 
 可以在有序列表中嵌套无序列表。
 
-```Markdown:line-numbers
+```Markdown
 1. First Item
 2. Second Item
    * Indented Item
@@ -228,7 +228,7 @@ ___Italic and Bold Text___
 
 也可以在无序列表中嵌套有序列表。
 
-```Markdown:line-numbers
+```Markdown
 * First Item
 * Second Item
   1. Indented Item
@@ -248,7 +248,7 @@ ___Italic and Bold Text___
 
 可以在列表中嵌套其他元素。
 
-````Markdown:line-numbers
+````Markdown
 1. First Item
 
    Paragraph
@@ -288,7 +288,7 @@ ___Italic and Bold Text___
 
 将包含一个或多个反引号 `` ` `` 的文本包裹在双反引号 ` `` ` 中，以表示行内代码。
 
-```Markdown:line-numbers
+```Markdown
 `code`
 `` `code` ``
 ```
@@ -302,7 +302,7 @@ ___Italic and Bold Text___
 
 要创建代码块，应将代码的每一行缩进至少四个空格或一个制表符。
 
-```Markdown:line-numbers
+```Markdown
     #include <stdio.h>
     int main() {
         printf("Hello, World!\n");
@@ -322,7 +322,7 @@ ___Italic and Bold Text___
 
 要创建分隔线，应在单独一行上使用至少三个星号 `*`、减号 `-` 或下划线 `_`，并且不能包含其他内容（可以用空格分隔）。
 
-```Markdown:line-numbers
+```Markdown
 ***
 ---
 ___
@@ -347,7 +347,7 @@ _ _ _
 
 Markdown 链接语法：`[链接文本](链接地址 "链接Title(可选)")`
 
-```Markdown:line-numbers
+```Markdown
 [Guide](/guide)
 [My GitHub](https://github.com/MinmusLin)
 [My Email](mailto:minmuslin@outlook.com)
@@ -367,7 +367,7 @@ Markdown 链接语法：`[链接文本](链接地址 "链接Title(可选)")`
 
 使用尖括号可以将链接或电子邮箱地址变为可点击的链接。
 
-```Markdown:line-numbers
+```Markdown
 <https://github.com/MinmusLin>
 <minmuslin@outlook.com>
 ```
@@ -383,7 +383,7 @@ Markdown 链接语法：`[链接文本](链接地址 "链接Title(可选)")`
 
 在链接语法前后添加星号 `*` 或下划线 `_` 以强调链接，在链接文本前后添加反引号 `` ` `` 以表示行内代码。
 
-```Markdown:line-numbers
+```Markdown
 *[My GitHub](https://github.com/MinmusLin)*
 _[My GitHub](https://github.com/MinmusLin)_
 [`My GitHub`](https://github.com/MinmusLin)
@@ -405,7 +405,7 @@ _[My GitHub](https://github.com/MinmusLin)_<br>
 
 以下示例格式对于引用链接第一部分（使用处）效果相同：
 
-```Markdown:line-numbers
+```Markdown
 [My GitHub][1]
 [My GitHub] [1]
 ```
@@ -416,7 +416,7 @@ _[My GitHub](https://github.com/MinmusLin)_<br>
 
 以下示例格式对于引用链接第二部分（定义处）效果相同：
 
-```Markdown:line-numbers
+```Markdown
 [1]: https://github.com/MinmusLin
 [1]: https://github.com/MinmusLin "我的 GitHub"
 [1]: https://github.com/MinmusLin '我的 GitHub'
@@ -441,7 +441,7 @@ _[My GitHub](https://github.com/MinmusLin)_<br>
 
 Markdown 图像语法：`![图像Title(可选)](图像地址)`
 
-```Markdown:line-numbers
+```Markdown
 ![Homepage Logo](/logos/homepage-logo.png)
 ```
 
@@ -453,7 +453,7 @@ Markdown 图像语法：`![图像Title(可选)](图像地址)`
 
 Markdown 链接图像语法：`[![图像Title(可选)](图像地址)](链接地址 "链接Title(可选)")`
 
-```Markdown:line-numbers
+```Markdown
 [![Tongji University](/logos/tongji-logo-light.png)](https://www.tongji.edu.cn "同济大学官网")
 ```
 

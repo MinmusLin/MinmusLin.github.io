@@ -11,6 +11,7 @@ import mediumZoom from 'medium-zoom'
 import 'nprogress-v2/dist/index.css'
 import '@theojs/lumen/pic'
 import './style.css'
+import 'virtual:group-icons.css'
 
 export default {
   extends: DefaultTheme,

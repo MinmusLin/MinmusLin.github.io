@@ -8,7 +8,7 @@
 
 要在文本上添加下划线，应在文本前后添加两个加号 `+`，与 HTML 的 `<ins>` 与 `<u>` 标签等价。
 
-```Markdown:line-numbers
+```Markdown
 ++Underlined Text++
 <ins>Underlined Text</ins>
 <u>Underlined Text</u>
@@ -26,7 +26,7 @@ HTML 的 `<ins>` 标签用于标记文档中新增的内容（语义化），而
 
 Markdown 官方语法中的空格和制表符有特殊用途，如创建换行或代码块。如果想用空格或制表符来缩进段落，可以使用 `&nbsp;` 或 CSS `text-indent` 实现。
 
-```Markdown:line-numbers
+```Markdown
 &nbsp;&nbsp;&nbsp;&nbsp;This paragraph is indented using non-breaking spaces.
 <p style="text-indent: 2em">This paragraph has a first-line indent controlled by CSS.</p>
 ```
@@ -41,7 +41,7 @@ Markdown 官方语法中的空格和制表符有特殊用途，如创建换行�
 
 Markdown 官方语法不支持居中对齐和右对齐，可以使用 CSS `text-align` 实现。
 
-```Markdown:line-numbers
+```Markdown
 <p style="text-align: center">This text will be center-aligned.</p>
 <p style="text-align: right">This text will be right-aligned.</p>
 ```
@@ -56,7 +56,7 @@ Markdown 官方语法不支持居中对齐和右对齐，可以使用 CSS `text-
 
 Markdown 官方语法不支持文字颜色，可以使用 CSS `color` 实现。
 
-```Markdown:line-numbers
+```Markdown
 <font color="red">Red Text</font>
 <p style="color: yellow">Yellow Text</p>
 <p style="color: rgb(0, 0, 255)">Blue Text</p>
@@ -77,7 +77,7 @@ Markdown 官方语法不支持文字颜色，可以使用 CSS `color` 实现。
 
 Markdown 没有内置的注释功能，但可以使用两种非官方的 Hack 方法实现。
 
-```Markdown:line-numbers
+```Markdown
 Paragraph 1
 
 [Comment 1]: #
@@ -109,7 +109,7 @@ Paragraph 3
 
 当仅设置宽度或高度时，浏览器会自动计算另一边的长度，以保持图像原始比例。
 
-```Markdown:line-numbers
+```Markdown
 <img src="/logos/homepage-logo.png" style="margin: 0 auto">
 <img src="/logos/homepage-logo.png" style="margin: 0 auto; width: 200px">
 <img src="/logos/homepage-logo.png" style="margin: 0 auto; height: 150px">
@@ -130,7 +130,7 @@ Paragraph 3
 
 要在文本上添加高亮效果，应在文本前后添加两个等号 `=`，与 HTML 的 `<mark>` 标签等价。
 
-```Markdown:line-numbers
+```Markdown
 ==Highlight Text==
 <mark>Highlight Text</mark>
 ```
@@ -143,7 +143,7 @@ Paragraph 3
 
 要在文本上添加上标 / 下标，应在文本前后添加符号 `^` / `~`，与 HTML 的 `<sup>` / `<sub>` 标签等价。
 
-```Markdown:line-numbers
+```Markdown
 E = mc^2^
 H~2~O
 
@@ -160,7 +160,7 @@ H~2~O
 
 要创建缩写，应在方括号内添加缩写，在 `[` 前添加星号 `*`，在 `]` 后添加冒号 `:` 和一个空格，之后添加缩写全称。
 
-```Markdown:line-numbers
+```Markdown
 The HTML specification is written by the W3C.
 *[W3C]: World Wide Web Consortium
 ```

@@ -1,6 +1,7 @@
 import {defineConfig} from 'vitepress'
 import {figure} from '@mdit/plugin-figure'
 import {MermaidMarkdown, MermaidPlugin} from 'vitepress-plugin-mermaid'
+import {groupIconMdPlugin, groupIconVitePlugin} from 'vitepress-plugin-group-icons'
 import vitepressProtectPlugin from 'vitepress-protect-plugin'
 import markdownItAbbr from 'markdown-it-abbr'
 import markdownItDeflist from 'markdown-it-deflist'
@@ -15,7 +16,8 @@ export default defineConfig({
   title: "MinmusLin's Blog",
   description: "MinmusLin's Blog | Code, Bugs & Sudden Enlightenment | 记录代码、Bug 与偶尔的灵光一现",
   head: [
-    ['link', {rel: 'icon', href: '/favicon.ico'}]
+    ['link', {rel: 'icon', href: '/favicon.ico'}],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css' }]
   ],
   cleanUrls: true,
   lastUpdated: true,
@@ -200,9 +202,11 @@ export default defineConfig({
   },
   markdown: {
     math: true,
+    lineNumbers: true,
     config: (md) => {
       md.use(figure)
       md.use(MermaidMarkdown)
+      md.use(groupIconMdPlugin)
       md.use(markdownItAbbr)
       md.use(markdownItDeflist)
       md.use(markdownItFootnote)
@@ -229,6 +233,7 @@ export default defineConfig({
   vite: {
     plugins: [
       MermaidPlugin(),
+      groupIconVitePlugin(),
       vitepressProtectPlugin({
         disableF12: true,
         disableCopy: false,

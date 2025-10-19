@@ -14,7 +14,7 @@ Markdown 扩展语法通过添加额外功能扩展了 Markdown 基本语法。�
 
 要创建表格，应使用三个及以上减号 `---` 分隔每列的标题和内容，并使用管道符 `|` 分隔每列。单元格的宽度可以变化，渲染效果相同。
 
-```Markdown:line-numbers
+```Markdown
 | Col 1 | Col 2   | Col 3 |
 |-------|---------|-------|
 | Alpha | Beta    | Gamma |
@@ -35,7 +35,7 @@ Markdown 扩展语法通过添加额外功能扩展了 Markdown 基本语法。�
 
 通过在表格标题下方三个及以上减号 `---` 的左侧、右侧或两侧添加冒号 `:`，实现当前列的左对齐、右对齐或居中对齐。
 
-```Markdown:line-numbers
+```Markdown
 | Col 1 | Col 2   | Col 3 |
 |:------|:-------:|------:|
 | Alpha | Beta    | Gamma |
@@ -54,7 +54,7 @@ Markdown 扩展语法通过添加额外功能扩展了 Markdown 基本语法。�
 ::: tip 在表格中创建换行或列表
 Markdown 不支持在表格中创建换行或列表，但可以通过 HTML 解决。
 
-```Markdown:line-numbers
+```Markdown
 | Col 1         | Col 2                                 | Col 3                                  |
 |---------------|---------------------------------------|----------------------------------------|
 | Alpha<br>Beta | <ol><li>Gamma</li><li>Delta</li></ol> | <ul><li>Epsilon</li><li>Zeta</li></ul> |
@@ -73,7 +73,7 @@ Markdown 不支持在表格中创建换行或列表，但可以通过 HTML 解�
 
 要创建无需缩进的代码块，应在代码块的前后行添加连续的三个反引号 ` ``` ` 或三个波浪号 `~~~`。
 
-````Markdown:line-numbers
+````Markdown
 ```
 #include <stdio.h>
 int main() {
@@ -103,7 +103,7 @@ int main() {
 
 大部分 Markdown 应用程序都支持代码块语法高亮显示。在代码块前一行连续的三个反引号 ` ``` ` 或三个波浪号 `~~~` 之后指定语言以显示语法高亮。
 
-````Markdown:line-numbers
+````Markdown
 ```C
 #include <stdio.h>
 int main() {
@@ -183,7 +183,7 @@ func main() {
 
 在脚注标识后添加冒号 `:` 以创建脚注内容。不必在文档末尾添加脚注内容，可以在除列表、表格之类的其他元素之外的文档中任意位置添加脚注内容。
 
-````Markdown:line-numbers
+````Markdown
 Markdown footnotes support a single paragraph[^1] as well as multiple paragraphs[^footnote].
 
 [^1]: Here's one with a single paragraph.
@@ -215,7 +215,7 @@ Markdown footnotes support a single paragraph[^1] as well as multiple paragraphs
 
 许多 Markdown 应用程序支持为标题添加自定义 ID（标题锚点），一些 Markdown 应用程序会自动为标题添加锚点：
 
-```Markdown:line-numbers
+```Markdown
 [www.minmuslin.cn/guide/markdown-extended-syntax#表格](#表格)
 [www.minmuslin.cn/guide/markdown-extended-syntax#表格](/guide/markdown-extended-syntax#表格)
 ```
@@ -226,7 +226,7 @@ Markdown footnotes support a single paragraph[^1] as well as multiple paragraphs
 
 要为标题添加自定义 ID（标题锚点），而不是使用默认自动生成的锚点，应向标题添加后缀：
 
-```Markdown:line-numbers
+```Markdown
 ## 代码块 {#code-block}
 
 [www.minmuslin.cn/guide/markdown-extended-syntax#code-block](#code-block)
@@ -243,7 +243,7 @@ Markdown footnotes support a single paragraph[^1] as well as multiple paragraphs
 
 部分 Markdown 应用程序支持创建术语及其对应的定义列表。要创建定义列表，应在第一行输入术语，在下一行输入冒号 `:`，后跟一个空格和定义。
 
-```Markdown:line-numbers
+```Markdown
 First Term
 : This is the definition of the first term.
 
@@ -265,7 +265,7 @@ Second Term
 
 要在文本上添加删除线，应在文本前后添加两个破浪号 `~`。
 
-```Markdown:line-numbers
+```Markdown
 ~~Deleted Text~~
 ```
 
@@ -279,7 +279,7 @@ Second Term
 
 要创建任务列表，应先按照 Markdown [列表](/guide/markdown-basic-syntax#列表)语法创建有序列表或无序列表，之后在任务列表项之前添加方括号 `[ ]` 表示复选框。要勾选一个复选框，应在方括号 `[ ]` 内添加 `x`。
 
-```Markdown:line-numbers
+```Markdown
 * [x] First Item
 * [ ] Second Item
 * [ ] Third Item
@@ -295,7 +295,7 @@ Second Term
 
 有两种方法可以将 Emoji 表情添加到 Markdown 文档中：将 Emoji 表情复制并粘贴到 Markdown 文档中，或输入 Emoji Shortcodes。
 
-```Markdown:line-numbers
+```Markdown
 :heart:
 ```
 
@@ -309,7 +309,7 @@ Second Term
 
 大部分 Markdown 应用程序会自动将链接或电子邮箱地址转换为可点击的链接，而无需使用尖括号。
 
-```Markdown:line-numbers
+```Markdown
 https://github.com/MinmusLin
 minmuslin@outlook.com
 ```
