@@ -24,6 +24,6 @@
   display: inline-block;
 }
 
-.VPDoc h1 > a.header-anchor {
+.vp-doc h1 .header-anchor {
   display: none;
 }

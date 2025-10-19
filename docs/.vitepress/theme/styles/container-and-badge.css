@@ -37,3 +37,39 @@ summary::before {
 details[open] > summary::before {
   transform: rotate(90deg);
 }
+
+.vp-doc .custom-block .custom-block-title {
+  font-size: 16px;
+}
+
+.vp-doc .custom-block.info blockquote {
+  border-color: rgba(103, 103, 108, 0.5);
+}
+
+.vp-doc .custom-block.tip blockquote {
+  border-color: rgba(26, 121, 79, 0.5);
+}
+
+.vp-doc .custom-block.warning blockquote {
+  border-color: rgba(145, 89, 48, 0.5);
+}
+
+.vp-doc .custom-block.danger blockquote {
+  border-color: rgba(184, 39, 45, 0.5);
+}
+
+.vp-doc .custom-block.details blockquote {
+  border-color: rgba(103, 103, 108, 0.5);
+}
+
+.vp-doc .custom-block.note blockquote {
+  border-color: rgba(103, 103, 108, 0.5);
+}
+
+.vp-doc .custom-block.important blockquote {
+  border-color: rgba(111, 66, 193, 0.5);
+}
+
+.vp-doc .custom-block.caution blockquote {
+  border-color: rgba(184, 39, 45, 0.5);
+}
