@@ -23,3 +23,7 @@
   color: transparent;
   display: inline-block;
 }
+
+.VPDoc h1 > a.header-anchor {
+  display: none;
+}
