@@ -125,6 +125,10 @@ export default defineConfig({
             {
               text: '高级技巧',
               link: '/guide/markdown-advanced-techniques'
+            },
+            {
+              text: 'VitePress 扩展',
+              link: '/guide/vitepress-markdown-extension'
             }
           ]
         }
