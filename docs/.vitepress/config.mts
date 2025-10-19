@@ -50,7 +50,7 @@ export default defineConfig({
       '/distribution': [
         {
           text: '分布式概述',
-          link: '/distribution'
+          link: '/distribution/'
         },
         {
           text: '分布式理论',
@@ -84,7 +84,7 @@ export default defineConfig({
       '/essay': [
         {
           text: '我的随笔',
-          link: '/essay'
+          link: '/essay/'
         },
         {
           text: '2025-05-07｜从放弃保研到字节暑期实习上岸：聊聊同济软件工程科班三年带给我了什么',
@@ -94,7 +94,7 @@ export default defineConfig({
       '/guide': [
         {
           text: '贡献者指南',
-          link: '/guide'
+          link: '/guide/'
         },
         {
           text: 'VitePress',

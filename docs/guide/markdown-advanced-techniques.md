@@ -184,3 +184,23 @@ The HTML specification is written by the W3C.
 *[W3C]: World Wide Web Consortium
 
 鼠标悬浮至缩写位置即可查看缩写全称。本功能也可用于评论或注释。
+
+## LaTeX 数学公式
+
+部分 Markdown 应用程序支持通过 LaTeX 语法创建数学公式。
+
+```Markdown
+When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
+
+$$
+x = {-b \pm \sqrt{b^2-4ac} \over 2a}
+$$
+```
+
+**渲染效果：**
+
+When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
+
+$$
+x = {-b \pm \sqrt{b^2-4ac} \over 2a}
+$$

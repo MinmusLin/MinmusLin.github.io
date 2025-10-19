@@ -257,3 +257,23 @@ VitePress 同样支持以标注的方式渲染 [GitHub 风格的警报](https://
 
 > [!TIP] Custom Title
 > This is a `tip` block.
+
+## 代码块
+
+### 语法高亮
+
+### 行高亮
+
+### 聚焦
+
+### 高亮 Diff
+
+### 高亮“错误”和“警告”
+
+### 行号
+
+### 导入代码片段
+
+### 代码组
+
+## 包含 Markdown 文件
