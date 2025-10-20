@@ -508,6 +508,74 @@ export default {
 
 ### 行号
 
+本 VitePress 站点已经配置为每个代码块默认启用行号：
+
+```JavaScript [docs/.vitepress/config.mts]
+export default defineConfig({
+  ...
+  markdown: {
+    lineNumbers: true
+  }
+  ...
+})
+```
+
+可以在代码块中添加 `:line-numbers`（启用行号）或 `:no-line-numbers`（禁用行号）标记来覆盖默认配置。
+
+还可以通过在 `:line-numbers` 标记之后添加等号 `=` 来自定义起始行号，如 `:line-numbers=2` 表示代码块中的行号从 2 开始。
+
+````Markdown
+```TypeScript {1}
+// 默认启用行号
+const line2 = 'This is line 2'
+const line3 = 'This is line 3'
+```
+
+```TypeScript {1}
+// 显式启用行号
+const line2 = 'This is line 2'
+const line3 = 'This is line 3'
+```
+
+```TypeScript:line-numbers=2 {1}
+// 显式启用行号（行号从 2 开始）
+const line3 = 'This is line 3'
+const line4 = 'This is line 4'
+```
+
+```TypeScript:no-line-numbers {1}
+// 禁用行号
+const line2 = 'This is line 2'
+const line3 = 'This is line 3'
+```
+````
+
+**渲染效果：**
+
+```TypeScript {1}
+// 默认启用行号
+const line2 = 'This is line 2'
+const line3 = 'This is line 3'
+```
+
+```TypeScript {1}
+// 显式启用行号
+const line2 = 'This is line 2'
+const line3 = 'This is line 3'
+```
+
+```TypeScript:line-numbers=2 {1}
+// 显式启用行号（行号从 2 开始）
+const line3 = 'This is line 3'
+const line4 = 'This is line 4'
+```
+
+```TypeScript:no-line-numbers {1}
+// 禁用行号
+const line2 = 'This is line 2'
+const line3 = 'This is line 3'
+```
+
 ### 导入代码片段
 
 ### 代码组

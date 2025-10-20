@@ -103,7 +103,7 @@ bun run preview
 ::: tip
 可以通过传递 `--port` 作为参数来配置服务器端口。
 
-```JSON
+```JSON [package.json]
 {
   ...
   "scripts": {
@@ -194,7 +194,7 @@ jobs:
 ::: warning 确保 VitePress 中 `base` 选项配置正确
 VitePress 默认站点部署在域名根路径（如 https://www.minmuslin.cn ）。当需要部署到子路径时（如 https://www.minmuslin.cn/blog ），必须正确配置 `base` 选项为 `'/blog/'` 以确保资源路径解析正确。
 
-```TypeScript
+```TypeScript [docs/.vitepress/config.mts]
 export default defineConfig({
   ...
   base: '/blog/'
