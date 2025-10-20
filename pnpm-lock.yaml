@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@iconify-json/vscode-icons':
+        specifier: ^1.2.32
+        version: 1.2.32
       '@mdit/plugin-figure':
         specifier: ^0.22.2
         version: 0.22.2(markdown-it@14.1.0)

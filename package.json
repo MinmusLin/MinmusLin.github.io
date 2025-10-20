@@ -22,6 +22,7 @@
     "preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "@iconify-json/vscode-icons": "^1.2.32",
     "@mdit/plugin-figure": "^0.22.2",
     "@theojs/lumen": "^6.4.4",
     "busuanzi.pure.js": "^1.0.3",

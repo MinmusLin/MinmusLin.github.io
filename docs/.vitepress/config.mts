@@ -1,7 +1,7 @@
 import {defineConfig} from 'vitepress'
 import {figure} from '@mdit/plugin-figure'
 import {MermaidMarkdown, MermaidPlugin} from 'vitepress-plugin-mermaid'
-import {groupIconMdPlugin, groupIconVitePlugin} from 'vitepress-plugin-group-icons'
+import {groupIconMdPlugin, groupIconVitePlugin, localIconLoader} from 'vitepress-plugin-group-icons'
 import vitepressProtectPlugin from 'vitepress-protect-plugin'
 import markdownItAbbr from 'markdown-it-abbr'
 import markdownItDeflist from 'markdown-it-deflist'
@@ -238,7 +238,14 @@ export default defineConfig({
   vite: {
     plugins: [
       MermaidPlugin(),
-      groupIconVitePlugin(),
+      groupIconVitePlugin({
+        customIcon: {
+          '.c': 'vscode-icons:file-type-c',
+          '.cpp': 'vscode-icons:file-type-cpp',
+          '.java': 'vscode-icons:file-type-java',
+          '.go': 'vscode-icons:file-type-go'
+        }
+      }),
       vitepressProtectPlugin({
         disableF12: true,
         disableCopy: false,
