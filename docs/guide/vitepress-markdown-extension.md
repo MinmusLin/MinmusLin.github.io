@@ -262,13 +262,251 @@ VitePress 同样支持以标注的方式渲染 [GitHub 风格的警报](https://
 
 ### 语法高亮
 
+VitePress 使用 [Shiki](https://github.com/shikijs/shiki) 在 Markdown 代码块中使用彩色文本实现语法高亮。
+
+这里可以查询 Shiki 支持的所有[编程语言](https://shiki.style/languages)。
+
 ### 行高亮
+
+可以在语言后通过花括号 `{}` 指定行号，实现行高亮。
+
+````Markdown
+```JavaScript{4}
+export default {
+  data() {
+    return {
+      msg: "Highlight Text"
+    }
+  }
+}
+```
+````
+
+**渲染效果：**
+
+```JavaScript{4}
+export default {
+  data() {
+    return {
+      msg: "Highlight Text"
+    }
+  }
+}
+```
+
+除了指定单行高亮外，还可以指定多个单行、多行，或两者均指定，实现行高亮。
+
+````Markdown
+```JavaScript{4,6,7-8,10-11}
+export default {
+  data() {
+    return {
+      msg1: "Highlight Text 1",
+      msg2: "Normal Text",
+      msg3: "Highlight Text 2",
+      msg4: "Normal Text",
+      msg5: "Highlight Text 3",
+      msg6: "Highlight Text 4",
+      msg7: "Normal Text",
+      msg8: "Highlight Text 5",
+      msg9: "Highlight Text 6"
+    }
+  }
+}
+```
+````
+
+**渲染效果：**
+
+```JavaScript{4,6,8-9,11-12}
+export default {
+  data() {
+    return {
+      msg1: "Highlight Text 1",
+      msg2: "Normal Text",
+      msg3: "Highlight Text 2",
+      msg4: "Normal Text",
+      msg5: "Highlight Text 3",
+      msg6: "Highlight Text 4",
+      msg7: "Normal Text",
+      msg8: "Highlight Text 5",
+      msg9: "Highlight Text 6"
+    }
+  }
+}
+```
+
+也可以使用 `// [!code highlight]` 注释实现行高亮。
+
+````Markdown
+```JavaScript
+export default {
+  data() {
+    return {
+      msg: "Highlight Text" // [!​code highlight]
+    }
+  }
+}
+```
+````
+
+**渲染效果：**
+
+```JavaScript
+export default {
+  data() {
+    return {
+      msg: "Highlight Text" // [!code highlight]
+    }
+  }
+}
+```
 
 ### 聚焦
 
-### 高亮 Diff
+可以使用 `// [!code focus]` 注释将这一行代码聚焦，并模糊代码的其他部分。
 
-### 高亮“错误”和“警告”
+````Markdown
+```JavaScript
+export default {
+  data() {
+    return {
+      msg: "Highlight Text" // [!​code focus]
+    }
+  }
+}
+```
+````
+
+**渲染效果：**
+
+```JavaScript
+export default {
+  data() {
+    return {
+      msg: "Highlight Text" // [!code focus]
+    }
+  }
+}
+```
+
+也可以使用 `// [!code focus:lines]` 注释定义要聚焦的行数。
+
+````Markdown
+```JavaScript
+export default {
+  data() {
+    return { // [!​code focus:3]
+      msg: "Highlight Text"
+    }
+  }
+}
+```
+````
+
+**渲染效果：**
+
+```JavaScript
+export default {
+  data() {
+    return { // [!code focus:3]
+      msg: "Highlight Text"
+    }
+  }
+}
+```
+
+### 差异
+
+在某一行添加 `// [!code --]` 或 `// [!code ++]` 注释将为该行创建 Diff，同时保留代码块的颜色。
+
+````Markdown
+```JavaScript
+export default {
+  data() {
+    return {
+      msg: 'Removed Text' // [!​code --]
+      msg: 'Added Text' // [!​code ++]
+    }
+  }
+}
+```
+````
+
+**渲染效果：**
+
+```JavaScript
+export default {
+  data() {
+    return {
+      msg: 'Removed Text' // [!code --]
+      msg: 'Added Text' // [!code ++]
+    }
+  }
+}
+```
+
+也可以直接创建 Diff。
+
+````Markdown
+```Diff
+@@ -1,7 +1,7 @@
+ export default {
+   data() {
+     return {
+-      msg: 'Removed Text'
++      msg: 'Added Text'
+     }
+   }
+ }
+```
+````
+
+**渲染效果：**
+
+```Diff
+@@ -1,7 +1,7 @@
+ export default {
+   data() {
+     return {
+-      msg: 'Removed Text'
++      msg: 'Added Text'
+     }
+   }
+ }
+```
+
+### “错误”和“警告”
+
+在某一行添加 `// [!code warning]` 或 `// [!code error]` 注释将会为该行相应的着色。
+
+**输入**
+
+````
+```js
+export default {
+  data () {
+    return {
+      msg: 'Error', // [!!code error]
+      msg: 'Warning' // [!!code warning]
+    }
+  }
+}
+```
+````
+
+**输出**
+
+```js
+export default {
+  data() {
+    return {
+      msg: 'Error', // [!code error]
+      msg: 'Warning' // [!code warning]
+    }
+  }
+}
+```
 
 ### 行号
 
