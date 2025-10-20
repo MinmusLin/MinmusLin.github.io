@@ -42,7 +42,15 @@ bun run dev
 ```
 :::
 
-开发服务器将在 http://localhost:5173 运行，支持热重载功能。
+开发服务器将在 http://localhost:5173 运行，并支持热重载（Hot Module Replacement）功能，终端显示如下：
+
+```ANSI:no-line-numbers
+  [32m[1mvitepress[22m v1.6.4[39m
+
+  [32m➜  [0mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜  [39m[2mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m  [32m➜  [39m[2mpress [22m[1mh[22m[2m to show help[22m
+```
 
 ### 生产构建
 
