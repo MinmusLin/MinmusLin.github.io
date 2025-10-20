@@ -121,7 +121,7 @@ int main() {
 ```
 
 ```Java
-public class HelloWorld {
+public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
@@ -139,7 +139,8 @@ func main() {
 
 **渲染效果：**
 
-```C
+::: code-group
+```C [main.c]
 #include <stdio.h>
 int main() {
     printf("Hello, World!\n");
@@ -147,7 +148,7 @@ int main() {
 }
 ```
 
-```C++
+```C++ [main.cpp]
 #include <iostream>
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -155,21 +156,22 @@ int main() {
 }
 ```
 
-```Java
-public class HelloWorld {
+```Java [Main.java]
+public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
 }
 ```
 
-```Go
+```Go [main.go]
 package main
 import "fmt"
 func main() {
     fmt.Println("Hello, World!")
 }
 ```
+:::
 
 ## 脚注
 
