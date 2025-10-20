@@ -478,31 +478,29 @@ export default {
 
 ### “错误”和“警告”
 
-在某一行添加 `// [!code warning]` 或 `// [!code error]` 注释将会为该行相应的着色。
+在某一行添加 `// [!code warning]` 或 `// [!code error]` 注释将为该行创建相应的着色。
 
-**输入**
-
-````
-```js
+````Markdown
+```JavaScript
 export default {
-  data () {
+  data() {
     return {
-      msg: 'Error', // [!!code error]
-      msg: 'Warning' // [!!code warning]
+      msg: 'Error Text', // [!​code error]
+      msg: 'Warning Text' // [!​code warning]
     }
   }
 }
 ```
 ````
 
-**输出**
+**渲染效果：**
 
-```js
+```JavaScript
 export default {
   data() {
     return {
-      msg: 'Error', // [!code error]
-      msg: 'Warning' // [!code warning]
+      msg: 'Error Text', // [!code error]
+      msg: 'Warning Text' // [!code warning]
     }
   }
 }
