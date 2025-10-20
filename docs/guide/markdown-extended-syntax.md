@@ -103,7 +103,8 @@ int main() {
 
 大部分 Markdown 应用程序都支持代码块语法高亮显示。在代码块前一行连续的三个反引号 ` ``` ` 或三个波浪号 `~~~` 之后指定语言以显示语法高亮。
 
-````Markdown
+::: code-group
+````Markdown [C.md]
 ```C
 #include <stdio.h>
 int main() {
@@ -111,7 +112,9 @@ int main() {
     return 0;
 }
 ```
+````
 
+````Markdown [C++.md]
 ```C++
 #include <iostream>
 int main() {
@@ -119,7 +122,9 @@ int main() {
     return 0;
 }
 ```
+````
 
+````Markdown [Java.md]
 ```Java
 public class Main {
     public static void main(String[] args) {
@@ -127,7 +132,9 @@ public class Main {
     }
 }
 ```
+````
 
+````Markdown [Go.md]
 ```Go
 package main
 import "fmt"
@@ -136,6 +143,7 @@ func main() {
 }
 ```
 ````
+:::
 
 **渲染效果：**
 
