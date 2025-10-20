@@ -21,6 +21,7 @@ export default defineConfig({
   ],
   cleanUrls: true,
   lastUpdated: true,
+  ignoreDeadLinks: true,
   themeConfig: {
     logo: '/favicon.ico',
     nav: [
