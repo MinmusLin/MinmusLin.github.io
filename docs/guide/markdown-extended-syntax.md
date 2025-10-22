@@ -181,6 +181,28 @@ func main() {
 ```
 :::
 
+可以在每个代码块的语言后通过方括号 `[]` 设置代码块标题：
+
+````Markdown
+```C [main.c]
+#include <stdio.h>
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+````
+
+**渲染效果：**
+
+```C [main.c]
+#include <stdio.h>
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+
 ## 脚注
 
 通过脚注可以添加注释和参考，而不会使文档正文混乱。创建脚注后，表示脚注序号的链接会出现在添加脚注标识的位置，可以点击链接以跳转至页面底部的脚注内容处。

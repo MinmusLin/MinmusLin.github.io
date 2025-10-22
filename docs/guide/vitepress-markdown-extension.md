@@ -578,6 +578,273 @@ const line3 = 'This is line 3'
 
 ### 导入代码片段
 
+可以通过下面的语法来从现有文件中导入代码片段，语法同时支持[行高亮](#行高亮)、[语法高亮](#语法高亮)和[行号](#行号)标记。
+
+```Markdown
+<<< @/filepath
+<<< @/filepath{highlightLines}
+<<< @/filepath{highlightLines language}
+<<< @/filepath{highlightLines language:line-numbers}
+<<< @/filepath{highlightLines language:no-line-numbers}
+```
+
+```JavaScript [docs/snippets/snippet.js]
+function foo() {
+  // ...
+}
+
+export default foo
+```
+
+```Markdown
+<<< @/snippets/snippet.js
+<<< @/snippets/snippet.js{2}
+<<< @/snippets/snippet.js{1-3}
+<<< @/snippets/snippet.js{2 JavaScript}
+<<< @/snippets/snippet.js{2 JavaScript:line-numbers}
+<<< @/snippets/snippet.js{2 JavaScript:no-line-numbers}
+```
+
+**渲染效果：**
+
+<<< @/snippets/snippet.js
+
+<<< @/snippets/snippet.js{2}
+
+<<< @/snippets/snippet.js{1-3}
+
+<<< @/snippets/snippet.js{2 JavaScript}
+
+<<< @/snippets/snippet.js{2 JavaScript:line-numbers}
+
+<<< @/snippets/snippet.js{2 JavaScript:no-line-numbers}
+
+::: tip
+`@` 的值对应源代码根目录，默认为 VitePress 项目根目录，除非配置了 `srcDir`。也可以从相对路径导入代码片段：
+
+```Markdown
+<<< ../snippets/snippet.js
+```
+:::
+
+也可以使用 [VS Code Region](https://code.visualstudio.com/docs/editor/codebasics#_folding) 来只包含代码文件的指定部分。可以在代码中使用 `// #region` 和 `// #endregion` 来指定自定义的代码区域，在文件路径后面通过添加井号 `#` 来提供一个自定义的代码区域名。
+
+```Markdown
+<<< @/filepath#region
+```
+
+```JavaScript{1,5} [docs/snippets/snippet-with-region.js]
+// #region snippet
+function foo() {
+  // ...
+}
+// #endregion snippet
+
+export default foo
+```
+
+```Markdown
+<<< @/snippets/snippet-with-region.js#snippet
+```
+
+**渲染效果：**
+
+<<< @/snippets/snippet-with-region.js#snippet
+
 ### 代码组
+
+可以使用 `::: code-group ... :::` 对多个代码块进行分组，在每个代码块的语言后通过方括号 `[]` 设置代码块标题：
+
+````Markdown
+::: code-group
+```C [main.c]
+#include <stdio.h>
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+
+```C++ [main.cpp]
+#include <iostream>
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+```Java [Main.java]
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+```Go [main.go]
+package main
+import "fmt"
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+:::
+````
+
+**渲染效果：**
+
+::: code-group
+```C [main.c]
+#include <stdio.h>
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+
+```C++ [main.cpp]
+#include <iostream>
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+```Java [Main.java]
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+```Go [main.go]
+package main
+import "fmt"
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+:::
+
+也可以在代码组中[导入代码片段](#导入代码片段)：
+
+```Markdown
+::: code-group
+<<< @/snippets/snippet.js{2 JavaScript}
+
+<<< @/snippets/snippet-with-region.js#snippet{2 JavaScript}
+:::
+```
+
+**渲染效果：**
+
+::: code-group
+<<< @/snippets/snippet.js{2 JavaScript}
+
+<<< @/snippets/snippet-with-region.js#snippet{2 JavaScript}
+:::
+
+:::: tip 代码块标题图标
+`vitepress-plugin-group-icons` 插件内置了丰富的图标，支持包管理器、框架、构建工具、配置文件和常见文件扩展名的图标。
+
+::: details `vitepress-plugin-group-icons` 插件支持的图标列表
+```JavaScript
+const builtinIcons = {
+	"pnpm": "vscode-icons:file-type-light-pnpm",
+	"npm": "vscode-icons:file-type-npm",
+	"yarn": "vscode-icons:file-type-yarn",
+	"bun": "vscode-icons:file-type-bun",
+	"deno": "vscode-icons:file-type-deno",
+	"vue": "vscode-icons:file-type-vue",
+	"svelte": "vscode-icons:file-type-svelte",
+	"angular": "vscode-icons:file-type-angular",
+	"react": "vscode-icons:file-type-reactjs",
+	"next": "vscode-icons:file-type-light-next",
+	"nuxt": "vscode-icons:file-type-nuxt",
+	"solid": "logos:solidjs-icon",
+	"astro": "vscode-icons:file-type-light-astro",
+	"qwik": "logos:qwik-icon",
+	"ember": "vscode-icons:file-type-ember",
+	"rollup": "vscode-icons:file-type-rollup",
+	"webpack": "vscode-icons:file-type-webpack",
+	"vite": "vscode-icons:file-type-vite",
+	"esbuild": "vscode-icons:file-type-esbuild",
+	"package.json": "vscode-icons:file-type-node",
+	"tsconfig.json": "vscode-icons:file-type-tsconfig",
+	".npmrc": "vscode-icons:file-type-npm",
+	".editorconfig": "vscode-icons:file-type-editorconfig",
+	".eslintrc": "vscode-icons:file-type-eslint",
+	".eslintignore": "vscode-icons:file-type-eslint",
+	"eslint.config": "vscode-icons:file-type-eslint",
+	".gitignore": "vscode-icons:file-type-git",
+	".gitattributes": "vscode-icons:file-type-git",
+	".env": "vscode-icons:file-type-dotenv",
+	".env.example": "vscode-icons:file-type-dotenv",
+	".vscode": "vscode-icons:file-type-vscode",
+	"tailwind.config": "vscode-icons:file-type-tailwind",
+	"uno.config": "vscode-icons:file-type-unocss",
+	"unocss.config": "vscode-icons:file-type-unocss",
+	".oxlintrc": "vscode-icons:file-type-oxlint",
+	"vue.config": "vscode-icons:file-type-vueconfig",
+	".mts": "vscode-icons:file-type-typescript",
+	".cts": "vscode-icons:file-type-typescript",
+	".ts": "vscode-icons:file-type-typescript",
+	".tsx": "vscode-icons:file-type-typescript",
+	".mjs": "vscode-icons:file-type-js",
+	".cjs": "vscode-icons:file-type-js",
+	".json": "vscode-icons:file-type-json",
+	".js": "vscode-icons:file-type-js",
+	".jsx": "vscode-icons:file-type-js",
+	".md": "vscode-icons:file-type-markdown",
+	".py": "vscode-icons:file-type-python",
+	".ico": "vscode-icons:file-type-favicon",
+	".html": "vscode-icons:file-type-html",
+	".css": "vscode-icons:file-type-css",
+	".scss": "vscode-icons:file-type-scss",
+	".yml": "vscode-icons:file-type-light-yaml",
+	".yaml": "vscode-icons:file-type-light-yaml",
+	".php": "vscode-icons:file-type-php",
+	".gjs": "vscode-icons:file-type-glimmer",
+	".gts": "vscode-icons:file-type-glimmer"
+};
+```
+:::
+
+如需添加上述列表未包含的图标，可在 VitePress 中配置自定义图标：
+
+```TypeScript{7-10} [docs/.vitepress/config.mts]
+export default defineConfig({
+  ...
+  vite: {
+    plugins: [
+      groupIconVitePlugin({
+        customIcon: {
+          '.c': 'vscode-icons:file-type-c',
+          '.cpp': 'vscode-icons:file-type-cpp',
+          '.java': 'vscode-icons:file-type-java',
+          '.go': 'vscode-icons:file-type-go'
+        }
+      })
+    ]
+  }
+  ...
+})
+```
+
+也可以通过 `~icon~` 语法来设置代码块标题图标。
+
+````Markdown
+``` [Docker ~vscode-icons:file-type-docker2~]
+Docker
+```
+````
+
+**渲染效果：**
+
+``` [Docker ~vscode-icons:file-type-docker2~]
+Docker
+```
+::::
 
 ## 包含 Markdown 文件
