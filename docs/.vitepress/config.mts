@@ -2,6 +2,7 @@ import {defineConfig} from 'vitepress'
 import {figure} from '@mdit/plugin-figure'
 import {MermaidMarkdown, MermaidPlugin} from 'vitepress-plugin-mermaid'
 import {groupIconMdPlugin, groupIconVitePlugin, localIconLoader} from 'vitepress-plugin-group-icons'
+import {tabsMarkdownPlugin} from 'vitepress-plugin-tabs'
 import vitepressProtectPlugin from 'vitepress-protect-plugin'
 import markdownItAbbr from 'markdown-it-abbr'
 import markdownItDeflist from 'markdown-it-deflist'
@@ -212,6 +213,7 @@ export default defineConfig({
       md.use(figure)
       md.use(MermaidMarkdown)
       md.use(groupIconMdPlugin)
+      md.use(tabsMarkdownPlugin)
       md.use(markdownItAbbr)
       md.use(markdownItDeflist)
       md.use(markdownItFootnote)

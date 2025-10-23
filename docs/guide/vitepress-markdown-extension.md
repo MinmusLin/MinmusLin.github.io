@@ -937,3 +937,77 @@ Paragraph 4
 ### Tip Badge <Badge type="tip" text="Tip Badge"/>
 ### Warning Badge <Badge type="warning" text="Warning Badge"/>
 ### Danger Badge <Badge type="danger" text="Danger Badge"/>
+
+## 标签页
+
+### 非共享选择状态标签页
+
+具有非共享选择状态的标签页：
+
+```Markdown
+:::tabs
+== Tab A
+Content in Tab A
+== Tab B
+Content in Tab B
+:::
+
+:::tabs
+== Tab A
+Content in Tab A
+== Tab B
+Content in Tab B
+:::
+```
+
+**渲染效果：**
+
+:::tabs
+== Tab A
+Content in Tab A
+== Tab B
+Content in Tab B
+:::
+
+:::tabs
+== Tab A
+Content in Tab A
+== Tab B
+Content in Tab B
+:::
+
+### 共享选择状态标签页
+
+具有共享选择状态的标签页：
+
+```Markdown
+:::tabs key:shared-selection-state
+== Tab A
+Content in Tab A
+== Tab B
+Content in Tab B
+:::
+
+:::tabs key:shared-selection-state
+== Tab A
+Content in Tab A
+== Tab B
+Content in Tab B
+:::
+```
+
+**渲染效果：**
+
+:::tabs key:shared-selection-state
+== Tab A
+Content in Tab A
+== Tab B
+Content in Tab B
+:::
+
+:::tabs key:shared-selection-state
+== Tab A
+Content in Tab A
+== Tab B
+Content in Tab B
+:::

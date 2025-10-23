@@ -5,6 +5,7 @@ import {onMounted, watch, nextTick} from 'vue'
 import {useData, useRoute, inBrowser} from 'vitepress'
 import Confetti from './components/Confetti.vue'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
+import {enhanceAppWithTabs} from 'vitepress-plugin-tabs/client'
 import {NProgress} from 'nprogress-v2/dist/index.js'
 import busuanzi from 'busuanzi.pure.js'
 import mediumZoom from 'medium-zoom'
@@ -17,6 +18,7 @@ export default {
   extends: DefaultTheme,
   Layout: Layout,
   enhanceApp: ({app, router}) => {
+    enhanceAppWithTabs(app)
     app.component('Underline', Underline)
     app.component('Confetti', Confetti)
     if (inBrowser) {

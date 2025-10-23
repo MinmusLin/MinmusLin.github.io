@@ -185,9 +185,9 @@ The HTML specification is written by the W3C.
 
 鼠标悬浮至缩写位置即可查看缩写全称。本功能也可用于评论或注释。
 
-## LaTeX 数学公式
+## 数学公式
 
-部分 Markdown 应用程序支持通过 LaTeX 语法创建数学公式。
+部分 Markdown 应用程序支持通过 $\LaTeX$ 语法创建数学公式，使用 `$` 标记行内公式，使用 `$$` 标记块级公式。
 
 ```Markdown
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
@@ -204,3 +204,47 @@ When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 $$
 x = {-b \pm \sqrt{b^2-4ac} \over 2a}
 $$
+
+::: warning
+使用 $\LaTeX$ 语法时，`$` 前后不能都是空格，否则会导致公式渲染失败。公式渲染失败会导致 VitePress 构建报错。
+:::
+
+## Mermaid 示意图
+
+可以使用 `mermaid` 代码框标记 Mermaid 示意图。点击此处查看 Mermaid [指南](https://mermaid.js.org/ecosystem/tutorials.html)。
+
+````Markdown{1,13}
+```mermaid
+sequenceDiagram
+    par Alice to Bob
+        Alice->>Bob: Go help John
+    and Alice to John
+        Alice->>John: I want this done today
+        par John to Charlie
+            John->>Charlie: Can we do this today?
+        and John to Diana
+            John->>Diana: Can you help us today?
+        end
+    end
+```
+````
+
+**渲染效果：**
+
+```mermaid
+sequenceDiagram
+    par Alice to Bob
+        Alice->>Bob: Go help John
+    and Alice to John
+        Alice->>John: I want this done today
+        par John to Charlie
+            John->>Charlie: Can we do this today?
+        and John to Diana
+            John->>Diana: Can you help us today?
+        end
+    end
+```
+
+::: warning
+由于 Mermaid 依赖浏览器的布局 API，因此无法进行 SSR（服务端渲染），只能在前端渲染。因此如果 Mermaid 代码中存在错误，无法在 VitePress 构建时发现，在插入 Mermaid 示意图时应保证内容按预期呈现。
+:::
