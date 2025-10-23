@@ -37,7 +37,7 @@ const members = [
   {
     avatar: 'https://www.github.com/MinmusLin.png',
     name: 'Jishen Lin',
-    title: 'Creator',
+    title: 'Author',
     links: [
       {
         icon: 'wechat',
