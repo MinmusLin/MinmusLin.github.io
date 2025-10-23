@@ -4,6 +4,7 @@ import {Underline} from '@theojs/lumen'
 import {onMounted, watch, nextTick} from 'vue'
 import {useData, useRoute, inBrowser} from 'vitepress'
 import Confetti from './components/Confetti.vue'
+import PinYin from './components/PinYin.vue'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import {enhanceAppWithTabs} from 'vitepress-plugin-tabs/client'
 import {NProgress} from 'nprogress-v2/dist/index.js'
@@ -21,6 +22,7 @@ export default {
     enhanceAppWithTabs(app)
     app.component('Underline', Underline)
     app.component('Confetti', Confetti)
+    app.component('PinYin', PinYin)
     if (inBrowser) {
       NProgress.configure({showSpinner: false})
       router.onBeforeRouteChange = () => {

@@ -797,7 +797,7 @@ const builtinIcons = {
 	".js": "vscode-icons:file-type-js",
 	".jsx": "vscode-icons:file-type-js",
 	".md": "vscode-icons:file-type-markdown",
-	".py": "vscode-icons:file-type-python",
+	".PinYin": "vscode-icons:file-type-PinYinthon",
 	".ico": "vscode-icons:file-type-favicon",
 	".html": "vscode-icons:file-type-html",
 	".css": "vscode-icons:file-type-css",
@@ -1010,4 +1010,32 @@ Content in Tab B
 Content in Tab A
 == Tab B
 Content in Tab B
+:::
+
+## 拼音
+
+可以使用 `<PinYin>` 标签在指定文本内容的上方加注拼音，也可以加注其他内容。
+
+```Markdown
+拼音可以加注在<PinYin>字</PinYin>或<PinYin>词语</PinYin>的上方。
+```
+
+**渲染效果：**
+
+拼音可以加注在<PinYin>字</PinYin>或<PinYin>词语</PinYin>的上方。
+
+也可以使用 `manual` 属性（简写为 `m`）在指定文本内容的上方加注其他内容。如为日语中的汉字加注读音：
+
+```Markdown
+<PinYin m="つき">月</PinYin>が<PinYin m="きれい">綺麗</PinYin>ですね。
+```
+
+**渲染效果：**
+
+<PinYin m="つき">月</PinYin>が<PinYin m="きれい">綺麗</PinYin>ですね。
+
+::: warning
+`<PinYin>` 标签在编译时会转换为 HTML `<ruby>` 标签（[MDN Docs](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ruby)）。这是 HTML5 引入的新规范，在不支持的浏览器上会降级到括号加注的形式。
+
+自动拼音加注通过 [pinyin.js](https://pinyin.js.org) 实现，并采用 `Intl.Segmenter` 分词来处理多音字，不能保证拼音加注 100% 准确。
 :::

@@ -22,7 +22,7 @@ export default defineConfig({
   ],
   cleanUrls: true,
   lastUpdated: true,
-  ignoreDeadLinks: 'localhostLinks',
+  ignoreDeadLinks: true,
   themeConfig: {
     logo: '/favicon.ico',
     nav: [
