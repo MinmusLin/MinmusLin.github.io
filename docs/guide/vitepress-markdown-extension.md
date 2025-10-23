@@ -848,3 +848,74 @@ Docker
 ::::
 
 ## 包含 Markdown 文件
+
+可以在一个 Markdown 文件中包含另一个 Markdown 文件，也可以指定包含的行范围。
+
+```Markdown
+<!--@include: @/filepath-->
+<!--@include: @/filepath{startLine,}-->
+<!--@include: @/filepath{,endLine}-->
+<!--@include: @/filepath{startLine,endLine}-->
+```
+
+```Markdown [docs/snippets/snippet.md]
+Paragraph 1
+
+Paragraph 2
+
+Paragraph 3
+
+Paragraph 4
+```
+
+::: tip
+`@` 的值对应源代码根目录，默认为 VitePress 项目根目录，除非配置了 `srcDir`。也可以从相对路径包含 Markdown 文件：
+
+```Markdown
+<!​--@include: ../snippets/snippet.md-->
+```
+:::
+
+### 包含整个文件
+
+```Markdown
+<!​--@include: @/snippets/snippet.md-->
+```
+
+**渲染效果：**
+
+<!--@include: @/snippets/snippet.md-->
+
+### 从指定行开始
+
+```Markdown
+<!​--@include: @/snippets/snippet.md{3,}-->
+```
+
+**渲染效果：**
+
+<!--@include: @/snippets/snippet.md{3,}-->
+
+### 到指定行结束
+
+```Markdown
+<!​--@include: @/snippets/snippet.md{,5}-->
+```
+
+**渲染效果：**
+
+<!--@include: @/snippets/snippet.md{,5}-->
+
+### 包含指定行范围
+
+```Markdown
+<!​--@include: @/snippets/snippet.md{3,5}-->
+```
+
+**渲染效果：**
+
+<!--@include: @/snippets/snippet.md{3,5}-->
+
+::: warning
+如果包含的 Markdown 文件不存在，将不会产生错误。因此在包含 Markdown 文件时应保证内容按预期呈现。
+:::
