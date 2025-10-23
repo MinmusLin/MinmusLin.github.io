@@ -23,3 +23,39 @@ next:
 ## 构建与部署
 
 项目采用 [Git](https://git-scm.com) 进行版本控制，通过 [GitHub Actions](https://docs.github.com/zh/actions) 实现持续集成与自动化部署，最终发布至 [GitHub Pages](https://docs.github.com/zh/pages)。
+
+## 贡献者
+
+<div style="display: flex; justify-content: center">
+  <VPTeamMembers size="medium" :members="members"/>
+</div>
+
+<script setup>
+import {VPTeamMembers} from 'vitepress/theme'
+
+const members = [
+  {
+    avatar: 'https://www.github.com/MinmusLin.png',
+    name: 'Jishen Lin',
+    title: 'Creator',
+    links: [
+      {
+        icon: 'wechat',
+        link: '/contact/wechat'
+      },
+      {
+        icon: 'qq',
+        link: '/contact/qq'
+      },
+      {
+        icon: 'xiaohongshu',
+        link: '/contact/xiaohongshu'
+      },
+      {
+        icon: 'github',
+        link: 'https://github.com/MinmusLin'
+      }
+    ]
+  }
+]
+</script>

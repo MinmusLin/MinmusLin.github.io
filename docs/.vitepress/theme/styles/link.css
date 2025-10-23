@@ -78,3 +78,19 @@ a {
 .vp-doc a:hover > code {
   color: inherit;
 }
+
+.VPSocialLink.no-icon {
+  padding-bottom: 0 !important;
+  background-image: none !important;
+  transition: none !important;
+}
+
+.VPSocialLink.no-icon:hover {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  background-size: 0 !important;
+}
+
+.VPSocialLink.no-icon[target="_blank"]::after {
+  content: none !important;
+}
