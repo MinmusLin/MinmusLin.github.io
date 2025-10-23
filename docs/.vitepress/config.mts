@@ -21,7 +21,7 @@ export default defineConfig({
   ],
   cleanUrls: true,
   lastUpdated: true,
-  ignoreDeadLinks: true,
+  ignoreDeadLinks: 'localhostLinks',
   themeConfig: {
     logo: '/favicon.ico',
     nav: [
@@ -258,5 +258,8 @@ export default defineConfig({
     ssr: {
       noExternal: ['mermaid']
     }
+  },
+  sitemap: {
+    hostname: 'https://www.minmuslin.cn'
   }
 })
