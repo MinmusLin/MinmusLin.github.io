@@ -919,3 +919,21 @@ Paragraph 4
 ::: warning
 如果包含的 Markdown 文件不存在，将不会产生错误。因此在包含 Markdown 文件时应保证内容按预期呈现。
 :::
+
+## 徽标
+
+徽标可以为标题添加状态。
+
+```Markdown
+### Info Badge <Badge type="info" text="Info Badge"/>
+### Tip Badge <Badge type="tip" text="Tip Badge"/>
+### Warning Badge <Badge type="warning" text="Warning Badge"/>
+### Danger Badge <Badge type="danger" text="Danger Badge"/>
+```
+
+**渲染效果：**
+
+### Info Badge <Badge type="info" text="Info Badge"/>
+### Tip Badge <Badge type="tip" text="Tip Badge"/>
+### Warning Badge <Badge type="warning" text="Warning Badge"/>
+### Danger Badge <Badge type="danger" text="Danger Badge"/>
