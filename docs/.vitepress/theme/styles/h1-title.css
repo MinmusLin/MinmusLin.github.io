@@ -1,4 +1,4 @@
-.VPDoc h1 {
+.VPDoc h1:not([class*="VPTeamMembers"]):not(.name) {
   background: linear-gradient(
     120deg,
     #746DC1 40%,
@@ -11,7 +11,7 @@
   display: inline-block;
 }
 
-.dark .VPDoc h1 {
+.dark .VPDoc h1:not([class*="VPTeamMembers"]):not(.name) {
   background: linear-gradient(
     120deg,
     #7D76CC 40%,
