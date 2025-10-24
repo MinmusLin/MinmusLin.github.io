@@ -40,11 +40,11 @@ watch(() => props.options, plotFunction, {deep: true})
   margin-bottom: 12px;
 }
 
-.dark .function-plot-container {
-  filter: invert(100%) hue-rotate(210deg);
-}
-
 .function-plot-container :deep(.function-plot .title) {
   font-size: 16px;
+}
+
+.dark .function-plot-container {
+  filter: invert(100%) hue-rotate(210deg);
 }
 </style>
