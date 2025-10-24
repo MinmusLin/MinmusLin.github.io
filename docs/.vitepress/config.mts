@@ -132,6 +132,10 @@ export default defineConfig({
             {
               text: 'VitePress 扩展',
               link: '/guide/vitepress-markdown-extension'
+            },
+            {
+              text: '函数图像扩展',
+              link: '/guide/function-plot-extension'
             }
           ]
         }

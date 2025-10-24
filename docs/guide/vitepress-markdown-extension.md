@@ -1057,19 +1057,3 @@ This is a spoiler: !!spoiler text!!
 ::: warning
 在页面中连续或过多使用黑幕会严重降低页面的观感与阅读体验。
 :::
-
-## 函数图像
-
-<FunctionPlot :options="{
-  title: '二次函数示例',
-  width: 600,
-  height: 400,
-  grid: true,
-  xAxis: { domain: [-5, 5] },
-  yAxis: { domain: [-2, 10] },
-  disableZoom: true,
-  data: [
-    { fn: 'x^2', color: 'blue' },
-    { fn: 'x^2 + 2*x + 1', color: 'red' }
-  ]
-}"/>
