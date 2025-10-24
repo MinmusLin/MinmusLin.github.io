@@ -28,6 +28,7 @@
     "@traptitech/markdown-it-spoiler": "^1.1.6",
     "busuanzi.pure.js": "^1.0.3",
     "canvas-confetti": "^1.9.3",
+    "function-plot": "^1.25.1",
     "markdown-it": "^14.1.0",
     "markdown-it-abbr": "^2.0.0",
     "markdown-it-deflist": "^3.0.0",
