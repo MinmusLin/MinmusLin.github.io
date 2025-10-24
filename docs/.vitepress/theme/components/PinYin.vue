@@ -21,7 +21,7 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
+<style>
 ruby rp, ruby rt {
   font-size: 0.7em;
   user-select: none;

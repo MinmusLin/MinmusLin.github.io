@@ -1057,3 +1057,22 @@ This is a spoiler: !!spoiler text!!
 ::: warning
 在页面中连续或过多使用黑幕会严重降低页面的观感与阅读体验。
 :::
+
+前端功能兼容性速查卡片。接受一个 `feature` 属性，传入值为 [webstatus.dev](https://webstatus.dev/) 上的功能 ID，显示类似 [MDN Web Docs](https://developer.mozilla.org/zh-CN/docs/Web) 文档开头处的卡片。
+
+兼容性情况将在用户访问页面时实时调用 API 查询。不必担心时效性。
+
+```vue
+<Baseline feature="request-animation-frame" />
+<Baseline feature="nesting" />
+<Baseline feature="text-spacing-trim" />
+<Baseline feature="abracadabra" />
+```
+
+<Baseline feature="request-animation-frame" />
+
+<Baseline feature="nesting" />
+
+<Baseline feature="text-spacing-trim" />
+
+<Baseline feature="abracadabra" />
