@@ -1,0 +1,19 @@
+.vp-doc li ol {
+  list-style: lower-roman;
+}
+
+.vp-doc li li ol {
+  list-style: lower-latin;
+}
+
+.vp-doc li li li ol {
+  list-style: lower-greek;
+}
+
+.vp-doc li ul {
+  list-style: circle;
+}
+
+.vp-doc li li ul {
+  list-style: square;
+}
