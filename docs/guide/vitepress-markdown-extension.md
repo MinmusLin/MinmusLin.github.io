@@ -1,5 +1,7 @@
 # VitePress Markdown 扩展
 
+<ArticleMetadata/>
+
 VitePress 不仅支持标准的 Markdown 语法，还提供了一系列强大的内置扩展功能。这些扩展包括自定义容器、GitHub 风格的警报、增强的代码块功能等，能够满足各种复杂的文档展示需求。
 
 ## 自定义容器

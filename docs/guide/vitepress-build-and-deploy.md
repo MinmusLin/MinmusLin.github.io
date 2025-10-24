@@ -1,5 +1,7 @@
 # VitePress 构建与部署
 
+<ArticleMetadata/>
+
 以下指南基于一些前提：
 
 * VitePress 站点位于项目的 `docs` 目录中。

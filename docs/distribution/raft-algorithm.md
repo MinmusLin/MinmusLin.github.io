@@ -1,5 +1,7 @@
 # Raft 算法
 
+<ArticleMetadata/>
+
 *In Search of an Understandable Consensus Algorithm (Extended Version)* 论文：
 
 <iframe src="https://raft.github.io/raft.pdf#toolbar=0&navpanes=0&statusbar=0&view=FitH" width="100%" style="aspect-ratio: 1/1; border: none"/>

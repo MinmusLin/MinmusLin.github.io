@@ -6,6 +6,8 @@ next:
 
 # 贡献者指南
 
+<ArticleMetadata/>
+
 本部分旨在为项目贡献者提供相关的技术参考与开发指南，涵盖 VitePress 简介、构建与部署流程，以及 Markdown 语法规范与内容撰写标准。
 
 ## 技术栈

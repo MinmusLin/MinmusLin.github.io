@@ -1,5 +1,7 @@
 # CAP 理论
 
+<ArticleMetadata/>
+
 ## 什么是 CAP 定理
 
 在理论计算机科学中，CAP 定理（CAP theorem），又被称作布鲁尔定理（Brewer's theorem），它指出对于一个分布式计算系统来说，不可能同时满足以下三点：

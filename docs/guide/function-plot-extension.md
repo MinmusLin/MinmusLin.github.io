@@ -1,5 +1,7 @@
 # 函数图像扩展
 
+<ArticleMetadata/>
+
 [Function Plot](https://mauriciopoppe.github.io/function-plot) 是一个基于 [D3.js](https://d3js.org/) 构建的绘图库，它能够以极简的配置渲染数学函数。
 
 该库目前支持交互式折线图和散点图。当图表比例被修改时，函数会依据新的边界范围重新计算，从而实现 **无限缩放** 的效果。

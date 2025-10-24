@@ -1,5 +1,7 @@
 # BASE 理论
 
+<ArticleMetadata/>
+
 ## 什么是 BASE 理论
 
 BASE 理论起源于 2008 年，由 eBay 的架构师 Dan Pritchett 在 ACM 上发表。

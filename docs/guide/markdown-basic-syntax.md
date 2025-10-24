@@ -1,5 +1,7 @@
 # Markdown 基本语法
 
+<ArticleMetadata/>
+
 Markdown 是一种轻量级标记语言，由 John Gruber 于 2004 年创建，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与 HTML 混合编写，可导出 HTML、PDF 以及本身 `.md` 格式的文件。因简洁、高效、易读、易写，Markdown 被大量使用，如 [Github](https://github.com)、[GitLab](https://about.gitlab.com)、[StackOverflow](https://stackoverflow.com)、[Wikipedia](https://www.wikipedia.org) 等。
 
 Markdown 应用程序通过 Markdown 处理器（也通常称为“解析器”或“实现”）将 Markdown 格式文本输出为 HTML 格式。
