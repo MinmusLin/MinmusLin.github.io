@@ -3,8 +3,6 @@ import Layout from './Layout.vue'
 import {Underline} from '@theojs/lumen'
 import {onMounted, watch, nextTick} from 'vue'
 import {useData, useRoute, inBrowser} from 'vitepress'
-import Baseline from './components/Baseline.vue'
-import BaselineIcon from './components/BaselineIcon.vue'
 import Confetti from './components/Confetti.vue'
 import PinYin from './components/PinYin.vue'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
@@ -22,8 +20,6 @@ export default {
   Layout: Layout,
   enhanceApp: ({app, router}) => {
     enhanceAppWithTabs(app)
-    app.component('Baseline', Baseline)
-    app.component('BaselineIcon', BaselineIcon)
     app.component('Confetti', Confetti)
     app.component('PinYin', PinYin)
     app.component('Underline', Underline)
