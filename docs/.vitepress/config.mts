@@ -9,6 +9,7 @@ import markdownItDeflist from 'markdown-it-deflist'
 import markdownItFootnote from 'markdown-it-footnote'
 import markdownItIns from 'markdown-it-ins'
 import markdownItMark from 'markdown-it-mark'
+import markdownItSpoiler from '@traptitech/markdown-it-spoiler'
 import markdownItSub from 'markdown-it-sub'
 import markdownItSup from 'markdown-it-sup'
 import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
@@ -219,6 +220,7 @@ export default defineConfig({
       md.use(markdownItFootnote)
       md.use(markdownItIns)
       md.use(markdownItMark)
+      md.use(markdownItSpoiler)
       md.use(markdownItSub)
       md.use(markdownItSup)
       md.use(markdownItTaskCheckbox)

@@ -1039,3 +1039,21 @@ Content in Tab B
 
 自动拼音加注通过 [pinyin.js](https://pinyin.js.org) 实现，并采用 `Intl.Segmenter` 分词来处理多音字，不能保证拼音加注 100% 准确。
 :::
+
+## 黑幕
+
+在文本前后添加两个感叹号 `!` 可产生黑幕遮挡文本的效果，鼠标悬停或触摸屏轻触即可显示被遮挡的文字。
+
+常用于符合文段主题但（如考虑政策或读者感受）不便明说的实话，灵感来源于[萌娘百科](https://mzh.moegirl.org.cn/Template:%E9%BB%91%E5%B9%95)。
+
+```Markdown
+This is a spoiler: !!spoiler text!!
+```
+
+**渲染效果：**
+
+This is a spoiler: !!spoiler text!!
+
+::: warning
+在页面中连续或过多使用黑幕会严重降低页面的观感与阅读体验。
+:::
