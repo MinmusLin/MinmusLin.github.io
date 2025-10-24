@@ -20,7 +20,7 @@ const plotFunction = () => {
   }
   try {
     plotContainer.value.innerHTML = ''
-    FunctionPlot({...props.options, target: plotContainer.value})
+    FunctionPlot({width: 640, height: 480, ...props.options, target: plotContainer.value})
   } catch (error) {
     console.error('Function plot error:', error)
   }
@@ -34,9 +34,17 @@ watch(() => props.options, plotFunction, {deep: true})
 .function-plot-container {
   color: black;
   user-select: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 12px;
 }
 
 .dark .function-plot-container {
   filter: invert(100%) hue-rotate(210deg);
+}
+
+.function-plot-container :deep(.function-plot .title) {
+  font-size: 16px;
 }
 </style>
