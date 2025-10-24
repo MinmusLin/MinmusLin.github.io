@@ -3,6 +3,7 @@ import Layout from './Layout.vue'
 import {Underline} from '@theojs/lumen'
 import {onMounted, watch, nextTick} from 'vue'
 import {useData, useRoute, inBrowser} from 'vitepress'
+import ArticleMetadata from './components/ArticleMetadata.vue'
 import Confetti from './components/Confetti.vue'
 import FunctionPlot from './components/FunctionPlot.vue'
 import PinYin from './components/PinYin.vue'
@@ -21,6 +22,7 @@ export default {
   Layout: Layout,
   enhanceApp: ({app, router}) => {
     enhanceAppWithTabs(app)
+    app.component('ArticleMetadata', ArticleMetadata)
     app.component('Confetti', Confetti)
     app.component('FunctionPlot', FunctionPlot)
     app.component('PinYin', PinYin)
