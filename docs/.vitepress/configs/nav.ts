@@ -23,3 +23,8 @@ export const nav: DefaultTheme.Config['nav'] = [
     link: '/guide'
   }
 ]
+
+export const breadcrumbTitle: Record<string, string> = {
+  '/distribution': '分布式技术',
+  '/guide': '贡献者指南'
+}

@@ -1,5 +1,5 @@
 <template>
-  <div id='breadcrumb'>
+  <div id='breadcrumb' v-if='items.length > 0'>
     <span v-for='item in items' class='bc-items' :id="item.first ? 'bc-project' : undefined">
       {{ item.name }}
     </span>
@@ -9,7 +9,7 @@
 <script setup lang='ts'>
 import {useData} from 'vitepress'
 import {ref, watchEffect} from 'vue'
-import {nav, sidebar, breadcrumbConfig} from '../../configs'
+import {nav, sidebar, breadcrumbTitle} from '../../configs'
 
 type Breadcrumb = {
   name: string
@@ -19,13 +19,17 @@ type Breadcrumb = {
 const {page} = useData()
 const items = ref<Breadcrumb[]>([])
 
-const findTitleInNav = (path: string): string => {
+const getBreadcrumbTitle = (path: string): string => {
+  const searchPath = '/' + path
+  if (breadcrumbTitle[searchPath]) {
+    return breadcrumbTitle[searchPath]
+  }
   if (!nav) {
     return path
   }
   const findRecursive = (navItems: any[]): string | null => {
     for (const item of navItems) {
-      if (item.link === '/' + path) {
+      if (item.link === searchPath) {
         return item.text
       }
       if (item.items) {
@@ -41,6 +45,9 @@ const findTitleInNav = (path: string): string => {
 }
 
 const findBreadcrumbInSidebar = (fullPath: string): string[] => {
+  if (!sidebar) {
+    return []
+  }
   const findRecursive = (config: any, currentPath: string[] = []): string[] | null => {
     for (const item of config) {
       if (item.link === '/' + fullPath.replace('.md', '')) {
@@ -59,8 +66,8 @@ const findBreadcrumbInSidebar = (fullPath: string): string[] => {
     if (fullPath.startsWith(basePath.replace('/', ''))) {
       const found = findRecursive(config, [])
       if (found) {
-        return found
-      }
+          return found
+        }
     }
   }
   return []
@@ -68,6 +75,7 @@ const findBreadcrumbInSidebar = (fullPath: string): string[] => {
 
 watchEffect(() => {
   if (!page.value.relativePath) {
+    items.value = []
     return
   }
   const pathSegs = page.value.relativePath.split('/').filter(seg => seg && seg !== 'index.md')
@@ -77,8 +85,13 @@ watchEffect(() => {
   }
   const breadcrumbItems: Breadcrumb[] = []
   if (pathSegs.length >= 1) {
+    const firstLevelPath = pathSegs[0]
+    if (!breadcrumbTitle.hasOwnProperty('/' + firstLevelPath)) {
+      items.value = []
+      return
+    }
     breadcrumbItems.push({
-      name: findTitleInNav(pathSegs[0]),
+      name: getBreadcrumbTitle(firstLevelPath),
       first: true
     })
   }
@@ -95,7 +108,7 @@ watchEffect(() => {
 
 <style>
 #breadcrumb {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   font-size: 15px;
   color: var(--vp-c-text-2);
 }
