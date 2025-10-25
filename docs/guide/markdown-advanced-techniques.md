@@ -2,7 +2,7 @@
 
 <ArticleMetadata/>
 
-对于大多数用户而言，Markdown 的[基本语法](/guide/markdown-basic-syntax)和[扩展语法](/guide/markdown-extended-syntax)已足以应对日常写作的需求。然而，在长期使用 Markdown 时，可能会发现 Markdown 官方语法的局限性。
+对于大多数用户而言，Markdown 的 [基本语法](/guide/markdown-basic-syntax) 和 [扩展语法](/guide/markdown-extended-syntax) 已足以应对日常写作的需求。然而，在长期使用 Markdown 时，可能会发现 Markdown 官方语法的局限性。
 
 本部分旨在探讨一些 Markdown 高级技巧，为 Markdown 官方语法未覆盖的常见需求提供实用解决方案。这些方法通常依赖于 HTML 与 Markdown 的混合使用，或对解析器特性的巧妙应用。
 

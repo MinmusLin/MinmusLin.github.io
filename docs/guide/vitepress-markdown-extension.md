@@ -180,7 +180,7 @@ This is a `raw` block.
 
 ## GitHub 风格的警报
 
-VitePress 同样支持以标注的方式渲染 [GitHub 风格的警报](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)，它们和[自定义容器](#自定义容器)的渲染方式相同。
+VitePress 同样支持以标注的方式渲染 [GitHub 风格的警报](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)，它们和 [自定义容器](#自定义容器) 的渲染方式相同。
 
 ### 默认标题
 
@@ -298,7 +298,7 @@ VitePress 同样支持以标注的方式渲染 [GitHub 风格的警报](https://
 
 VitePress 使用 [Shiki](https://github.com/shikijs/shiki) 在 Markdown 代码块中使用彩色文本实现语法高亮。
 
-这里可以查询 Shiki 支持的所有[编程语言](https://shiki.style/languages)。
+这里可以查询 Shiki 支持的所有 [编程语言](https://shiki.style/languages)。
 
 ### 行高亮
 
@@ -612,7 +612,7 @@ const line3 = 'This is line 3'
 
 ### 导入代码片段
 
-可以通过下面的语法来从现有文件中导入代码片段，语法同时支持[行高亮](#行高亮)、[语法高亮](#语法高亮)和[行号](#行号)标记。
+可以通过下面的语法来从现有文件中导入代码片段，语法同时支持 [行高亮](#行高亮)、[语法高亮](#语法高亮) 和 [行号](#行号) 标记。
 
 ```Markdown
 <<< @/filepath
@@ -761,7 +761,7 @@ func main() {
 ```
 :::
 
-也可以在代码组中[导入代码片段](#导入代码片段)：
+也可以在代码组中 [导入代码片段](#导入代码片段)：
 
 ```Markdown
 ::: code-group
@@ -1078,7 +1078,7 @@ Content in Tab B
 
 在文本前后添加两个感叹号 `!` 可产生黑幕遮挡文本的效果，鼠标悬停或触摸屏轻触即可显示被遮挡的文字。
 
-常用于符合文段主题但（如考虑政策或读者感受）不便明说的实话，灵感来源于[萌娘百科](https://mzh.moegirl.org.cn/Template:%E9%BB%91%E5%B9%95)。
+常用于符合文段主题但（如考虑政策或读者感受）不便明说的实话，灵感来源于 [萌娘百科](https://mzh.moegirl.org.cn/Template:%E9%BB%91%E5%B9%95)。
 
 ```Markdown
 This is a spoiler: !!spoiler text!!

@@ -10,7 +10,7 @@
 
 大多数简单的绘图工具在绘制振荡过于剧烈的函数时会遇到问题。例如，函数 $f(x) = \sin(e^x)$ 在 $x > 5$ 时会快速振荡。无论对函数进行多少次采样评估，这类工具都难以正确渲染该函数。
 
-Function Plot 则通过[区间算法](https://github.com/mauriciopoppe/interval-arithmetic)来评估函数。这意味着，当一个 $x$ 轴边界为 $[x_i, x_{i+1}]$ 的矩形区域显示在屏幕上时，可以确保该矩形包含了所有 $\xi \in [x_i, x_{i+1}]$ 所对应的 $f(\xi)$ 值。最终结果就是：实现曲线的像素级完美呈现。
+Function Plot 则通过 [区间算法](https://github.com/mauriciopoppe/interval-arithmetic) 来评估函数。这意味着，当一个 $x$ 轴边界为 $[x_i, x_{i+1}]$ 的矩形区域显示在屏幕上时，可以确保该矩形包含了所有 $\xi \in [x_i, x_{i+1}]$ 所对应的 $f(\xi)$ 值。最终结果就是：实现曲线的像素级完美呈现。
 
 <FunctionPlot :options="{
   height: 250,
