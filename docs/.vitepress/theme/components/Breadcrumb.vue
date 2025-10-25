@@ -29,7 +29,7 @@ const getBreadcrumbTitle = (path: string): string => {
   }
   const findRecursive = (navItems: any[]): string | null => {
     for (const item of navItems) {
-      if (item.link === searchPath) {
+      if (item.link == searchPath) {
         return item.text
       }
       if (item.items) {
@@ -50,7 +50,7 @@ const findBreadcrumbInSidebar = (fullPath: string): string[] => {
   }
   const findRecursive = (config: any, currentPath: string[] = []): string[] | null => {
     for (const item of config) {
-      if (item.link === '/' + fullPath.replace('.md', '')) {
+      if (item.link == '/' + fullPath.replace('.md', '')) {
         return currentPath
       }
       if (item.items) {
@@ -78,8 +78,8 @@ watchEffect(() => {
     items.value = []
     return
   }
-  const pathSegs = page.value.relativePath.split('/').filter(seg => seg && seg !== 'index.md')
-  if (pathSegs.length === 0) {
+  const pathSegs = page.value.relativePath.split('/').filter(seg => seg && seg != 'index.md')
+  if (pathSegs.length == 0) {
     items.value = []
     return
   }
