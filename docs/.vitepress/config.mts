@@ -13,6 +13,7 @@ import markdownItSpoiler from '@traptitech/markdown-it-spoiler'
 import markdownItSub from 'markdown-it-sub'
 import markdownItSup from 'markdown-it-sup'
 import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
+import markdownTimeline from 'vitepress-markdown-timeline'
 import {nav, sidebar} from './configs'
 
 export default defineConfig({
@@ -116,6 +117,7 @@ export default defineConfig({
       md.use(markdownItSub)
       md.use(markdownItSup)
       md.use(markdownItTaskCheckbox)
+      md.use(markdownTimeline)
     },
     image: {
       lazyLoading: true

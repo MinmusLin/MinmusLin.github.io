@@ -130,6 +130,38 @@ This is a `tip` block.
 This is a `tip` block.
 :::
 
+### 时间线容器
+
+`timeline` 容器提供了 Markdown 时间线语法，可以渲染时间线样式。
+
+```Markdown
+::: timeline 2025-01-01
+Timeline 1
+:::
+
+::: timeline 2025-02-01
+Timeline 2
+:::
+
+::: timeline 2025-03-01
+Timeline 3
+:::
+```
+
+**渲染效果：**
+
+::: timeline 2025-01-01
+Timeline 1
+:::
+
+::: timeline 2025-02-01
+Timeline 2
+:::
+
+::: timeline 2025-03-01
+Timeline 3
+:::
+
 ### `raw` 容器
 
 `raw` 是一个特殊的容器，可以用来防止与 VitePress 的样式和路由冲突。

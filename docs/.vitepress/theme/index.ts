@@ -16,6 +16,7 @@ import 'nprogress-v2/dist/index.css'
 import '@theojs/lumen/pic'
 import './style.css'
 import 'virtual:group-icons.css'
+import 'vitepress-markdown-timeline/dist/theme/index.css'
 
 export default {
   extends: DefaultTheme,
