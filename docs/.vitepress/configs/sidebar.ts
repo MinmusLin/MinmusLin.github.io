@@ -89,16 +89,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           link: '/guide/function-plot-extension'
         }
       ]
-    },
-    {
-      text: '规范性文件',
-      collapsed: false,
-      items: [
-        {
-          text: '中文文案排版指北',
-          link: '/guide/chinese-copywriting-guidelines'
-        }
-      ]
     }
   ]
 }
