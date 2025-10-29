@@ -66,8 +66,8 @@ const findBreadcrumbInSidebar = (fullPath: string): string[] => {
     if (fullPath.startsWith(basePath.replace('/', ''))) {
       const found = findRecursive(config, [])
       if (found) {
-          return found
-        }
+        return found
+      }
     }
   }
   return []

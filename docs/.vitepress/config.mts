@@ -1,7 +1,7 @@
 import {defineConfig} from 'vitepress'
 import {figure} from '@mdit/plugin-figure'
 import {MermaidMarkdown, MermaidPlugin} from 'vitepress-plugin-mermaid'
-import {groupIconMdPlugin, groupIconVitePlugin, localIconLoader} from 'vitepress-plugin-group-icons'
+import {groupIconMdPlugin, groupIconVitePlugin} from 'vitepress-plugin-group-icons'
 import {tabsMarkdownPlugin} from 'vitepress-plugin-tabs'
 import vitepressProtectPlugin from 'vitepress-protect-plugin'
 import markdownItAbbr from 'markdown-it-abbr'
@@ -20,8 +20,14 @@ export default defineConfig({
   title: "MinmusLin's Blog",
   description: "MinmusLin's Blog | Code, Bugs & Sudden Enlightenment | 记录代码、Bug 与偶尔的灵光一现",
   head: [
-    ['link', {rel: 'icon', href: '/favicon.ico'}],
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css' }]
+    ['link', {
+      rel: 'icon',
+      href: '/favicon.ico'
+    }],
+    ['link', {
+      rel: 'stylesheet',
+      href: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css'
+    }]
   ],
   cleanUrls: true,
   lastUpdated: true,

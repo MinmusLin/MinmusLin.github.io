@@ -1,7 +1,9 @@
 <template>
   <ruby ref='textEle'>
-    <slot></slot>
-    <rp>(</rp><rt>{{ display }}</rt><rp>)</rp>
+    <slot/>
+    <rp>(</rp>
+    <rt>{{ display }}</rt>
+    <rp>)</rp>
   </ruby>
 </template>
 
@@ -11,13 +13,16 @@ import pinyin from 'pinyin'
 
 const display = ref('')
 const textEle = ref<HTMLSpanElement | null>(null)
-const props = defineProps<{manual?: string, m?: string}>()
+const props = defineProps<{ manual?: string, m?: string }>()
 
 onMounted(() => {
   if (!textEle.value) {
     return
   }
-  display.value = props.manual ?? props.m ?? pinyin(textEle.value.innerText, {heteronym: true, segment: true}).flat().join(' ')
+  display.value = props.manual ?? props.m ?? pinyin(textEle.value.innerText, {
+    heteronym: true,
+    segment: true
+  }).flat().join(' ')
 })
 </script>
 
