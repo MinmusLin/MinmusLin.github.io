@@ -501,4 +501,6 @@ Markdown 允许直接使用符号 `<` 和 `&`，并自动进行转义。若 `&` 
 
 对于 HTML 块级标签，如 `<div>`、`<table>`、`<pre>` 和 `<p>` 等，应在其前后添加空白行以与其它内容进行分隔。尽量不要使用空格（Spaces）或制表符（Tabs）对 HTML 标签进行缩进，否则将影响 Markdown 文档格式。
 
+::: warning
 在 HTML 块级标签内不能使用 Markdown 语法。如 `<p>*Italic Text* and **Bold Text**</p>` 将不起作用。
+:::
