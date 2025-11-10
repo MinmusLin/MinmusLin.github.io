@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "HarmonyOS Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url(../fonts/HarmonyOSSans-Regular.woff2);
+}
+
+@font-face {
+  font-family: "HarmonyOS Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url(../fonts/HarmonyOSSans-Bold.woff2);
+}
+
+@font-face {
+  font-family: "HarmonyOS Sans";
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+  src: url(../fonts/HarmonyOSSans-Italic.woff2);
+}
+
+@font-face {
+  font-family: "HarmonyOS Sans";
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+  src: url(../fonts/HarmonyOSSans-BoldItalic.woff2);
+}
+
+@font-face {
+  font-family: "Monaco";
+  font-display: swap;
+  src: url(../fonts/Monaco.ttf);
+}
+
+:root {
+  --vp-font-family-base: "HarmonyOS Sans";
+  --vp-font-family-mono: "Monaco";
+}
