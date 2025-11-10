@@ -24,6 +24,8 @@
   "devDependencies": {
     "@iconify-json/vscode-icons": "^1.2.33",
     "@mdit/plugin-figure": "^0.22.2",
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.18.2",
+    "@nolebase/vitepress-plugin-highlight-targeted-heading": "^2.18.2",
     "@theojs/lumen": "^6.4.4",
     "@traptitech/markdown-it-spoiler": "^1.1.6",
     "busuanzi.pure.js": "^1.0.3",

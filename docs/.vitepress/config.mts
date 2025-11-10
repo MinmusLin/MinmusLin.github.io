@@ -157,10 +157,11 @@ export default defineConfig({
       })
     ],
     optimizeDeps: {
-      include: ['mermaid']
+      include: ['mermaid'],
+      exclude: ['@nolebase/vitepress-plugin-enhanced-readabilities/client', 'vitepress', '@nolebase/ui']
     },
     ssr: {
-      noExternal: ['mermaid']
+      noExternal: ['mermaid', '@nolebase/vitepress-plugin-highlight-targeted-heading', '@nolebase/vitepress-plugin-enhanced-readabilities', '@nolebase/ui']
     }
   },
   sitemap: {

@@ -17,6 +17,7 @@ import '@theojs/lumen/pic'
 import './style.css'
 import 'virtual:group-icons.css'
 import 'vitepress-markdown-timeline/dist/theme/index.css'
+import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 
 export default {
   extends: DefaultTheme,

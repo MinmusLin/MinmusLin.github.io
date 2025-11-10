@@ -43,3 +43,7 @@
 .VPFeatures .items .item:hover {
   transform: translateY(-5px);
 }
+
+.VPSocialLinks.VPNavBarSocialLinks.social-links {
+  margin-right: 0;
+}

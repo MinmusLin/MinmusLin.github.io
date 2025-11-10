@@ -3,6 +3,15 @@
     <template #doc-before>
       <Breadcrumb/>
     </template>
+    <template #layout-top>
+      <NolebaseHighlightTargetedHeading/>
+    </template>
+    <template #nav-bar-content-after>
+      <NolebaseEnhancedReadabilitiesMenu/>
+    </template>
+    <template #nav-screen-content-after>
+      <NolebaseEnhancedReadabilitiesScreenMenu/>
+    </template>
   </Layout>
 </template>
 
@@ -11,6 +20,8 @@ import {useData} from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import {nextTick, provide} from 'vue'
 import Breadcrumb from './components/Breadcrumb.vue'
+import {NolebaseHighlightTargetedHeading} from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
+import {NolebaseEnhancedReadabilitiesMenu, NolebaseEnhancedReadabilitiesScreenMenu} from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 
 const {isDark} = useData()
 
@@ -46,6 +57,10 @@ const {Layout} = DefaultTheme
 </script>
 
 <style>
+:root {
+  --vp-nolebase-highlight-targeted-heading-bg: var(--vp-c-yellow-soft);
+}
+
 ::view-transition-old(root), ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
