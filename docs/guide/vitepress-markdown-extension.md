@@ -959,18 +959,18 @@ Paragraph 4
 徽标可以为标题添加状态。
 
 ```Markdown
-### Info Badge <Badge type="info" text="Info Badge"/>
-### Tip Badge <Badge type="tip" text="Tip Badge"/>
-### Warning Badge <Badge type="warning" text="Warning Badge"/>
-### Danger Badge <Badge type="danger" text="Danger Badge"/>
+### 信息徽标 <Badge type="info" text="Info Badge"/>
+### 提示徽标 <Badge type="tip" text="Tip Badge"/>
+### 警告徽标 <Badge type="warning" text="Warning Badge"/>
+### 危险徽标 <Badge type="danger" text="Danger Badge"/>
 ```
 
 **渲染效果：**
 
-### Info Badge <Badge type="info" text="Info Badge"/>
-### Tip Badge <Badge type="tip" text="Tip Badge"/>
-### Warning Badge <Badge type="warning" text="Warning Badge"/>
-### Danger Badge <Badge type="danger" text="Danger Badge"/>
+### 信息徽标 <Badge type="info" text="Info Badge"/>
+### 提示徽标 <Badge type="tip" text="Tip Badge"/>
+### 警告徽标 <Badge type="warning" text="Warning Badge"/>
+### 危险徽标 <Badge type="danger" text="Danger Badge"/>
 
 ## 标签页
 

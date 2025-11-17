@@ -60,7 +60,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="noopener noreferrer">Attribution-NonCommercial-ShareAlike 4.0 International</a>',
-      copyright: 'Copyright © 2025-Present <a href="mailto:minmuslin@outlook.com" target="_blank" rel="noopener noreferrer">Jishen Lin</a>'
+      copyright: `Copyright © ${new Date().getFullYear()} <a href='mailto:minmuslin@outlook.com' target='_blank' rel='noopener noreferrer'>Jishen Lin</a>`
     },
     editLink: {
       pattern: 'https://github.com/MinmusLin/MinmusLin.github.io/edit/main/docs/:path',
