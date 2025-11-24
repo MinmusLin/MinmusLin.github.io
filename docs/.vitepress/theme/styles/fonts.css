@@ -38,5 +38,5 @@
 
 :root {
   --vp-font-family-base: "HarmonyOS Sans";
-  --vp-font-family-mono: "Monaco";
+  --vp-font-family-mono: "Monaco", monospace;
 }
