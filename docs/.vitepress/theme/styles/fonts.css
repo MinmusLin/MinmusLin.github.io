@@ -1,4 +1,4 @@
-@supports (font: -apple-system-body) {
+@supports (font-family: -apple-system) {
   @font-face {
     font-family: "HarmonyOS Sans";
     font-style: normal;
