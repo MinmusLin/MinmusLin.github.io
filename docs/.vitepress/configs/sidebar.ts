@@ -45,8 +45,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       link: '/essay/2025-05-07'
     },
     {
-      text: '2026-05-22｜同济大学毕业设计（论文）谢辞',
-      link: '/essay/2026-05-22'
+      text: '2026-05-15｜同济大学本科毕业设计（论文）谢辞',
+      link: '/essay/2026-05-15'
     }
   ],
   '/guide': [
