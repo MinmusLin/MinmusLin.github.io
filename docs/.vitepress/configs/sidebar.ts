@@ -43,6 +43,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     {
       text: '2025-05-07｜从放弃保研到字节暑期实习上岸：聊聊同济软件工程科班三年带给我了什么',
       link: '/essay/2025-05-07'
+    },
+    {
+      text: '2026-05-22｜同济大学毕业设计（论文）谢辞',
+      link: '/essay/2026-05-22'
     }
   ],
   '/guide': [
