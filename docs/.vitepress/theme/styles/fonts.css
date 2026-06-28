@@ -1,4 +1,4 @@
-@supports (font-family: -apple-system) {
+@supports (font-family: -apple-system) and (-webkit-font-smoothing: antialiased) {
   @font-face {
     font-family: "HarmonyOS Sans";
     font-style: normal;
