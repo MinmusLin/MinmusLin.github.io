@@ -47,6 +47,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     {
       text: '2026-05-15｜同济大学本科毕业设计（论文）谢辞',
       link: '/essay/2026-05-15'
+    },
+    {
+      text: '2026-09-11｜我仍然喜欢赶路',
+      link: '/essay/2026-09-11'
     }
   ],
   '/guide': [
