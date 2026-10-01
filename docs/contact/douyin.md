@@ -1,0 +1,27 @@
+---
+layout: page
+title: Redirecting...
+navbar: false
+footer: false
+---
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh">
+  <div style="text-align: center">
+    <p>Redirecting...</p>
+  </div>
+</div>
+
+<script setup>
+import {onMounted} from 'vue'
+import {inBrowser} from 'vitepress'
+
+onMounted(() => {
+  const nav = document.querySelector('.VPLocalNav.empty.fixed')
+  if (nav) {
+    nav.remove()
+  }
+  if (inBrowser) {
+    window.location.href = 'https://www.douyin.com/user/MS4wLjABAAAAr87dfTH8PZt_PZ-k2B2jX1SjZApYfR6kSrjBTiXlM-IBbupVPy-DRPytc2TMcIjK'
+  }
+})
+</script>

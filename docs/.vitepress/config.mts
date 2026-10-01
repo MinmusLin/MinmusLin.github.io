@@ -18,7 +18,7 @@ import {nav, sidebar} from './configs'
 
 export default defineConfig({
   title: "MinmusLin's Blog",
-  description: "MinmusLin's Blog | Code, Bugs & Sudden Enlightenment | 记录代码、Bug 与偶尔的灵光一现",
+  description: "MinmusLin's Blog | Code, Bugs & Sudden Enlightenment | 记录代码、生活与偶尔的灵光一现",
   head: [
     ['link', {
       rel: 'icon',
@@ -50,8 +50,20 @@ export default defineConfig({
         link: '/contact/qq'
       },
       {
+        icon: 'zhihu',
+        link: '/contact/zhihu'
+      },
+      {
         icon: 'xiaohongshu',
         link: '/contact/xiaohongshu'
+      },
+      {
+        icon: 'bilibili',
+        link: '/contact/bilibili'
+      },
+      {
+        icon: 'tiktok',
+        link: '/contact/douyin'
       },
       {
         icon: 'github',
