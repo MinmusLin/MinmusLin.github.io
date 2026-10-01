@@ -10,3 +10,7 @@
 .medium-zoom--opened .medium-zoom-overlay {
   opacity: 0.85 !important;
 }
+
+.vp-doc figure figcaption {
+  margin: 0.5em 0;
+}
