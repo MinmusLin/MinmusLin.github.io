@@ -50,8 +50,20 @@ const members = [
         link: '/contact/qq'
       },
       {
+        icon: 'zhihu',
+        link: '/contact/zhihu'
+      },
+      {
         icon: 'xiaohongshu',
         link: '/contact/xiaohongshu'
+      },
+      {
+        icon: 'bilibili',
+        link: '/contact/bilibili'
+      },
+      {
+        icon: 'tiktok',
+        link: '/contact/douyin'
       },
       {
         icon: 'github',
