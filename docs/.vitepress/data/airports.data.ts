@@ -5,57 +5,43 @@ import {visitedAirportIatas, type AirportVisit} from '../../footprint/data'
 declare const data: AirportVisit[]
 export {data}
 
+const airportNames: Record<string, string> = {
+  CGQ: '长春龙嘉国际机场',
+  PEK: '北京首都国际机场',
+  YNJ: '延吉朝阳川国际机场',
+  PVG: '上海浦东国际机场',
+  DLC: '大连周水子国际机场',
+  CGO: '郑州新郑国际机场',
+  KWE: '贵阳龙洞堡国际机场',
+  KMG: '昆明长水国际机场',
+  LYI: '临沂启阳国际机场',
+  XIY: '西安咸阳国际机场',
+  PKX: '北京大兴国际机场',
+  SHA: '上海虹桥国际机场',
+  CDG: '巴黎夏尔·戴高乐机场',
+  SHE: '沈阳桃仙国际机场',
+  TFU: '成都天府国际机场',
+  CKG: '重庆江北国际机场',
+  DXB: '迪拜国际机场',
+  FCO: '罗马-菲乌米奇诺机场',
+  BRU: '布鲁塞尔机场',
+  TSN: '天津滨海国际机场'
+}
+
 export default defineLoader({
   watch: ['../../footprint/data.ts'],
   async load(): Promise<AirportVisit[]> {
     const matches = await airportData.getMultipleAirports(visitedAirportIatas)
-    const query = `SELECT ?code ?title WHERE {
-      VALUES ?code { ${visitedAirportIatas.map(iata => `"${iata}"`).join(' ')} }
-      ?airport wdt:P238 ?code .
-      ?article schema:about ?airport ;
-        schema:isPartOf <https://zh.wikipedia.org/> ;
-        schema:name ?title .
-    }`
-    const wikidataUrl = new URL('https://query.wikidata.org/sparql')
-    wikidataUrl.searchParams.set('query', query)
-    wikidataUrl.searchParams.set('format', 'json')
-    const headers = {'User-Agent': 'MinmusLinFootprint/1.0 (https://www.minmuslin.cn)'}
-    const wikidataResponse = await fetch(wikidataUrl, {headers, signal: AbortSignal.timeout(15000)})
-    if (!wikidataResponse.ok) {
-      throw new Error(`Wikidata 机场名称查询失败：HTTP ${wikidataResponse.status}`)
-    }
-    const wikidata = await wikidataResponse.json()
-    const titles = new Map<string, string>(wikidata.results.bindings.map((item: {code: {value: string}; title: {value: string}}) => [item.code.value, item.title.value]))
-    const wikipediaUrl = new URL('https://zh.wikipedia.org/w/api.php')
-    wikipediaUrl.search = new URLSearchParams({
-      action: 'query',
-      prop: 'info',
-      inprop: 'varianttitles',
-      titles: [...titles.values()].join('|'),
-      format: 'json',
-      formatversion: '2'
-    }).toString()
-    const wikipediaResponse = await fetch(wikipediaUrl, {headers, signal: AbortSignal.timeout(15000)})
-    if (!wikipediaResponse.ok) {
-      throw new Error(`中文维基百科机场名称查询失败：HTTP ${wikipediaResponse.status}`)
-    }
-    const wikipedia = await wikipediaResponse.json()
-    const names = new Map<string, string>(wikipedia.query.pages.map((page: {title: string; varianttitles?: {'zh-hans'?: string}}) => [page.title, page.varianttitles?.['zh-hans'] || page.title]))
-
     return matches.map((airport, index) => {
       const iata = visitedAirportIatas[index]
       if (!airport || airport.iata !== iata) {
         throw new Error(`无法查询机场：${iata}`)
       }
-      const name = names.get(titles.get(iata) || '')
-      if (!name) {
-        throw new Error(`无法查询机场中文名称：${iata}`)
-      }
       const coordinates: [number, number] = [Number(airport.longitude), Number(airport.latitude)]
       if (!coordinates.every(Number.isFinite)) {
         throw new Error(`机场坐标无效：${iata}`)
       }
-      return {iata, icao: airport.icao, name, countryCode: airport.country_code, coordinates}
+      return {iata, icao: airport.icao, name: airportNames[iata] || airport.airport, countryCode: airport.country_code, coordinates}
     })
   }
 })
