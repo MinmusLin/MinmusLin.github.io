@@ -87,7 +87,7 @@ import {GeoComponent, ToolboxComponent, TooltipComponent} from 'echarts/componen
 import {CanvasRenderer} from 'echarts/renderers'
 import VChart, {type Exposed} from 'vue-echarts'
 import {chinaVisitedRegions, worldVisitedRegions, visitedFlights, type FlightVisit} from '../../../footprint/data'
-import {data as visitedAirports} from '../../../footprint/airports.data'
+import {data as visitedAirports} from '../../data/airports.data'
 
 use([LinesChart, ScatterChart, GeoComponent, ToolboxComponent, TooltipComponent, CanvasRenderer])
 
