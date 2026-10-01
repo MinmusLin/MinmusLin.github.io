@@ -197,8 +197,8 @@ const option = computed(() => {
     geo: {
       map: mapName,
       roam: true,
-      aspectScale: 0.75,
-      preserveAspect: props.scope === 'china' ? 'contain' : undefined,
+      aspectScale: 0.8,
+      preserveAspect: 'contain',
       scaleLimit: {min: 1, max: 10},
       left: 12,
       right: 12,
@@ -315,7 +315,9 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: clamp(360px, 56vw, 540px);
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.66;
   overflow: hidden;
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
@@ -323,10 +325,7 @@ onMounted(async () => {
 }
 
 .footprint-map-china {
-  width: 100%;
-  height: auto;
-  min-height: 360px;
-  aspect-ratio: 1.24;
+  aspect-ratio: 0.99;
 }
 
 .footprint-map-reset {
