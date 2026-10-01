@@ -18,7 +18,7 @@ import {nav, sidebar} from './configs'
 
 export default defineConfig({
   title: "MinmusLin's Blog",
-  description: "MinmusLin's Blog | Code, Bugs & Sudden Enlightenment | 记录代码、生活与偶尔的灵光一现",
+  description: "MinmusLin's Blog | Code, Life & Sudden Enlightenment | 记录代码、生活与偶尔的灵光一现",
   head: [
     ['link', {
       rel: 'icon',

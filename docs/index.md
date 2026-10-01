@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: MinmusLin's Blog
-  text: Code, Bugs & Sudden
+  text: Code, Life & Sudden
   textsuffix: Enlightenment
   tagline: 记录代码、生活与偶尔的灵光一现
   image:
