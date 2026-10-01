@@ -28,8 +28,10 @@
     "@nolebase/vitepress-plugin-highlight-targeted-heading": "^2.18.2",
     "@theojs/lumen": "^7.0.1",
     "@traptitech/markdown-it-spoiler": "^1.1.6",
+    "airport-data-js": "^4.0.0",
     "busuanzi.pure.js": "^1.0.3",
     "canvas-confetti": "^1.9.4",
+    "echarts": "^6.1.0",
     "function-plot": "^1.25.4",
     "markdown-it": "^15.0.2",
     "markdown-it-abbr": "^2.0.0",
@@ -52,6 +54,7 @@
     "vitepress-plugin-mermaid": "^2.0.17",
     "vitepress-plugin-tabs": "^0.9.1",
     "vitepress-protect-plugin": "^1.0.6",
-    "vue": "^3.5.43"
+    "vue": "^3.5.43",
+    "vue-echarts": "^8.3.1"
   }
 }

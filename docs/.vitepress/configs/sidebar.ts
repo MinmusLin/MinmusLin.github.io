@@ -53,6 +53,20 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       link: '/essay/2026-09-11'
     }
   ],
+  '/footprint': [
+    {
+      text: '我的足迹',
+      link: '/footprint/'
+    },
+    {
+      text: '中国足迹',
+      link: '/footprint/china'
+    },
+    {
+      text: '世界足迹',
+      link: '/footprint/world'
+    }
+  ],
   '/guide': [
     {
       text: '贡献者指南',

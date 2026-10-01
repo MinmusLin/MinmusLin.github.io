@@ -19,6 +19,10 @@ export const nav: DefaultTheme.Config['nav'] = [
     link: '/essay'
   },
   {
+    text: '足迹',
+    link: '/footprint'
+  },
+  {
     text: '指南',
     link: '/guide'
   }
