@@ -16,7 +16,7 @@
       <VChart v-if='ready' ref='chart' class='footprint-chart' role='img' :aria-label='mapDescription' :option='option' autoresize/>
       <p v-else class='footprint-map-status'>{{ error || '地图加载中…' }}</p>
       <button v-if='ready' type='button' class='footprint-map-reset' @click="chart?.dispatchAction({type: 'restore'})">
-        <span aria-hidden='true'>↺</span> 复原视图
+        复原视图
       </button>
     </div>
 
