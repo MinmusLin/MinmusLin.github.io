@@ -23,7 +23,7 @@ const airportNames: Record<string, string> = {
   TFU: '成都天府国际机场',
   CKG: '重庆江北国际机场',
   DXB: '迪拜国际机场',
-  FCO: '罗马-菲乌米奇诺机场',
+  FCO: '罗马-菲乌米奇诺“列奥那多·达芬奇”国际机场',
   BRU: '布鲁塞尔机场',
   TSN: '天津滨海国际机场'
 }
