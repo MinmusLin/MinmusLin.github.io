@@ -98,7 +98,9 @@ const ready = ref(false)
 const error = ref('')
 const labels = ref<Record<string, string>>({})
 const mapName = `footprint-${props.scope}`
-const regions = computed(() => props.scope === 'china' ? chinaVisitedRegions : worldVisitedRegions)
+const regions = computed(() => props.scope === 'china'
+  ? [...chinaVisitedRegions].sort((a, b) => Number(a.code) - Number(b.code))
+  : [...worldVisitedRegions].sort((a, b) => a.code.localeCompare(b.code)))
 const provinceNames: Record<string, string> = {
   '11': '北京市',
   '12': '天津市',

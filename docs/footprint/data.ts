@@ -20,39 +20,40 @@ export type FlightVisit = {
 }
 
 export const chinaVisitedRegions: RegionVisit[] = [
-  {code: '220100'},
-  {code: '310000'},
-  {code: '120000'},
-  {code: '510100'},
   {code: '110000'},
-  {code: '222400'},
-  {code: '500000'},
+  {code: '120000'},
   {code: '210100'},
-  {code: '410100'},
-  {code: '610100'},
   {code: '210200'},
-  {code: '520100'},
-  {code: '530100'},
-  {code: '371300'},
-  {code: '520400'},
+  {code: '220100'},
   {code: '220200'},
+  {code: '222400'},
   {code: '230100'},
   {code: '231000'},
-  {code: '370600'},
+  {code: '310000'},
   {code: '320100'},
   {code: '320500'},
+  {code: '320600'},
   {code: '330100'},
   {code: '330400'},
-  {code: '320600'},
-  {code: '420100'}
+  {code: '370600'},
+  {code: '371300'},
+  {code: '410100'},
+  {code: '420100'},
+  {code: '500000'},
+  {code: '510100'},
+  {code: '520100'},
+  {code: '520400'},
+  {code: '530100'},
+  {code: '610100'}
 ]
 
 export const worldVisitedRegions: RegionVisit[] = [
   {code: 'CHN'},
   {code: 'FRA'},
-  {code: 'BEL'},
   {code: 'ARE'},
-  {code: 'ITA'}
+  {code: 'ITA'},
+  {code: 'CHE'},
+  {code: 'BEL'}
 ]
 
 export const visitedAirportIatas = [
