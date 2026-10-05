@@ -35,7 +35,9 @@ export const chinaVisitedRegions: RegionVisit[] = [
   {code: '320600'},
   {code: '330100'},
   {code: '330400'},
+  {code: '370200'},
   {code: '370600'},
+  {code: '371100'},
   {code: '371300'},
   {code: '410100'},
   {code: '420100'},
@@ -56,27 +58,30 @@ export const worldVisitedRegions: RegionVisit[] = [
   {code: 'BEL'}
 ]
 
-export const visitedAirportIatas = [
-  'CGQ',
-  'PEK',
-  'YNJ',
-  'PVG',
-  'DLC',
-  'CGO',
-  'KWE',
-  'KMG',
-  'LYI',
-  'XIY',
-  'PKX',
-  'SHA',
-  'CDG',
-  'SHE',
-  'TFU',
-  'CKG',
-  'DXB',
-  'FCO',
-  'BRU',
-  'TSN'
+export const visitedAirports: {iata: string; name?: string}[] = [
+  {iata: 'CGQ', name: '长春龙嘉国际机场'},
+  {iata: 'PEK', name: '北京首都国际机场'},
+  {iata: 'YNJ', name: '延吉朝阳川国际机场'},
+  {iata: 'PVG', name: '上海浦东国际机场'},
+  {iata: 'DLC', name: '大连周水子国际机场'},
+  {iata: 'CGO', name: '郑州新郑国际机场'},
+  {iata: 'KWE', name: '贵阳龙洞堡国际机场'},
+  {iata: 'KMG', name: '昆明长水国际机场'},
+  {iata: 'LYI', name: '临沂启阳国际机场'},
+  {iata: 'RIZ', name: '日照山字河机场'},
+  {iata: 'XIY', name: '西安咸阳国际机场'},
+  {iata: 'PKX', name: '北京大兴国际机场'},
+  {iata: 'SHA', name: '上海虹桥国际机场'},
+  {iata: 'CDG', name: '巴黎夏尔·戴高乐机场'},
+  {iata: 'TAO', name: '青岛胶东国际机场'},
+  {iata: 'SHE', name: '沈阳桃仙国际机场'},
+  {iata: 'TFU', name: '成都天府国际机场'},
+  {iata: 'CKG', name: '重庆江北国际机场'},
+  {iata: 'DXB', name: '迪拜国际机场'},
+  {iata: 'FCO', name: '罗马-菲乌米奇诺“列奥那多·达芬奇”国际机场'},
+  {iata: 'BRU', name: '布鲁塞尔机场'},
+  {iata: 'TSN', name: '天津滨海国际机场'},
+  {iata: 'CTU', name: '成都双流国际机场'}
 ]
 
 export const visitedFlights: FlightVisit[] = [
@@ -87,7 +92,7 @@ export const visitedFlights: FlightVisit[] = [
   {date: '2016-08-11', airline: '红土航空', number: 'A67113', from: 'KMG', via: ['LYI'], to: 'CGQ'},
   {date: '2022-08-19', airline: '上海航空', number: 'FM9184', from: 'CGQ', to: 'PVG'},
   {date: '2022-12-13', airline: '上海航空', number: 'FM9382', from: 'PVG', to: 'CGQ'},
-  {date: '2023-02-08', airline: '上海航空', number: 'FM9126', from: 'DLC', to: 'PVG'},
+  {date: '2023-02-08', airline: '上海航空', number: 'FM9126', from: 'DLC', via: ['RIZ'], to: 'PVG'},
   {date: '2023-07-20', airline: '吉祥航空', number: 'HO1191', from: 'PVG', to: 'CGQ'},
   {date: '2024-01-23', airline: '海南航空', number: 'HU7842', from: 'PVG', to: 'XIY'},
   {date: '2024-01-29', airline: '南方航空', number: 'CZ6947', from: 'XIY', to: 'PKX'},
@@ -96,7 +101,7 @@ export const visitedFlights: FlightVisit[] = [
   {date: '2024-02-24', airline: '上海航空', number: 'FM9350', from: 'CGO', to: 'SHA'},
   {date: '2024-10-22', airline: '东方航空', number: 'MU553', from: 'PVG', to: 'CDG'},
   {date: '2024-10-27', airline: '东方航空', number: 'MU570', from: 'CDG', to: 'PVG'},
-  {date: '2025-01-10', airline: '吉祥航空', number: 'HO1075', from: 'PVG', to: 'CGQ'},
+  {date: '2025-01-10', airline: '吉祥航空', number: 'HO1075', from: 'PVG', via: ['TAO'], to: 'CGQ'},
   {date: '2025-02-22', airline: '春秋航空', number: '9C6760', from: 'SHE', to: 'PVG'},
   {date: '2025-04-30', airline: '春秋航空', number: '9C8935', from: 'PVG', to: 'CGQ'},
   {date: '2025-05-03', airline: '春秋航空', number: '9C8810', from: 'CGQ', to: 'PVG'},
@@ -111,5 +116,7 @@ export const visitedFlights: FlightVisit[] = [
   {date: '2026-09-11', airline: '海南航空', number: 'HU7427', from: 'PVG', to: 'TFU'},
   {date: '2026-09-13', airline: '上海航空', number: 'FM9544', from: 'TFU', to: 'PVG'},
   {date: '2026-09-24', airline: '中国国航', number: 'CA2832', from: 'PVG', to: 'TSN'},
-  {date: '2026-09-27', airline: '东方航空', number: 'MU5144', from: 'TSN', to: 'SHA'}
+  {date: '2026-09-27', airline: '东方航空', number: 'MU5144', from: 'TSN', to: 'SHA'},
+  {date: '2026-10-02', airline: '西藏航空', number: 'TV9866', from: 'SHA', to: 'CTU'},
+  {date: '2026-10-05', airline: '春秋航空', number: '9C8820', from: 'TFU', to: 'SHA'}
 ]
