@@ -15,7 +15,7 @@
     <div class='footprint-map' :class="{'footprint-map-china': scope === 'china'}">
       <VChart v-if='ready' ref='chart' class='footprint-chart' role='img' :aria-label='mapDescription' :option='option' autoresize/>
       <p v-else class='footprint-map-status'>{{ error || '地图加载中…' }}</p>
-      <button v-if='ready' type='button' class='footprint-map-reset' @click="chart?.dispatchAction({type: 'restore'})">
+      <button v-if='ready' type='button' class='footprint-map-reset' @click="chart?.chart?.setOption(option, {notMerge: true})">
         复原视图
       </button>
     </div>
@@ -111,14 +111,14 @@ import {computed, nextTick, onMounted, onUnmounted, ref} from 'vue'
 import {useData, withBase} from 'vitepress'
 import {use, registerMap} from 'echarts/core'
 import {LinesChart, ScatterChart} from 'echarts/charts'
-import {GeoComponent, ToolboxComponent, TooltipComponent} from 'echarts/components'
+import {GeoComponent, TooltipComponent} from 'echarts/components'
 import {CanvasRenderer} from 'echarts/renderers'
 import VChart, {type Exposed} from 'vue-echarts'
 import {chinaVisitedRegions, worldVisitedRegions, visitedFlights, type FlightVisit} from '../../../footprint/data'
 import {data as visitedAirports} from '../../data/airports.data'
 import {data as aircraftPhotos, type AircraftPhoto} from '../../data/aircraft.data'
 
-use([LinesChart, ScatterChart, GeoComponent, ToolboxComponent, TooltipComponent, CanvasRenderer])
+use([LinesChart, ScatterChart, GeoComponent, TooltipComponent, CanvasRenderer])
 
 const props = defineProps<{scope: 'china' | 'world'}>()
 const {isDark} = useData()
@@ -266,6 +266,9 @@ const option = computed(() => {
     tooltip: {
       trigger: 'item',
       renderMode: 'richText',
+      backgroundColor: isDark.value ? '#1B1F27' : '#FFF',
+      borderColor: colors.border,
+      textStyle: {color: colors.text},
       formatter: formatTooltip
     },
     geo: {
