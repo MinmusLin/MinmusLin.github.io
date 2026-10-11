@@ -71,17 +71,43 @@
             <td>{{ flight.airline }}</td>
             <td>{{ flight.number }}</td>
             <td>{{ flight.aircraft }}</td>
-            <td>{{ flight.registration }}</td>
-            <td>{{ flightRouteWithIcao(flight) }}</td>
+            <td>
+              <a v-if='aircraftPhotos[flight.registration]' :href='aircraftPhotos[flight.registration]!.link'
+                 target='_blank' rel='noopener noreferrer'
+                 :aria-label='`${flight.registration} 飞机照片`'
+                 :aria-describedby='photoPreview?.flight.date === flight.date && photoPreview.flight.number === flight.number ? `aircraft-photo-${scope}` : undefined'
+                 @mouseenter='showAircraftPhoto($event, flight)' @focus='showAircraftPhoto($event, flight)'
+                 @mouseleave='scheduleHideAircraftPhoto' @blur='hideAircraftPhoto'>{{ flight.registration }}</a>
+              <span v-else>{{ flight.registration }}</span>
+            </td>
+            <td>{{ flightRoute(flight).map(airportRouteName).join(' → ') }}</td>
           </tr>
         </tbody>
       </table>
     </div>
+    <Teleport to='body'>
+      <div v-if='photoPreview' :id='`aircraft-photo-${scope}`' ref='photoPreviewElement' class='footprint-aircraft-photo' role='tooltip'
+           @mouseenter='cancelHideAircraftPhoto' @mouseleave='hideAircraftPhoto'
+           :style="{left: `${photoPreview.left}px`, top: `${photoPreview.top}px`, maxHeight: photoPreview.maxHeight ? `${photoPreview.maxHeight}px` : undefined}">
+        <img :src='photoPreview.photo.url' :width='photoPreview.photo.width' :height='photoPreview.photo.height'
+             :alt='`${photoPreview.photo.registration} 飞机图像`'>
+        <div class='footprint-aircraft-details'>
+          <strong>{{ photoPreview.photo.registration }}</strong>
+          <p>{{ photoPreview.flight.aircraft }} · {{ photoPreview.flight.airline }}</p>
+          <dl>
+            <dt>乘坐航班</dt><dd>{{ photoPreview.flight.number }} · {{ photoPreview.flight.date }}</dd>
+            <dt>飞行路线</dt><dd>{{ flightRoute(photoPreview.flight).map(airportRouteName).join(' → ') }}</dd>
+            <dt>摄影师</dt><dd>{{ photoPreview.photo.photographer }}</dd>
+          </dl>
+          <p class='footprint-aircraft-source'>图像来源：Planespotters.net · 点击注册号查看详情</p>
+        </div>
+      </div>
+    </Teleport>
   </section>
 </template>
 
 <script setup lang='ts'>
-import {computed, onMounted, ref} from 'vue'
+import {computed, nextTick, onMounted, onUnmounted, ref} from 'vue'
 import {useData, withBase} from 'vitepress'
 import {use, registerMap} from 'echarts/core'
 import {LinesChart, ScatterChart} from 'echarts/charts'
@@ -90,6 +116,7 @@ import {CanvasRenderer} from 'echarts/renderers'
 import VChart, {type Exposed} from 'vue-echarts'
 import {chinaVisitedRegions, worldVisitedRegions, visitedFlights, type FlightVisit} from '../../../footprint/data'
 import {data as visitedAirports} from '../../data/airports.data'
+import {data as aircraftPhotos, type AircraftPhoto} from '../../data/aircraft.data'
 
 use([LinesChart, ScatterChart, GeoComponent, ToolboxComponent, TooltipComponent, CanvasRenderer])
 
@@ -99,6 +126,53 @@ const chart = ref<Exposed | null>(null)
 const ready = ref(false)
 const error = ref('')
 const labels = ref<Record<string, string>>({})
+const photoPreview = ref<{flight: FlightVisit; photo: AircraftPhoto; left: number; top: number; maxHeight?: number} | null>(null)
+const photoPreviewElement = ref<HTMLElement | null>(null)
+let photoHideTimer: ReturnType<typeof setTimeout> | undefined
+const cancelHideAircraftPhoto = () => { clearTimeout(photoHideTimer) }
+const hideAircraftPhoto = () => {
+  cancelHideAircraftPhoto()
+  photoPreview.value = null
+}
+const scheduleHideAircraftPhoto = () => {
+  cancelHideAircraftPhoto()
+  photoHideTimer = setTimeout(hideAircraftPhoto, 150)
+}
+const handlePhotoScroll = (event: Event) => {
+  if (!photoPreviewElement.value?.contains(event.target as Node)) hideAircraftPhoto()
+}
+const handlePhotoKeydown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape') hideAircraftPhoto()
+}
+const showAircraftPhoto = (event: MouseEvent | FocusEvent, flight: FlightVisit) => {
+  cancelHideAircraftPhoto()
+  const photo = aircraftPhotos[flight.registration]
+  if (!photo) return
+  const target = event.currentTarget as HTMLElement
+  requestAnimationFrame(async () => {
+    if (!target.matches(':hover, :focus')) return
+    const bounds = target.getBoundingClientRect()
+    photoPreview.value = {flight, photo, left: 12, top: 12}
+    await nextTick()
+    if (!photoPreview.value || !photoPreviewElement.value) return
+    let {width, height} = photoPreviewElement.value.getBoundingClientRect()
+    let left = Math.max(12, Math.min(bounds.left, window.innerWidth - width - 12))
+    const availableHeight = Math.max(bounds.top - 20, window.innerHeight - bounds.bottom - 20)
+    if (height > availableHeight) {
+      if (bounds.left >= width + 20) left = bounds.left - width - 8
+      else if (bounds.right + width + 20 <= window.innerWidth) left = bounds.right + 8
+      else {
+        photoPreview.value.maxHeight = availableHeight
+        await nextTick()
+        if (!photoPreview.value || !photoPreviewElement.value) return
+        height = photoPreviewElement.value.getBoundingClientRect().height
+      }
+    }
+    const top = bounds.bottom + height + 8 <= window.innerHeight - 12 ? bounds.bottom + 8 : bounds.top - height - 8
+    photoPreview.value.left = left
+    photoPreview.value.top = Math.max(12, Math.min(top, window.innerHeight - height - 12))
+  })
+}
 const mapName = `footprint-${props.scope}`
 const regions = computed(() => props.scope === 'china'
   ? [...chinaVisitedRegions].sort((a, b) => Number(a.code) - Number(b.code))
@@ -146,10 +220,6 @@ const airportRouteName = (iata: string) => {
   const airport = airportsByIata.get(iata)
   return airport ? `${airport.name.replace(/(?:国际)?机场$/, '')} ${iata}` : iata
 }
-const flightRouteWithIcao = (flight: FlightVisit) => flightRoute(flight).map(iata => {
-  const airport = airportsByIata.get(iata)
-  return airport ? `${airportRouteName(iata)} (${airport.icao})` : iata
-}).join(' → ')
 const flights = computed(() => props.scope === 'china'
   ? visitedFlights.filter(flight => isChinaAirport(flight.from) && isChinaAirport(flight.to))
   : visitedFlights.filter(flight => !isChinaAirport(flight.from) || !isChinaAirport(flight.to)))
@@ -252,6 +322,9 @@ const option = computed(() => {
 })
 
 onMounted(async () => {
+  window.addEventListener('scroll', handlePhotoScroll, true)
+  window.addEventListener('resize', hideAircraftPhoto)
+  window.addEventListener('keydown', handlePhotoKeydown)
   try {
     const file = props.scope === 'china' ? 'china-prefectures.geojson' : 'world-countries.geojson'
     const response = await fetch(withBase(`/geo/${file}`))
@@ -266,6 +339,13 @@ onMounted(async () => {
     console.error('足迹地图加载失败：', reason)
     error.value = '足迹地图加载失败，请稍后重试。'
   }
+})
+
+onUnmounted(() => {
+  hideAircraftPhoto()
+  window.removeEventListener('scroll', handlePhotoScroll, true)
+  window.removeEventListener('resize', hideAircraftPhoto)
+  window.removeEventListener('keydown', handlePhotoKeydown)
 })
 </script>
 
@@ -373,6 +453,65 @@ onMounted(async () => {
 .footprint-table-scroll table {
   width: 100%;
   white-space: nowrap;
+}
+
+.footprint-aircraft-photo {
+  position: fixed;
+  z-index: 100;
+  width: min(420px, calc(100vw - 24px));
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 8px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  box-shadow: 0 8px 24px #0003;
+}
+
+.footprint-aircraft-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  background: var(--vp-c-bg-soft);
+}
+
+.footprint-aircraft-details {
+  padding: 10px 4px 2px;
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.footprint-aircraft-details strong {
+  font-size: 18px;
+}
+
+.footprint-aircraft-details p {
+  margin: 4px 0;
+}
+
+.footprint-aircraft-details dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  margin: 8px 0;
+}
+
+.footprint-aircraft-details dt,
+.footprint-aircraft-source {
+  color: var(--vp-c-text-2);
+}
+
+.footprint-aircraft-details dd {
+  margin: 0;
+}
+
+.footprint-aircraft-details .footprint-aircraft-source {
+  margin-top: 8px;
+  font-size: 12px;
 }
 
 .dark .footprint-visited {
