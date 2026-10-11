@@ -66,6 +66,10 @@ export default defineConfig({
         link: '/contact/douyin'
       },
       {
+        icon: 'linkedin',
+        link: 'https://www.linkedin.com/in/jishenlin'
+      },
+      {
         icon: 'github',
         link: 'https://github.com/MinmusLin'
       }

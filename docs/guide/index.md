@@ -28,12 +28,14 @@ next:
 
 ## 贡献者
 
-<div style="display: flex; justify-content: center">
+<div class="contributors" style="display: flex; justify-content: center" :style="{'--contact-columns': contactColumns}">
   <VPTeamMembers size="medium" :members="members"/>
 </div>
 
 <script setup>
 import {VPTeamMembers} from 'vitepress/theme'
+
+const contactColumns = 4
 
 const members = [
   {
@@ -66,6 +68,10 @@ const members = [
         link: '/contact/douyin'
       },
       {
+        icon: 'linkedin',
+        link: 'https://www.linkedin.com/in/jishenlin'
+      },
+      {
         icon: 'github',
         link: 'https://github.com/MinmusLin'
       }
@@ -73,3 +79,15 @@ const members = [
   }
 ]
 </script>
+
+<style scoped>
+.contributors :deep(.VPTeamMembersItem .links) {
+  height: auto;
+}
+
+.contributors :deep(.VPSocialLinks) {
+  display: grid;
+  grid-template-columns: repeat(var(--contact-columns), 36px);
+  gap: 8px;
+}
+</style>
