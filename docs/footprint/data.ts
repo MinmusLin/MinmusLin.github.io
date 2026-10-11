@@ -118,7 +118,7 @@ export const visitedFlights: FlightVisit[] = [
   {date: '2026-09-11', airline: '海南航空', number: 'HU7427', aircraft: '波音 737-800(WL)', registration: 'B-1102', from: 'PVG', to: 'TFU'},
   {date: '2026-09-13', airline: '上海航空', number: 'FM9544', aircraft: '波音 737-8 MAX', registration: 'B-1152', from: 'TFU', to: 'PVG'},
   {date: '2026-09-24', airline: '中国国航', number: 'CA2832', aircraft: '波音 737-79L(WL)', registration: 'B-5213', from: 'PVG', to: 'TSN'},
-  {date: '2026-09-27', airline: '东方航空', number: 'MU5144', aircraft: '空客 320-232(WL)', registration: 'B-1859', from: 'TSN', to: 'SHA'},
+  {date: '2026-09-27', airline: '东方航空', number: 'MU5144', aircraft: '空客 320-232(SL)', registration: 'B-1859', from: 'TSN', to: 'SHA'},
   {date: '2026-10-02', airline: '西藏航空', number: 'TV9866', aircraft: '空客 330-243', registration: 'B-8420', from: 'SHA', to: 'CTU'},
   {date: '2026-10-05', airline: '春秋航空', number: '9C8820', aircraft: '空客 321-253(NX)', registration: 'B-321G', from: 'TFU', to: 'SHA'}
 ]
