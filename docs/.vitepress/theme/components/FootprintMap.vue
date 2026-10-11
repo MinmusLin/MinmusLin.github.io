@@ -63,13 +63,15 @@
     <div v-else class='footprint-table-scroll'>
       <table>
         <thead>
-          <tr><th>日期</th><th>航空公司</th><th>航班号</th><th>路线</th></tr>
+          <tr><th>日期</th><th>航空公司</th><th>航班号</th><th>机型</th><th>注册号</th><th>路线</th></tr>
         </thead>
         <tbody>
           <tr v-for='flight in flights' :key='`${flight.date}-${flight.number}`'>
             <td><time :datetime='flight.date'>{{ flight.date }}</time></td>
             <td>{{ flight.airline }}</td>
             <td>{{ flight.number }}</td>
+            <td>{{ flight.aircraft }}</td>
+            <td>{{ flight.registration }}</td>
             <td>{{ flightRouteWithIcao(flight) }}</td>
           </tr>
         </tbody>
